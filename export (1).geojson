@@ -32,88 +32,6 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "relation/9226591",
-        "addr:city": "Kuala Lumpur",
-        "addr:housenumber": "6",
-        "addr:postcode": "50450",
-        "addr:street": "Jalan Kia Peng",
-        "building": "apartments",
-        "start_date": "2013",
-        "type": "multipolygon",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.712782,
-          3.152195
-        ]
-      },
-      "id": "relation/9226591"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/23034384",
-        "building": "yes",
-        "building:use": "office",
-        "height": "150",
-        "name": "Menara Maxis",
-        "name:en": "Maxis Tower",
-        "name:ms": "Menara Maxis",
-        "name:zh": "明讯大厦",
-        "name:zh-Hans": "明讯大厦",
-        "name:zh-Hant": "明訊大廈",
-        "start_date": "1998",
-        "wikidata": "Q5260261",
-        "wikimedia_commons": "Category:Maxis Tower",
-        "wikipedia": "en:Maxis Tower",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7130346,
-          3.1581741
-        ]
-      },
-      "id": "way/23034384"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/23766100",
-        "addr:city": "Kuala Lumpur",
-        "addr:street": "Jalan Pudu",
-        "building": "commercial",
-        "building:levels": "7",
-        "bus": "yes",
-        "name": "Pudu Sentral",
-        "name:en": "Pudu Sentral",
-        "name:ms": "Pudu Sentral",
-        "name:zh": "富都中环",
-        "name:zh-Hans": "富都中环",
-        "name:zh-Hant": "富都中環",
-        "old_name": "Puduraya Terminal",
-        "start_date": "1976",
-        "wheelchair": "yes",
-        "wikidata": "Q1074967",
-        "wikimedia_commons": "Category:Pudu Sentral",
-        "wikipedia": "en:Pudu Sentral",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7009094,
-          3.1456121
-        ]
-      },
-      "id": "way/23766100"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "way/23766164",
         "addr:city": "Kuala Lumpur",
         "addr:housenumber": "98",
@@ -187,158 +105,6 @@
         ]
       },
       "id": "way/23768012"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/28271270",
-        "addr:city": "Kuala Lumpur",
-        "addr:housename": "Plaza Low Yat",
-        "addr:housenumber": "7",
-        "addr:postcode": "55100",
-        "addr:street": "Jalan Bintang",
-        "air_conditioning": "yes",
-        "building": "retail",
-        "building:levels": "6",
-        "description": "Mall with all types of IT related shops",
-        "facebook": "https://www.facebook.com/plazalowyat/",
-        "name": "Plaza Low Yat",
-        "name:ms": "Plaza Low Yat",
-        "name:zh": "刘蝶广场",
-        "name:zh-Hans": "刘蝶广场",
-        "name:zh-Hant": "劉蝶廣場",
-        "opening_hours": "10:00-22:00",
-        "operator": "Low Yat Group",
-        "phone": "+60 3 21483651",
-        "second_hand": "yes",
-        "shop": "mall",
-        "start_date": "1999",
-        "stroller": "no",
-        "toilets": "yes",
-        "website": "https://www.plazalowyat.com/",
-        "wheelchair": "yes",
-        "wikidata": "Q6692970",
-        "wikimedia_commons": "Category:Plaza Low Yat",
-        "wikipedia": "en:Plaza Low Yat",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7100083,
-          3.1440262
-        ]
-      },
-      "id": "way/28271270"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/190885803",
-        "addr:city": "Kuala Lumpur",
-        "addr:country": "MY",
-        "addr:housenumber": "50",
-        "addr:postcode": "50200",
-        "addr:street": "Jalan Sultan Ismail",
-        "air_conditioning": "yes",
-        "building": "retail",
-        "building:levels": "8",
-        "layer": "1",
-        "name": "Lot 10",
-        "name:en": "Lot 10",
-        "name:ms": "Lot 10",
-        "name:zh": "乐天广场",
-        "name:zh-Hans": "乐天广场",
-        "name:zh-Hant": "樂天廣場",
-        "opening_hours": "Mo-Su 10:00-22:00",
-        "operator": "YTL Land",
-        "phone": "+60327823566",
-        "shop": "mall",
-        "start_date": "1990",
-        "website": "https://lot10.com.my/",
-        "wikidata": "Q535177",
-        "wikimedia_commons": "Category:Lot 10",
-        "wikipedia": "en:Lot 10",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7119818,
-          3.1463712
-        ]
-      },
-      "id": "way/190885803"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/244500102",
-        "building": "yes",
-        "building:levels": "34",
-        "name": "Idaman Residence @ KLCC",
-        "name:en": "Idaman Residence @ KLCC",
-        "start_date": "2008",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7085431,
-          3.1565797
-        ]
-      },
-      "id": "way/244500102"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/279944536",
-        "3dmr": "3",
-        "addr:country": "MY",
-        "alt_name": "Petronas Twin Towers",
-        "alt_name:ja": "ペトロナスタワー",
-        "alt_name:zh": "佩重納斯大廈",
-        "building": "office",
-        "check_date": "2021-04-21",
-        "image": "https://photos.app.goo.gl/V2NypLDxBCndaR1K6",
-        "is_in:country": "Malaysia",
-        "is_in:country_code": "MY",
-        "is_in:iso_3166_2": "MY-14",
-        "layer": "1",
-        "name": "Menara Berkembar Petronas",
-        "name:ar": "برجا بتروناس التوأم",
-        "name:el": "Πύργοι Πετρόνας",
-        "name:en": "Petronas Towers",
-        "name:es": "Torres Petronas",
-        "name:fr": "Tours Petronas",
-        "name:hi": "पेट्रोनास जुड़वा मीनार",
-        "name:ja": "ペトロナスツインタワー",
-        "name:ko": "페트로나스 트윈 타워",
-        "name:my": "ပက္တရိုးနက်စ် တာဝါ",
-        "name:sr": "Башни Петронас",
-        "name:tr": "Petronas Towers",
-        "name:zh": "国家石油公司双峰塔",
-        "nohousenumber": "yes",
-        "operator": "KLCC Property Holdings Berhad",
-        "phone": "+60 3-2331 8080",
-        "start_date": "1999",
-        "tourism": "attraction",
-        "url": "https://youtu.be/3xqyeSogm0w?si=8ZNmrJLUmeF-wsTb",
-        "wheelchair": "yes",
-        "wikidata": "Q83063",
-        "wikimedia_commons": "Category:Petronas Towers",
-        "wikipedia": "en:Petronas Towers",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.711761,
-          3.1579705
-        ]
-      },
-      "id": "way/279944536"
     },
     {
       "type": "Feature",
@@ -483,7 +249,7 @@
         "addr:street": "Jalan Petaling",
         "amenity": "place_of_worship",
         "building": "temple",
-        "description": "隆雪陳氏書院宗親會成立于1896年（清光緒丙甲年），是陳氏的血緣組織，由錫礦家秀連、新禧、陳春及在田等四位先賢，聚合陳氏宗親 在吉隆坡創立，同年又創建雪蘭莪陳氏書院總墳. 1897年，雪州政府拍賣陳氏書院現址，最終陳秀連以3500元標得7間毗連店鋪地段，動工興建陳氏書院。\n\n建築結構規格設計皆仿自廣州陳氏書院，惟規模較小規模較小，在工程進行期間，曾面對一些阻攔，工程停頓了6年，所以工程在4年后得以完成。書院的宮殿式建築雕梁畫棟，美侖美奐，是中國境外難得見到的古粵建築物，並被列為歷史文物重點保護古建築。",
+        "description": "Chan She Shu Yuen Clan Association",
         "email": "cssykl@gmail.com",
         "name": "Chan See Shu Yuen Temple",
         "name:en": "Chan See Shu Yuen Temple",
@@ -510,165 +276,6 @@
         ]
       },
       "id": "way/467212998"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/468010755",
-        "addr:city": "Kuala Lumpur",
-        "addr:postcode": "59100",
-        "addr:street": "Jalan Ara",
-        "amenity": "place_of_worship",
-        "building": "mosque",
-        "check_date": "2026-02-01",
-        "denomination": "sunni",
-        "facebook": "https://www.facebook.com/pages/Masjid-Saidina-Abu-Bakar-Bangsar/267493756697836",
-        "name": "Masjid Saidina Abu Bakar As-Siddiq",
-        "phone": "+60 32283 3707",
-        "religion": "muslim",
-        "short_name": "MSABA",
-        "start_date": "1982",
-        "website": "https://www.msaba.com.my/",
-        "wikidata": "Q3407638",
-        "wikipedia": "en:Saidina Abu Bakar As Siddiq Mosque",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.6718889,
-          3.1295368
-        ]
-      },
-      "id": "way/468010755"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/471963813",
-        "building": "apartments",
-        "building:flats": "298",
-        "building:levels": "46",
-        "name": "Orion Residence",
-        "start_date": "2025",
-        "website": "https://www.orionresidenceskl.com/",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7144299,
-          3.1464653
-        ]
-      },
-      "id": "way/471963813"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/524812840",
-        "addr:city": "Kuala Lumpur",
-        "addr:housenumber": "145",
-        "addr:postcode": "50450",
-        "addr:street": "Jalan Ampang",
-        "brand": "Four Seasons",
-        "brand:wikidata": "Q1424786",
-        "brand:wikipedia": "en:Four Seasons Hotels and Resorts",
-        "building": "hotel",
-        "building:levels": "74",
-        "building:levels:underground": "3",
-        "height": "342.5",
-        "image": "https://photos.app.goo.gl/BHzmFKvLcrh1WJEt5",
-        "internet_access": "wlan",
-        "internet_access:fee": "no",
-        "name": "Four Seasons Place Kuala Lumpur",
-        "name:en": "Four Seasons Place Kuala Lumpur",
-        "name:ms": "Four Seasons Place Kuala Lumpur",
-        "name:zh": "吉隆坡四季酒店",
-        "name:zh-Hans": "吉隆坡四季酒店",
-        "name:zh-Hant": "吉隆坡四季酒店",
-        "phone": "+603 2382 8888",
-        "stars": "5",
-        "start_date": "2018-11-18",
-        "tourism": "hotel",
-        "website": "https://www.fourseasons.com/kualalumpur/",
-        "wikidata": "Q30643059",
-        "wikimedia_commons": "Category:Four Seasons Hotel Kuala Lumpur",
-        "wikipedia": "en:Four Seasons Place Kuala Lumpur",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7138657,
-          3.1580789
-        ]
-      },
-      "id": "way/524812840"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/544348327",
-        "building": "apartments",
-        "building:levels": "58",
-        "height": "235",
-        "name": "Vortex Tower",
-        "name:en": "Vortex Tower",
-        "start_date": "2016",
-        "wikidata": "Q110552665",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.707308,
-          3.154732
-        ]
-      },
-      "id": "way/544348327"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/546904095",
-        "addr:street": "Jalan Sultan Salahuddin",
-        "building": "office",
-        "building:levels": "37",
-        "height": "175",
-        "name": "Menara Kerja Raya",
-        "name:ms": "Menara Kerja Raya",
-        "office": "government",
-        "old_name": "Kompleks Kerja Raya 2",
-        "short_name": "KKR2 Tower",
-        "start_date": "2015",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.6910577,
-          3.1529122
-        ]
-      },
-      "id": "way/546904095"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/559977609",
-        "building": "yes",
-        "start_date": "1901",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7012474,
-          3.1616963
-        ]
-      },
-      "id": "way/559977609"
     },
     {
       "type": "Feature",
@@ -708,206 +315,6 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "way/585538315",
-        "building": "apartments",
-        "building:levels": "50",
-        "height": "230",
-        "name": "Pavilion Suites",
-        "name:en": "Pavilion Suites",
-        "start_date": "2016",
-        "wikipedia": "en:Pavilion Kuala Lumpur#Pavilion Elite",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7125968,
-          3.1482272
-        ]
-      },
-      "id": "way/585538315"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/645604854",
-        "addr:city": "Kuala Lumpur",
-        "addr:housename": "Menara Merdeka Maybank",
-        "addr:postcode": "50118",
-        "addr:street": "Presint Merdeka 118",
-        "alt_name": "Merdeka 118",
-        "building": "office",
-        "building:levels": "118",
-        "check_date": "2025-08-30",
-        "description": "Highest building in Malaysia",
-        "height": "678.9",
-        "name": "Menara Merdeka Maybank",
-        "name:ms": "Menara Merdeka Maybank",
-        "name:ms-Arab": "مرديک 118",
-        "name:zh": "默迪卡马来亚银行",
-        "nohousenumber": "yes",
-        "old_name": "KL 118;PNB 118;Merdeka 118",
-        "operator": "PNB Merdeka Ventures Sdn Bhd",
-        "start_date": "2024-01-10",
-        "website": "https://merdeka118.com/",
-        "wikidata": "Q7969454",
-        "wikimedia_commons": "Category:Merdeka 118",
-        "wikipedia": "en:Merdeka 118",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7006839,
-          3.1415945
-        ]
-      },
-      "id": "way/645604854"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/659540014",
-        "alt_name": "KLCC Mosque;Masjid Asy-Syakirin",
-        "amenity": "place_of_worship",
-        "building": "mosque",
-        "image": "https://photos.app.goo.gl/ZugYv27hqL459fw27",
-        "layer": "1",
-        "name": "Masjid As Syakirin",
-        "name:en": "As Syakirin Mosque",
-        "name:ms": "Masjid As Syakirin",
-        "religion": "muslim",
-        "start_date": "1996",
-        "wikidata": "Q3396984",
-        "wikimedia_commons": "Category:As-Syakirin Mosque",
-        "wikipedia": "en:As Syakirin Mosque",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.716285,
-          3.1572853
-        ]
-      },
-      "id": "way/659540014"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/659878360",
-        "addr:city": "Kuala Lumpur",
-        "addr:street": "Jalan Lembah",
-        "building": "yes",
-        "email": "info@iamm.org.my",
-        "facebook": "https://www.facebook.com/islamicartsmuseummalaysia/",
-        "fee": "yes",
-        "name": "Muzium Kesenian Islam Malaysia",
-        "name:en": "Islamic Arts Museum Malaysia",
-        "name:pl": "Muzeum Sztuki Islamskiej",
-        "name:zh": "伊斯兰艺术博物馆",
-        "opening_hours": "Mo-Su 10:00-18:00",
-        "phone": "+60 3 20927070",
-        "short_name": "IAMM",
-        "start_date": "1998",
-        "tourism": "museum",
-        "website": "https://www.iamm.org.my/",
-        "wikidata": "Q3330187",
-        "wikimedia_commons": "Category:Islamic Arts Museum Malaysia",
-        "wikipedia": "en:Islamic Arts Museum Malaysia",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.6897523,
-          3.1414518
-        ]
-      },
-      "id": "way/659878360"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/661782737",
-        "alt_name": "Menara EQ",
-        "building": "commercial",
-        "building:levels": "55",
-        "building:levels:underground": "4",
-        "height": "230",
-        "name": "Equatorial Plaza",
-        "name:en": "Equatorial Plaza",
-        "start_date": "2018",
-        "website": "https://equatorialplaza.com/",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7096909,
-          3.1530513
-        ]
-      },
-      "id": "way/661782737"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/661786933",
-        "addr:city": "Kuala Lumpur",
-        "addr:housenumber": "121",
-        "addr:postcode": "50450",
-        "addr:street": "Jalan Ampang",
-        "building": "hotel",
-        "building:levels": "55",
-        "height": "235",
-        "layer": "1",
-        "start_date": "2018",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7094106,
-          3.1584938
-        ]
-      },
-      "id": "way/661786933"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/690817756",
-        "addr:city": "Kuala Lumpur",
-        "addr:housenumber": "2",
-        "addr:postcode": "55100",
-        "addr:street": "Jalan Hang Tuah",
-        "building": "retail",
-        "building:levels": "3.5",
-        "description": "F&B Hub",
-        "email": "enquiry@tuah1895.my",
-        "name": "PLAZA TUAH 1895 @ Bukit Bintang City Centre",
-        "name:en": "Tuah 1895",
-        "name:ms": "Plaza Tuah 1895",
-        "official_name": "Plaza Tuah 1895",
-        "operator": "BBCC Development Sdn. Bhd.",
-        "phone": "+603 9770 2255",
-        "start_date": "2025-01",
-        "website": "https://tuah1895.my/",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7073286,
-          3.1411243
-        ]
-      },
-      "id": "way/690817756"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "way/801337963",
         "addr:city": "Kuala Lumpur",
         "addr:postcode": "50050",
@@ -940,158 +347,6 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "way/863227716",
-        "addr:city": "Kuala Lumpur",
-        "addr:postcode": "55188",
-        "addr:street": "Persiaran TRX",
-        "air_conditioning": "yes",
-        "alt_name": "Lifestyle Quarter",
-        "building": "retail",
-        "building:levels": "5",
-        "contact:facebook": "https://www.facebook.com/TRXtheexchange/",
-        "email": "guest.experience@theexchangetrx.com.my",
-        "internet_access": "wlan",
-        "internet_access:fee": "no",
-        "layer": "2",
-        "name": "The Exchange TRX",
-        "name:en": "The Exchange TRX",
-        "name:ms": "Plaza The Exchange TRX",
-        "opening_date": "2023-11-29",
-        "opening_hours": "Mo-Su 10:00-22:00",
-        "operator": "LQ Retail Sdn Bhd",
-        "phone": "+03 8682 9888",
-        "shop": "mall",
-        "start_date": "2023-11-29",
-        "stroller": "limited",
-        "toilets": "yes",
-        "toilets:wheelchair": "yes",
-        "website": "https://www.theexchangetrx.com/",
-        "wheelchair": "yes",
-        "wikidata": "Q123699989",
-        "wikimedia_commons": "Category:The_Exchange_TRX",
-        "wikipedia": "en:The Exchange TRX",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7179499,
-          3.1426374
-        ]
-      },
-      "id": "way/863227716"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/863227718",
-        "addr:housename": "Menara IQ",
-        "alt_name": "HSBC Bank",
-        "building": "office",
-        "building:levels": "33",
-        "name": "Menara IQ @ TRX",
-        "name:en": "IQ Tower @ TRX",
-        "name:ms": "Menara IQ @ TRX",
-        "start_date": "2022-04",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7190175,
-          3.1405254
-        ]
-      },
-      "id": "way/863227718"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/919093803",
-        "addr:housename": "Menara Affin",
-        "alt_name": "Affin Bank Tower",
-        "building": "office",
-        "building:levels": "47",
-        "height": "233",
-        "name": "Menara Affin @ TRX",
-        "name:en": "Affin Tower @ TRX",
-        "name:ms": "Menara Affin @ TRX",
-        "name:zh": "艾芬大厦 @ 敦拉萨国际贸易中心",
-        "name:zh-Hans": "艾芬大厦 @ 敦拉萨国际贸易中心",
-        "name:zh-Hant": "艾芬大樓 @ 敦拉薩國際貿易中心",
-        "start_date": "2022-04",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7196718,
-          3.1407121
-        ]
-      },
-      "id": "way/919093803"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/1148185905",
-        "addr:city": "Kuala Lumpur",
-        "addr:postcode": "50088",
-        "addr:street": "Persiaran KLCC",
-        "alt_name": "KLCC East Gate",
-        "building": "mall",
-        "building:levels": "5",
-        "description": "Future Mall by KLCC",
-        "layer": "1",
-        "name": "Plaza Ombak KLCC",
-        "name:en": "Plaza Ombak KLCC",
-        "name:ms": "Plaza Ombak KLCC",
-        "official_name": "Plaza Ombak KLCC",
-        "shop": "mall",
-        "source:url": "https://www.facebook.com/PlacesMalaysia/posts/new-ombak-klcc-mall-opening-soon-this-october-this-new-retail-and-lifestyle-mall/1236325298500448/",
-        "start_date": "2026-08-21",
-        "website": "https://www.ombakklcc.com.my/",
-        "wikidata": "Q136464527",
-        "wikimedia_commons": "Category:Ombak KLCC",
-        "wikipedia": "en:Ombak KLCC",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7177939,
-          3.1565917
-        ]
-      },
-      "id": "way/1148185905"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "way/1237772917",
-        "brand": "Marriott",
-        "brand:wikidata": "Q3918608",
-        "building": "apartments",
-        "name": "Marriott Executive Apartments",
-        "name:en": "Marriott Executive Apartments",
-        "phone": "+60 3-23302880",
-        "start_date": "2025-10-01",
-        "tourism": "apartment",
-        "website": "https://www.marriott.com/en-us/hotels/kulea-marriott-executive-apartments-kuala-lumpur",
-        "@geometry": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.7166678,
-          3.1523847
-        ]
-      },
-      "id": "way/1237772917"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "way/1254323729",
         "addr:housenumber": "41",
         "addr:street": "Jalan Hang Lekiu",
@@ -1116,52 +371,635 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "way/1410134107",
-        "building": "office",
-        "building:levels": "53",
-        "height": "252",
-        "name": "Menara Permata Sapura",
-        "name:en": "Permata Sapura Tower",
-        "name:ms": "Menara Sapura",
-        "start_date": "2021",
-        "website": "https://www.sapuraproperty.com.my/permata-sapura/",
-        "wikidata": "Q110300685",
-        "wikimedia_commons": "Category:Permata Sapura Tower",
-        "wikipedia": "en:Permata Sapura Tower",
+        "@id": "way/32418529",
+        "addr:street": "Jalan Raja",
+        "building": "public",
+        "name": "Old High Court Building",
+        "name:en": "Old High Court Building",
+        "name:ms": "Mahkamah Tinggi Lama",
+        "start_date": "1915",
+        "wikidata": "Q12053152",
+        "wikipedia": "en:Old_High_Court_Building_(Kuala_Lumpur)",
         "@geometry": "center"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          101.7137049,
-          3.1532485
+          101.6942000,
+          3.1492000
         ]
       },
-      "id": "way/1410134107"
+      "id": "way/32418529"
     },
     {
       "type": "Feature",
       "properties": {
-        "@id": "way/1431173235",
-        "addr:housenumber": "6",
-        "addr:street": "Jalan Panggung",
-        "building": "commercial",
-        "name": "Wisma Persatuan Hing An",
-        "name:ms": "Wisma Persatuan Hing An",
-        "name:zh": "雪隆兴安会馆大厦",
-        "name:zh-Hans": "雪隆兴安会馆大厦",
-        "name:zh-Hant": "雪隆興安會館大廈",
-        "start_date": "1985",
+        "@id": "way/23766165",
+        "addr:street": "Dataran Merdeka",
+        "building": "yes",
+        "name": "Kuala Lumpur City Gallery",
+        "name:en": "Kuala Lumpur City Gallery",
+        "official_name": "Former Government Printing Office",
+        "start_date": "1899",
+        "tourism": "museum",
+        "wikidata": "Q28224795",
         "@geometry": "center"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          101.6973333,
-          3.1419548
+          101.6936300,
+          3.1478100
         ]
       },
-      "id": "way/1431173235"
+      "id": "way/23766165"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23766160",
+        "addr:street": "Jalan Raja Laut",
+        "building": "theatre",
+        "name": "Panggung Bandaraya DBKL",
+        "name:en": "DBKL City Theatre",
+        "start_date": "1896",
+        "wikidata": "Q5204853",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6947000,
+          3.1501000
+        ]
+      },
+      "id": "way/23766160"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23766162",
+        "addr:street": "Jalan Sultan Hishamuddin",
+        "building": "museum",
+        "name": "National Textiles Museum",
+        "name:en": "National Textiles Museum",
+        "name:ms": "Muzium Tekstil Negara",
+        "start_date": "1905",
+        "tourism": "museum",
+        "wikidata": "Q6978877",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6942700,
+          3.1473800
+        ]
+      },
+      "id": "way/23766162"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46820101",
+        "addr:street": "Jalan Raja",
+        "building": "yes",
+        "name": "Guthrie Building",
+        "name:en": "Guthrie Building",
+        "start_date": "1912",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6940000,
+          3.1471000
+        ]
+      },
+      "id": "way/46820101"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23766163",
+        "addr:street": "Jalan Raja",
+        "building": "museum",
+        "name": "Old Music Museum / Former Chartered Bank",
+        "name:en": "Old Music Museum",
+        "start_date": "1919",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6938900,
+          3.1486100
+        ]
+      },
+      "id": "way/23766163"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31336421",
+        "addr:street": "Jalan Sultan Hishamuddin",
+        "building": "train_station",
+        "name": "Kuala Lumpur Railway Station",
+        "name:en": "Kuala Lumpur Railway Station",
+        "name:ms": "Stesen Kereta Api Kuala Lumpur",
+        "start_date": "1910",
+        "wikidata": "Q2382023",
+        "wikipedia": "en:Kuala Lumpur railway station",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6937790,
+          3.1398900
+        ]
+      },
+      "id": "way/31336421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31336422",
+        "addr:street": "Jalan Sultan Hishamuddin",
+        "building": "office",
+        "name": "Former FMS Railway Headquarters",
+        "name:en": "Malayan Railway Administration Building",
+        "name:ms": "Bangunan Ibu Pejabat Keretapi Tanah Melayu",
+        "start_date": "1917",
+        "wikidata": "Q6741548",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6934000,
+          3.1404000
+        ]
+      },
+      "id": "way/31336422"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/456123789",
+        "addr:street": "Dataran Merdeka",
+        "amenity": "fountain",
+        "name": "Victorian Fountain",
+        "name:en": "Victorian Fountain",
+        "start_date": "1897",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6937000,
+          3.1486000
+        ]
+      },
+      "id": "node/456123789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31336425",
+        "addr:street": "Jalan Tangsi",
+        "building": "house",
+        "name": "Rumah Tangsi / Loke Chow Kit Mansion",
+        "name:en": "Rumah Tangsi",
+        "start_date": "1903",
+        "wikidata": "Q108865421",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6917000,
+          3.1508000
+        ]
+      },
+      "id": "way/31336425"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/45812984",
+        "addr:street": "Jalan Medan Tuanku",
+        "building": "house",
+        "name": "Loke Yew Mansion",
+        "name:en": "Loke Yew Mansion",
+        "start_date": "1892",
+        "wikidata": "Q6668589",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6983000,
+          3.1593000
+        ]
+      },
+      "id": "way/45812984"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/82390182",
+        "addr:street": "Jalan Istana",
+        "building": "palace",
+        "name": "Istana Negara / Old National Palace",
+        "name:en": "Old Istana Negara",
+        "name:ms": "Istana Negara Lama",
+        "start_date": "1928",
+        "wikidata": "Q3301077",
+        "wikipedia": "en:Istana_Negara,_Kuala_Lumpur_(old)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6961000,
+          3.1325000
+        ]
+      },
+      "id": "way/82390182"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/52819012",
+        "addr:street": "Jalan Ampang",
+        "building": "yes",
+        "name": "MaTiC / Malaysia Tourism Centre",
+        "name:en": "Malaysia Tourism Centre",
+        "name:ms": "Pusat Pelancongan Malaysia",
+        "start_date": "1935",
+        "wikidata": "Q6737339",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7056000,
+          3.1568000
+        ]
+      },
+      "id": "way/52819012"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/42189021",
+        "addr:street": "Jalan Stonor",
+        "building": "house",
+        "name": "Rumah Penghulu Abu Seman",
+        "name:en": "Rumah Penghulu Abu Seman",
+        "start_date": "1920",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7156000,
+          3.1511000
+        ]
+      },
+      "id": "way/42189021"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/42189022",
+        "addr:street": "Jalan Stonor",
+        "building": "yes",
+        "name": "Badan Warisan Malaysia HQ",
+        "name:en": "Heritage Model House",
+        "start_date": "1925",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7158000,
+          3.1512000
+        ]
+      },
+      "id": "way/42189022"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24577280",
+        "addr:street": "Jalan Tun Perak",
+        "amenity": "place_of_worship",
+        "building": "mosque",
+        "name": "Masjid Jamek Sultan Abdul Samad",
+        "name:en": "Sultan Abdul Samad Jamek Mosque",
+        "name:ms": "Masjid Jamek Sultan Abdul Samad",
+        "religion": "muslim",
+        "start_date": "1909",
+        "wikidata": "Q1258168",
+        "wikipedia": "en:Jamek_Mosque",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6956920,
+          3.1488060
+        ]
+      },
+      "id": "way/24577280"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24577285",
+        "addr:street": "Lebuh Pudu",
+        "amenity": "place_of_worship",
+        "building": "temple",
+        "name": "Sin Sze Si Ya Temple",
+        "name:en": "Sin Sze Si Ya Temple",
+        "name:zh": "仙四师爷庙",
+        "religion": "taoist",
+        "start_date": "1864",
+        "wikidata": "Q2494864",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6963900,
+          3.1456500
+        ]
+      },
+      "id": "way/24577285"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/24577288",
+        "addr:street": "Jalan Tun H.S. Lee",
+        "amenity": "place_of_worship",
+        "building": "temple",
+        "name": "Sri Mahamariamman Temple",
+        "name:en": "Sri Mahamariamman Temple",
+        "name:ta": "ஸ்ரீ மகாமாரியம்மன் திருக்கோவில்",
+        "religion": "hindu",
+        "start_date": "1873",
+        "wikidata": "Q3027878",
+        "wikipedia": "en:Sri_Mahamariamman_Temple,_Kuala_Lumpur",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6964000,
+          3.1444000
+        ]
+      },
+      "id": "way/24577288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/305777980",
+        "addr:street": "Jalan Raja",
+        "amenity": "place_of_worship",
+        "building": "church",
+        "name": "St. Mary's Cathedral",
+        "name:en": "St. Mary's Cathedral",
+        "religion": "christian",
+        "start_date": "1894",
+        "wikidata": "Q7589988",
+        "wikipedia": "en:St._Mary%27s_Cathedral,_Kuala_Lumpur",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6938000,
+          3.1503000
+        ]
+      },
+      "id": "way/305777980"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/466004235",
+        "addr:street": "Jalan Berhala",
+        "amenity": "place_of_worship",
+        "building": "temple",
+        "name": "Buddhist Maha Vihara",
+        "name:en": "Buddhist Maha Vihara",
+        "religion": "buddhist",
+        "start_date": "1894",
+        "wikidata": "Q4984257",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6879000,
+          3.1332000
+        ]
+      },
+      "id": "way/466004235"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/12839210",
+        "addr:street": "Medan Pasar",
+        "building": "commercial",
+        "name": "Medan Pasar Shophouses / Old Market Square",
+        "name:en": "Old Market Square",
+        "start_date": "1907",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6961000,
+          3.1467000
+        ]
+      },
+      "id": "way/12839210"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23766166",
+        "addr:street": "Jalan Tun H.S. Lee",
+        "building": "commercial",
+        "name": "Lee Rubber Building",
+        "name:en": "Lee Rubber Building",
+        "start_date": "1930",
+        "wikidata": "Q108865422",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6963000,
+          3.1438000
+        ]
+      },
+      "id": "way/23766166"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23766167",
+        "addr:street": "Jalan Tuanku Abdul Rahman",
+        "building": "cinema",
+        "name": "Coliseum Theatre",
+        "name:en": "Coliseum Theatre",
+        "start_date": "1920",
+        "wikidata": "Q5145812",
+        "wikipedia": "en:Coliseum_Theatre_(Kuala_Lumpur)",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6963000,
+          3.1537000
+        ]
+      },
+      "id": "way/23766167"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83912039",
+        "addr:street": "Lorong Panggung",
+        "building": "yes",
+        "name": "Kwai Chai Hong",
+        "name:en": "Kwai Chai Hong",
+        "name:zh": "鬼仔巷",
+        "start_date": "1910",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6975000,
+          3.1418000
+        ]
+      },
+      "id": "way/83912039"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83912040",
+        "addr:street": "Jalan Doraisamy",
+        "building": "retail",
+        "name": "The Row KL",
+        "name:en": "The Row KL",
+        "start_date": "1940",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6998000,
+          3.1583000
+        ]
+      },
+      "id": "way/83912040"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83912041",
+        "addr:street": "Kampung Baru",
+        "building": "residential",
+        "name": "Kampung Baru Traditional Houses",
+        "name:ms": "Rumah Tradisional Kampung Baru",
+        "start_date": "1899",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7032000,
+          3.1610000
+        ]
+      },
+      "id": "way/83912041"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23766168",
+        "addr:street": "Dataran Merdeka",
+        "building": "yes",
+        "name": "Royal Selangor Club",
+        "name:en": "Royal Selangor Club",
+        "start_date": "1884",
+        "wikidata": "Q7374824",
+        "wikipedia": "en:Royal_Selangor_Club",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6933000,
+          3.1491000
+        ]
+      },
+      "id": "way/23766168"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23766169",
+        "addr:street": "Jalan Bukit Nanas",
+        "building": "school",
+        "name": "St. John's Institution",
+        "name:en": "St. John's Institution",
+        "start_date": "1904",
+        "wikidata": "Q7588656",
+        "wikipedia": "en:St._John%27s_Institution",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7001000,
+          3.1495000
+        ]
+      },
+      "id": "way/23766169"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23766170",
+        "addr:street": "Jalan Hang Tuah",
+        "building": "school",
+        "name": "Victoria Institution",
+        "name:en": "Victoria Institution",
+        "start_date": "1893",
+        "wikidata": "Q3558117",
+        "wikipedia": "en:Victoria_Institution",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7028000,
+          3.1396000
+        ]
+      },
+      "id": "way/23766170"
     }
   ]
 }
