@@ -1000,6 +1000,121 @@
         ]
       },
       "id": "way/23766170"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1092837101",
+        "addr:city": "Kuala Lumpur",
+        "addr:street": "Jalan Raja Laut",
+        "building": "retail",
+        "description": "Bazaar Baru Chow Kit / Market hall building",
+        "name": "Bazaar Baru Chow Kit",
+        "name:en": "Chow Kit Market",
+        "name:ms": "Bazaar Baru Chow Kit",
+        "name:zh": "秋杰巴刹",
+        "opening_hours": "Mo-Su 06:00-18:00",
+        "start_date": "1955",
+        "tourism": "attraction",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6983000,
+          3.1643000
+        ]
+      },
+      "id": "way/1092837101"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/98237102",
+        "addr:housenumber": "98-100",
+        "addr:street": "Jalan Tuanku Abdul Rahman",
+        "building": "restaurant",
+        "description": "Colonial-era Western restaurant established in 1921.",
+        "name": "Coliseum Cafe & Grill Room",
+        "name:en": "Coliseum Cafe",
+        "start_date": "1921",
+        "tourism": "attraction",
+        "website": "https://coliseum1921.com/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6965000,
+          3.1539000
+        ]
+      },
+      "id": "way/98237102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/8237103",
+        "addr:street": "Jalan Tuanku Abdul Rahman",
+        "building": "retail",
+        "description": "Colonial-era pre-war shophouses along lower Batu Road.",
+        "name": "Jalan TAR Heritage Shophouses",
+        "name:en": "Jalan TAR Colonial Shophouses",
+        "start_date": "1920",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6971000,
+          3.1578000
+        ]
+      },
+      "id": "way/8237103"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/102938475",
+        "addr:street": "Jalan Raja Laut",
+        "building": "retail",
+        "description": "Historic shopping complex on Batu Road/Jalan Raja Laut built in 1976.",
+        "name": "Pertama Complex",
+        "name:en": "Pertama Complex",
+        "opening_hours": "Mo-Su 10:00-22:00",
+        "shop": "mall",
+        "start_date": "1976",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6961000,
+          3.1558000
+        ]
+      },
+      "id": "way/102938475"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/49281723",
+        "addr:street": "Jalan Chow Kit",
+        "building": "commercial",
+        "description": "Classic pre-war commercial shophouses along Jalan Chow Kit.",
+        "name": "Jalan Chow Kit Heritage Shophouses",
+        "name:en": "Chow Kit Historic Shophouses",
+        "start_date": "1930",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6988000,
+          3.1633000
+        ]
+      },
+      "id": "way/49281723"
     }
   ]
 }
