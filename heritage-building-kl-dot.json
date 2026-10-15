@@ -6,16 +6,16 @@
   "title": "Kuala Lumpur Heritage Buildings: Spatial Location",
   "params": [
     {"name": "c_lon", "value": 101.6965},
-    {"name": "c_lat", "value": 3.145},
-    {"name": "overview_zoom", "value": 1000000},
+    {"name": "c_lat", "value": 3.152},
+    {"name": "overview_zoom", "value": 690000},
     {"name": "focus_zoom", "value": 2500000},
     {
       "name": "center_to",
-      "value": [101.6965, 3.145],
+      "value": [101.6965, 3.152],
       "bind": {
         "input": "select",
         "options": [
-          [101.6965, 3.145],
+          [101.6965, 3.151],
           [101.6937, 3.1479],
           [101.6960, 3.1497],
           [101.6955, 3.1451],
@@ -37,7 +37,7 @@
     },
     {
       "name": "zoom_level",
-      "expr": "(center_to[0] == c_lon && center_to[1] == c_lat) ? overview_zoom : focus_zoom"
+      "expr": "(abs(center_to[0] - c_lon) < 0.0001 && abs(center_to[1] - c_lat) < 0.0001) ? overview_zoom : focus_zoom"
     }
   ],
   "projection": {
