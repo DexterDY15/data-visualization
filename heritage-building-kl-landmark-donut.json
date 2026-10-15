@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Buildings vs Non-building Landmarks",
+    "subtitle": "Kuala Lumpur Heritage Landmarks",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "offset": 15
+  },
+  "width": 320,
+  "height": 320,
+  "padding": 20,
+  "background": "#fafafa",
+  "view": {"stroke": null},
+  "data": {
+    "url": "data-basic.json",
+    "format": {"type": "json"}
+  },
+  "transform": [
+    {
+      "calculate": "test(/Monument|Garden|Site|Padang/, datum.name) ? 'Non-building landmark' : 'Building'",
+      "as": "landmark_type"
+    },
+    {
+      "aggregate": [{"op": "count", "as": "landmark_count"}],
+      "groupby": ["landmark_type"]
+    },
+    {
+      "joinaggregate": [{"op": "sum", "field": "landmark_count", "as": "total"}]
+    },
+    {"calculate": "datum.landmark_count / datum.total", "as": "share"}
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 82,
+        "outerRadius": 145,
+        "stroke": "#ffffff",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "theta": {"field": "landmark_count", "type": "quantitative", "stack": true},
+        "order": {
+          "field": "landmark_type",
+          "type": "nominal",
+          "sort": ["Building", "Non-building landmark"]
+        },
+        "color": {
+          "field": "landmark_type",
+          "type": "nominal",
+          "title": "Landmark type",
+          "scale": {
+            "domain": ["Building", "Non-building landmark"],
+            "range": ["#8B4513", "#2E8B57"]
+          },
+          "legend": {"orient": "bottom", "direction": "vertical"}
+        },
+        "tooltip": [
+          {"field": "landmark_type", "type": "nominal", "title": "Type"},
+          {"field": "landmark_count", "type": "quantitative", "title": "Landmarks"},
+          {"field": "share", "type": "quantitative", "title": "Share", "format": ".1%"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 32,
+        "fontWeight": "bold",
+        "color": "#333333",
+        "dy": -8
+      },
+      "encoding": {
+        "x": {"value": 160},
+        "y": {"value": 160},
+        "text": {"field": "total", "type": "quantitative"}
+      }
+    },
+    {
+      "mark": {"type": "text", "fontSize": 12, "color": "#666666", "dy": 18},
+      "encoding": {
+        "x": {"value": 160},
+        "y": {"value": 160},
+        "text": {"value": "landmarks"}
+      }
+    }
+  ]
+}

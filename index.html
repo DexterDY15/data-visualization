@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kuala Lumpur Heritage Buildings — Visualizations</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #242424;
+        background: #f3f4f6;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header {
+        padding: 2rem max(1.25rem, calc((100% - 1200px) / 2));
+        background: #fff;
+        border-bottom: 1px solid #dedede;
+      }
+
+      h1 {
+        margin: 0 0 0.5rem;
+        font-size: clamp(1.6rem, 4vw, 2.25rem);
+      }
+
+      header p {
+        margin: 0;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem;
+      }
+
+      .introduction {
+        width: 100%;
+        margin: 0 0 1.25rem;
+        padding: 1.25rem 1.5rem;
+        box-sizing: border-box;
+        background: #fff;
+        border: 1px solid #dedede;
+        border-radius: 0.5rem;
+      }
+
+      .introduction h2 {
+        margin: 0 0 0.5rem;
+        font-size: 1.25rem;
+      }
+
+      .introduction p {
+        margin: 0;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .chart-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.25rem;
+        justify-items: end;
+      }
+
+      .chart-card {
+        width: 100%;
+        box-sizing: border-box;
+        min-width: 0;
+        padding: 1rem;
+        background: #fff;
+        border: 1px solid #dedede;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px #0000000d;
+      }
+
+      .chart-card h2 {
+        margin: 0 0 0.75rem;
+        font-size: 1.1rem;
+      }
+
+      .feature-layout {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.4fr) minmax(0, 1fr);
+        gap: 1.5rem;
+        align-items: start;
+      }
+
+      .feature-description p {
+        margin: 0;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .donut-comparison {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 360px) minmax(0, 360px) minmax(0, 1fr);
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .chart-narrative {
+        margin-top: 1.25rem;
+        color: #555;
+        line-height: 1.7;
+      }
+
+      .chart-narrative h3 {
+        margin: 0 0 0.75rem;
+        color: #242424;
+        font-size: 1.1rem;
+      }
+
+      .chart-narrative p {
+        margin: 0 0 0.9rem;
+      }
+
+      .chart-narrative p:last-child {
+        margin-bottom: 0;
+      }
+
+      .chart-frame {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow-x: auto;
+      }
+
+      .chart-frame.vega-embed {
+        display: block !important;
+      }
+
+      .chart-frame.vega-embed canvas.marks,
+      .chart-frame.vega-embed svg {
+        display: block;
+        margin-left: auto;
+      }
+
+      #treemap canvas.marks {
+        margin-right: auto;
+      }
+
+      .chart-frame.vega-embed .vega-bindings {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .chart-status {
+        color: #666;
+      }
+
+      .chart-error {
+        color: #a12622;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 480px) {
+        main {
+          padding: 1rem 0.75rem;
+        }
+
+        .chart-card {
+          padding: 0.75rem;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .feature-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .donut-comparison {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  </head>
+  <body>
+    <header>
+      <h1>The Muddy Beginnings of a City</h1>
+      <p>A Data Visualization of Kuala Lumpur Heritage Landmarks</p>
+    </header>
+
+    <main>
+      <section class="introduction" aria-labelledby="introduction-title">
+        <h2 id="introduction-title">Introduction</h2>
+        <p>
+          This dashboard explores Malaysia’s heritage landmarks, focusing on historic sites in Kuala Lumpur. 
+          Use the interactive charts to explore landmark locations, architectural styles, original and current 
+          functions, age, and heritage status. Hover over chart marks for details.
+        </p>
+      </section>
+
+      <div class="chart-grid">
+        <section class="chart-card" aria-labelledby="dot-map-title">
+          <h2 id="dot-map-title">Once Upon a Muddy Confluence</h2>
+          <div class="feature-layout">
+            <div class="feature-description">
+              <p>Select the Map Areas to explore heritage landmarks in specific areas.</p>
+            </div>
+            <div class="chart-frame" id="dot-map" aria-live="polite">
+              <p class="chart-status">Loading chart…</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="state-map-title">
+          <h2 id="state-map-title">Proportional Symbol Map — Heritage Landmarks in Each State</h2>
+          <div class="feature-layout">
+            <div class="feature-description">
+              <p>Compare the estimated number of heritage buildings across Malaysian states. Larger circles indicate states with more recorded buildings; hover over a circle to see its state and count.</p>
+            </div>
+            <div class="chart-frame" id="state-map" aria-live="polite">
+              <p class="chart-status">Loading chart…</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="treemap-title">
+          <h2 id="treemap-title">Treemap — Architectural Style</h2>
+          <div class="chart-frame" id="treemap" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
+          <div class="chart-narrative">
+            <p>
+              An architectural style is a visual and structural shorthand that tells the story of the time, place, culture, and technology that created it. Rather than just decorative choices, a building's style functions as a physical record of human history.
+            </p>
+            <p>
+              Kuala Lumpur’s heritage landmarks tell a story of colonial adaptation, migration, and survival in a tropical environment.
+            </p>
+            <p>
+              By weaving these distinct architectural movements together, Kuala Lumpur's heritage landscape unfolds as a physical timeline of political and social evolution. Early Colonial architecture projected institutional discipline, an unyielding connection to the British homeland, and the absolute imperial authority of the crown over the colony. As governance evolved, the British attempted to legitimize their rule through the Colonial Islamic style—a romanticized attempt to construct an "official" state identity that felt visually harmonious with the local Muslim populace while framing British rule as the ultimate protector of local culture. Alongside these imperial narratives stood the Vernacular tradition, embodied by the Straits Eclectic shophouse and the Traditional Malay house. These structures demonstrated high environmental intelligence; they did not fight the tropical climate but cooperated with it entirely through passive cooling, utilizing central airwells, open layouts, raised stilts, and natural materials like timber or local clay. Finally, following independence, Modern styles swept away this ornamentation in favor of radical optimism, self-reliance, and a clean break from both feudal and colonial pasts. This bold geometry broadcasted a message to the world that the newly independent Malaysia was democratic, rational, and technologically progressive.
+            </p>
+          </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="original-function-title">
+          <h2 id="original-function-title">Lollipop Chart — Original Function</h2>
+          <div class="feature-layout">
+            <div class="feature-description">
+              <p>See how Kuala Lumpur’s heritage landmarks were originally used, from civic buildings and schools to residences and places of worship. The lollipop length and label show the number in each category; hover for details.</p>
+            </div>
+            <div class="chart-frame" id="original-function" aria-live="polite">
+              <p class="chart-status">Loading chart…</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="current-function-title">
+          <h2 id="current-function-title">Lollipop Chart — Current Function</h2>
+          <div class="feature-layout">
+            <div class="feature-description">
+              <p>Many heritage landmarks have changed purpose over time. Compare their current uses, including museums, government offices, education, and community spaces; longer lollipops represent more landmarks.</p>
+            </div>
+            <div class="chart-frame" id="current-function" aria-live="polite">
+              <p class="chart-status">Loading chart…</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="age-pyramid-title">
+          <h2 id="age-pyramid-title">Age Pyramid Chart — Landmarks per Era</h2>
+          <div class="feature-layout">
+            <div class="feature-description">
+              <p>Landmarks are grouped into ten-year age bands, with Colonial Era structures shown to the left and Post-Independence structures to the right. Compare the counts across eras and hover over a bar for the exact age band and total.</p>
+            </div>
+            <div class="chart-frame" id="age-pyramid" aria-live="polite">
+              <p class="chart-status">Loading chart…</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="donut-comparison-title">
+          <h2 id="donut-comparison-title">Heritage Status and Landmark Type</h2>
+          <div class="donut-comparison">
+            <div class="feature-description">
+              <p>Heritage status reflects the recognition given to each landmark. Hover over a segment to compare the counts and proportions of Heritage and National Heritage sites.</p>
+            </div>
+            <div class="chart-frame" id="donut" aria-live="polite">
+              <p class="chart-status">Loading chart…</p>
+            </div>
+            <div class="chart-frame" id="landmark-donut" aria-live="polite">
+              <p class="chart-status">Loading chart…</p>
+            </div>
+            <div class="feature-description">
+              <p>This chart compares buildings with non-building landmarks. Monuments, Perdana Botanical Garden, and the flag-hoisting site and padang are classified as non-building landmarks; the other records are classified as buildings.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      const charts = [
+        { element: "dot-map", spec: "heritage-building-kl-dot.json" },
+        { element: "state-map", spec: "heritage-building-malaysia-proportional.vega" },
+        { element: "treemap", spec: "heritage-building-kl-treemap.json" },
+        { element: "original-function", spec: "heritage-building-kl-lollipop.json" },
+        { element: "current-function", spec: "heritage-building-kl-lollipop2.json" },
+        { element: "age-pyramid", spec: "heritage-building-kl-age-pyramid.json" },
+        { element: "donut", spec: "heritage-building-kl-donut.json" },
+        { element: "landmark-donut", spec: "heritage-building-kl-landmark-donut.json" }
+      ];
+
+      async function renderCharts() {
+        for (const chart of charts) {
+          const container = document.getElementById(chart.element);
+          try {
+            await vegaEmbed(container, chart.spec, { actions: false });
+          } catch (error) {
+            console.error(`Unable to render ${chart.spec}`, error);
+            container.replaceChildren();
+            const message = document.createElement("p");
+            message.className = "chart-error";
+            message.textContent = `Could not load this chart. Check that the page is served locally and that its spec and data files are available. (${chart.spec})`;
+            container.append(message);
+          }
+        }
+      }
+
+      renderCharts();
+    </script>
+  </body>
+</html>
