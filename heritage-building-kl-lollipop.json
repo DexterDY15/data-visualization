@@ -1,0 +1,80 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Original Functional Purposes of KL Heritage Buildings",
+    "subtitle": "Number of buildings by the function they were originally built for",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "offset": 15
+  },
+  "width": 600,
+  "height": 320,
+  "background": "#fafafa",
+  "data": {
+    "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/data-basic.json",
+    "format": {"type": "json"}
+  },
+  "transform": [
+    {"filter": "isValid(datum.purpose)"},
+    {
+      "aggregate": [{"op": "count", "as": "building_count"}],
+      "groupby": ["purpose"]
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "purpose",
+      "type": "nominal",
+      "sort": {"field": "building_count", "order": "descending"},
+      "title": null,
+      "axis": {"labelFontSize": 12, "labelLimit": 320, "domain": false, "ticks": false}
+    },
+    "x": {
+      "field": "building_count",
+      "type": "quantitative",
+      "title": "Number of Buildings",
+      "scale": {"domain": [0, 22]},
+      "axis": {"tickMinStep": 1, "grid": true, "gridDash": [2, 3]}
+    },
+    "color": {
+      "field": "purpose",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": [
+          "Civic, Government & Administrative",
+          "Education & Social Clubs",
+          "Residential & Royal",
+          "Places of Worship & Religious Institutions",
+          "Transportation & Public Infrastructure",
+          "Commerce, Finance & Retail"
+        ],
+        "range": ["#8B4513", "#3A6EA5", "#B5651D", "#2E8B57", "#7A5195", "#C9822B"]
+      }
+    },
+    "tooltip": [
+      {"field": "purpose", "type": "nominal", "title": "Purpose"},
+      {"field": "building_count", "type": "quantitative", "title": "Buildings"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "rule", "strokeWidth": 3},
+      "encoding": {
+        "x": {"datum": 0},
+        "x2": {"field": "building_count"}
+      }
+    },
+    {
+      "mark": {"type": "circle", "size": 450, "opacity": 1, "stroke": "#ffffff", "strokeWidth": 2}
+    },
+    {
+      "mark": {"type": "text", "fontSize": 11, "fontWeight": "bold"},
+      "encoding": {
+        "text": {"field": "building_count", "type": "quantitative"},
+        "color": {"value": "#ffffff"}
+      }
+    }
+  ]
+}
