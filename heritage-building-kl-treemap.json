@@ -1,0 +1,171 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Treemap of KL heritage buildings by architectural category and specific style",
+  "width": 900,
+  "height": 600,
+  "padding": 10,
+  "background": "#fafafa",
+  "autosize": "none",
+
+  "title": {
+    "text": "Architectural Styles of Kuala Lumpur Heritage Buildings",
+    "subtitle": "Large blocks = architectural category | Tiles inside = specific style (area = number of buildings)",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "offset": 12
+  },
+
+  "data": [
+    {
+      "name": "raw",
+      "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/data-basic.json",
+      "format": {"type": "json"}
+    },
+    {
+      "name": "tree_root",
+      "values": [{"id": "root", "parent": null}]
+    },
+    {
+      "name": "cats",
+      "source": "raw",
+      "transform": [
+        {"type": "aggregate", "groupby": ["category"], "ops": ["count"], "as": ["total"]},
+        {"type": "formula", "as": "id", "expr": "datum.category"},
+        {"type": "formula", "as": "parent", "expr": "'root'"},
+        {"type": "formula", "as": "category_label", "expr": "upper(slice(datum.category,0,1)) + slice(datum.category,1)"},
+        {"type": "formula", "as": "size", "expr": "null"}
+      ]
+    },
+    {
+      "name": "styles",
+      "source": "raw",
+      "transform": [
+        {"type": "aggregate", "groupby": ["category", "specific_style"], "ops": ["count"], "as": ["size"]},
+        {"type": "formula", "as": "id", "expr": "datum.category + '|' + datum.specific_style"},
+        {"type": "formula", "as": "parent", "expr": "datum.category"},
+        {"type": "formula", "as": "category_label", "expr": "upper(slice(datum.category,0,1)) + slice(datum.category,1)"}
+      ]
+    },
+    {
+      "name": "tree",
+      "source": ["tree_root", "cats", "styles"],
+      "transform": [
+        {"type": "stratify", "key": "id", "parentKey": "parent"},
+        {
+          "type": "treemap",
+          "field": "size",
+          "sort": {"field": "value", "order": "descending"},
+          "method": "squarify",
+          "round": true,
+          "size": [{"signal": "width"}, {"signal": "height"}],
+          "paddingInner": 2,
+          "paddingOuter": 3,
+          "paddingTop": 24
+        }
+      ]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [{"type": "filter", "expr": "datum.children == 0"}]
+    },
+    {
+      "name": "parents",
+      "source": "tree",
+      "transform": [{"type": "filter", "expr": "datum.depth == 1"}]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": ["Colonial", "Colonial islamic", "Modern", "Vernacular"],
+      "range": ["#8B4513", "#C9822B", "#2E8B57", "#3A6EA5"]
+    }
+  ],
+
+  "legends": [
+    {
+      "fill": "color",
+      "title": "Category",
+      "orient": "bottom",
+      "direction": "horizontal"
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "parents"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x0"},
+          "y": {"field": "y0"},
+          "x2": {"field": "x1"},
+          "y2": {"field": "y1"},
+          "fill": {"scale": "color", "field": "category_label"},
+          "fillOpacity": {"value": 0.25},
+          "stroke": {"scale": "color", "field": "category_label"},
+          "strokeWidth": {"value": 2}
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {"data": "leaves"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x0"},
+          "y": {"field": "y0"},
+          "x2": {"field": "x1"},
+          "y2": {"field": "y1"},
+          "fill": {"scale": "color", "field": "category_label"},
+          "fillOpacity": {"value": 0.85},
+          "stroke": {"value": "#ffffff"},
+          "strokeWidth": {"value": 1},
+          "tooltip": {
+            "signal": "{'Category': datum.category_label, 'Specific Style': datum.specific_style, 'Buildings': datum.size}"
+          }
+        },
+        "hover": {"fillOpacity": {"value": 1}},
+        "update": {"fillOpacity": {"value": 0.85}}
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "parents"},
+      "interactive": false,
+      "encode": {
+        "enter": {
+          "x": {"signal": "datum.x0 + 6"},
+          "y": {"signal": "datum.y0 + 5"},
+          "text": {"signal": "datum.category_label + ' (' + datum.total + ')'"},
+          "fontSize": {"value": 13},
+          "fontWeight": {"value": "bold"},
+          "fill": {"value": "#222222"},
+          "baseline": {"value": "top"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "leaves"},
+      "interactive": false,
+      "encode": {
+        "enter": {
+          "x": {"signal": "datum.x0 + 5"},
+          "y": {"signal": "datum.y0 + 4"},
+          "text": {
+            "signal": "(datum.x1 - datum.x0 > 60 && datum.y1 - datum.y0 > 30) ? datum.specific_style + ' (' + datum.size + ')' : ''"
+          },
+          "limit": {"signal": "datum.x1 - datum.x0 - 8"},
+          "fontSize": {"value": 10},
+          "fill": {"value": "#ffffff"},
+          "baseline": {"value": "top"}
+        }
+      }
+    }
+  ]
+}

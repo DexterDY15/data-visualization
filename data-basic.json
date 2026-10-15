@@ -1,352 +1,52 @@
 [
-  {
-    "name": "Former Selangor JKR Building (Textile Museum)",
-    "start_year": 1905,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)"
-  },
-  {
-    "name": "Chancery Building, Tunku Canselor Hall and Experimental Theatre",
-    "start_year": 1965,
-    "era": "Post-Independence (1957 Onwards)",
-    "category": "modern",
-    "specific_style": "Post Independence-Modern (Brutalist Influence)"
-  },
-  {
-    "name": "Carcosa Building",
-    "start_year": 1896,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Neo Gothic and Tudor"
-  },
-  {
-    "name": "City Hall Building (City Theatre)",
-    "start_year": 1896,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)"
-  },
-  {
-    "name": "Railway Headquarters Building (KTM)",
-    "start_year": 1917,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)"
-  },
-  {
-    "name": "Former Information Department Building (Block D)",
-    "start_year": 1905,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)"
-  },
-  {
-    "name": "High Court Building",
-    "start_year": 1915,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)"
-  },
-  {
-    "name": "Sultan Abdul Samad Mosque Building (Jamek Mosque)",
-    "start_year": 1909,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Moorish / Indo-Saracenic Revival"
-  },
-  {
-    "name": "Parliament Building",
-    "start_year": 1963,
-    "era": "Post-Independence (1957 Onwards)",
-    "category": "modern",
-    "specific_style": "Post Independence-Modern / International Style"
-  },
-  {
-    "name": "Federal Territory Postal Controller Office Building (KL Memorial Library)",
-    "start_year": 1907,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)"
-  },
-  {
-    "name": "General Post Office Building (Supreme Court)",
-    "start_year": 1911,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)"
-  },
-  {
-    "name": "Federal Territory Islamic Religious Office Building (Music Museum)",
-    "start_year": 1888,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Colonial-Mughal Eclectic"
-  },
-  {
-    "name": "Residency Building",
-    "start_year": 1888,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial Bungalow / Georgian Colonial"
-  },
-  {
-    "name": "St. John's Institution",
-    "start_year": 1904,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Early Romanesque and European Baroque"
-  },
-  {
-    "name": "Railway Station Building",
-    "start_year": 1910,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)"
-  },
-  {
-    "name": "Sultan Abdul Samad Building (Supreme Court), Block A",
-    "start_year": 1897,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)"
-  },
-  {
-    "name": "Kuala Lumpur and Selangor Chinese Assembly Hall",
-    "start_year": 1934,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Neo Classical"
-  },
-  {
-    "name": "St. Mary's Church",
-    "start_year": 1894,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Early English Gothic"
-  },
-  {
-    "name": "Rubber Research Institute of Malaysia",
-    "start_year": 1936,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Early Modern / Art Deco"
-  },
-  {
-    "name": "National Palace (Istana Negara)",
-    "start_year": 1928,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Neo Classical Palladium"
-  },
-  {
-    "name": "National Mosque and Heroes' Mausoleum",
-    "start_year": 1965,
-    "era": "Post-Independence (1957 Onwards)",
-    "category": "modern",
-    "specific_style": "Post Independence-Modern Vernacular (Modern Islamic)"
-  },
-  {
-    "name": "Victoria Institution Secondary School Building",
-    "start_year": 1929,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-British Colonial Classical"
-  },
-  {
-    "name": "Merdeka Stadium",
-    "start_year": 1957,
-    "era": "Post-Independence (1957 Onwards)",
-    "category": "modern",
-    "specific_style": "Independence Era-Modern Structural Engineering"
-  },
-  {
-    "name": "National Monument",
-    "start_year": 1966,
-    "era": "Post-Independence (1957 Onwards)",
-    "category": "modern",
-    "specific_style": "Modernist Commemorative Sculpture Park"
-  },
-  {
-    "name": "National Museum",
-    "start_year": 1963,
-    "era": "Post-Independence (1957 Onwards)",
-    "category": "vernacular",
-    "specific_style": "Modern Regionalist / Malay Vernacular Modern"
-  },
-  {
-    "name": "Former Malaysia Tourism Centre (MaTiC) and Tunku Abdul Rahman Hall",
-    "start_year": 1935,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Neo Classical Mansion"
-  },
-  {
-    "name": "Former Dewan Bahasa dan Pustaka Building",
-    "start_year": 1962,
-    "era": "Post-Independence (1957 Onwards)",
-    "category": "modern",
-    "specific_style": "Post Independence-Modern (Mural Art Integration)"
-  },
-  {
-    "name": "Sulaiman Building (Federal Territory Syariah Court)",
-    "start_year": 1930,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Art Deco"
-  },
-  {
-    "name": "Majestic Hotel Building (Former National Art Gallery)",
-    "start_year": 1932,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial Neo-Classical / Art Deco Eclectic"
-  },
-  {
-    "name": "Istana Budaya Building (Palace of Culture)",
-    "start_year": 1999,
-    "era": "Post-Independence (1957 Onwards)",
-    "category": "vernacular",
-    "specific_style": "Post Independence-Modern Vernacular (Sirih Junjung Motif)"
-  },
-  {
-    "name": "National Library of Malaysia Building",
-    "start_year": 1992,
-    "era": "Post-Independence (1957 Onwards)",
-    "category": "vernacular",
-    "specific_style": "Post Independence-Modern Vernacular (Tengkolok Headgear Motif)"
-  },
-  {
-    "name": "First Malayan Flag Hoisting Site and Royal Selangor Club Padang",
-    "start_year": 1957,
-    "era": "Post-Independence (1957 Onwards)",
-    "category": "modern",
-    "specific_style": "Civic Plaza & Flagpole Monument"
-  },
-  {
-    "name": "Perdana Botanical Garden (KL Lake Gardens)",
-    "start_year": 1888,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "British Colonial Landscape Architecture"
-  },
-  {
-    "name": "Anti-Corruption Agency Building",
-    "start_year": 1920,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial Utilitarian / Public Works Department"
-  },
-  {
-    "name": "Former Loke Chow Kit House Building",
-    "start_year": 1907,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-European Baroque Mansion"
-  },
-  {
-    "name": "Industrial Court Building",
-    "start_year": 1905,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)"
-  },
-  {
-    "name": "Telekom Museum Building",
-    "start_year": 1928,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Neo Classical Greek Revival"
-  },
-  {
-    "name": "Drama Theatre Building",
-    "start_year": 1914,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-English Country Cottage"
-  },
-  {
-    "name": "Institute for Medical Research Building",
-    "start_year": 1900,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Neo Classical / Art Deco"
-  },
-  {
-    "name": "Guest Palace (Istana Tetamu)",
-    "start_year": 1889,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Neo Classical Residence"
-  },
-  {
-    "name": "Central Market",
-    "start_year": 1888,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Art Deco (1937 Facade Modernization)"
-  },
-  {
-    "name": "P. Ramlee Memorial Library",
-    "start_year": 1960,
-    "era": "Post-Independence (1957 Onwards)",
-    "category": "vernacular",
-    "specific_style": "Post-Independence Malay Kampong Vernacular Wooden House"
-  },
-  {
-    "name": "Royal Selangor Club Building",
-    "start_year": 1884,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Mock Tudor Revival"
-  },
-  {
-    "name": "Royal Malaysia Police PULAPOL Monument",
-    "start_year": 1904,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial Military Institutional Commemorative Monument"
-  },
-  {
-    "name": "Federal House",
-    "start_year": 1954,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial",
-    "specific_style": "Colonial-Utilitarian Modernist Office"
-  },
-  {
-    "name": "National Stadium (Stadium Negara)",
-    "start_year": 1962,
-    "era": "Post-Independence (1957 Onwards)",
-    "category": "modern",
-    "specific_style": "Post Independence-Modern Structural Suspended Roof"
-  },
-  {
-    "name": "Vivekananda Ashrama Building",
-    "start_year": 1904,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "vernacular",
-    "specific_style": "Colonial-Indian Renaissance / Southern Indian Vernacular"
-  },
-  {
-    "name": "Sin Sze Si Ya Temple",
-    "start_year": 1864,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "vernacular",
-    "specific_style": "Traditional Chinese Temple Vernacular"
-  },
-  {
-    "name": "Maxwell Secondary School",
-    "start_year": 1917,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "colonial islamic",
-    "specific_style": "Colonial-Moorish and Gothic Eclectic"
-  },
-  {
-    "name": "Chan She Shu Yuen Clan Ancestral Hall",
-    "start_year": 1906,
-    "era": "Colonial Era (Pre-1957)",
-    "category": "vernacular",
-    "specific_style": "Classic Southern Chinese Cantonese Temple Vernacular"
-  }
+  {"name": "Former Selangor JKR Building (Textile Museum)", "start_year": 1905, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)", "purpose": "Civic, Government & Administrative"},
+  {"name": "Chancery Building, Tunku Canselor Hall and Experimental Theatre", "start_year": 1965, "era": "Post-Independence (1957 Onwards)", "category": "modern", "specific_style": "Post Independence-Modern (Brutalist Influence)", "purpose": "Education & Social Clubs"},
+  {"name": "Carcosa Building", "start_year": 1896, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Neo Gothic and Tudor", "purpose": "Residential & Royal"},
+  {"name": "City Hall Building (City Theatre)", "start_year": 1896, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)", "purpose": "Civic, Government & Administrative"},
+  {"name": "Railway Headquarters Building (KTM)", "start_year": 1917, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)", "purpose": "Transportation & Public Infrastructure"},
+  {"name": "Former Information Department Building (Block D)", "start_year": 1905, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)", "purpose": "Civic, Government & Administrative"},
+  {"name": "High Court Building", "start_year": 1915, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)", "purpose": "Civic, Government & Administrative"},
+  {"name": "Sultan Abdul Samad Mosque Building (Jamek Mosque)", "start_year": 1909, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Moorish / Indo-Saracenic Revival", "purpose": "Places of Worship & Religious Institutions"},
+  {"name": "Parliament Building", "start_year": 1963, "era": "Post-Independence (1957 Onwards)", "category": "modern", "specific_style": "Post Independence-Modern / International Style", "purpose": "Civic, Government & Administrative"},
+  {"name": "Federal Territory Postal Controller Office Building (KL Memorial Library)", "start_year": 1907, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)", "purpose": "Civic, Government & Administrative"},
+  {"name": "General Post Office Building (Supreme Court)", "start_year": 1911, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)", "purpose": "Civic, Government & Administrative"},
+  {"name": "Federal Territory Islamic Religious Office Building (Music Museum)", "start_year": 1888, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Colonial-Mughal Eclectic", "purpose": "Places of Worship & Religious Institutions"},
+  {"name": "Residency Building", "start_year": 1888, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial Bungalow / Georgian Colonial", "purpose": "Residential & Royal"},
+  {"name": "St. John's Institution", "start_year": 1904, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Early Romanesque and European Baroque", "purpose": "Education & Social Clubs"},
+  {"name": "Railway Station Building", "start_year": 1910, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)", "purpose": "Transportation & Public Infrastructure"},
+  {"name": "Sultan Abdul Samad Building (Supreme Court), Block A", "start_year": 1897, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)", "purpose": "Civic, Government & Administrative"},
+  {"name": "Kuala Lumpur and Selangor Chinese Assembly Hall", "start_year": 1934, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Neo Classical", "purpose": "Education & Social Clubs"},
+  {"name": "St. Mary's Church", "start_year": 1894, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Early English Gothic", "purpose": "Places of Worship & Religious Institutions"},
+  {"name": "Rubber Research Institute of Malaysia", "start_year": 1936, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Early Modern / Art Deco", "purpose": "Civic, Government & Administrative"},
+  {"name": "National Palace (Istana Negara)", "start_year": 1928, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Neo Classical Palladium", "purpose": "Residential & Royal"},
+  {"name": "National Mosque and Heroes' Mausoleum", "start_year": 1965, "era": "Post-Independence (1957 Onwards)", "category": "modern", "specific_style": "Post Independence-Modern Vernacular (Modern Islamic)", "purpose": "Places of Worship & Religious Institutions"},
+  {"name": "Victoria Institution Secondary School Building", "start_year": 1929, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-British Colonial Classical", "purpose": "Education & Social Clubs"},
+  {"name": "Merdeka Stadium", "start_year": 1957, "era": "Post-Independence (1957 Onwards)", "category": "modern", "specific_style": "Independence Era-Modern Structural Engineering", "purpose": "Education & Social Clubs"},
+  {"name": "National Monument", "start_year": 1966, "era": "Post-Independence (1957 Onwards)", "category": "modern", "specific_style": "Modernist Commemorative Sculpture Park", "purpose": "Civic, Government & Administrative"},
+  {"name": "National Museum", "start_year": 1963, "era": "Post-Independence (1957 Onwards)", "category": "vernacular", "specific_style": "Modern Regionalist / Malay Vernacular Modern", "purpose": "Civic, Government & Administrative"},
+  {"name": "Former Malaysia Tourism Centre (MaTiC) and Tunku Abdul Rahman Hall", "start_year": 1935, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Neo Classical Mansion", "purpose": "Residential & Royal"},
+  {"name": "Former Dewan Bahasa dan Pustaka Building", "start_year": 1962, "era": "Post-Independence (1957 Onwards)", "category": "modern", "specific_style": "Post Independence-Modern (Mural Art Integration)", "purpose": "Civic, Government & Administrative"},
+  {"name": "Sulaiman Building (Federal Territory Syariah Court)", "start_year": 1930, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Art Deco", "purpose": "Civic, Government & Administrative"},
+  {"name": "Majestic Hotel Building (Former National Art Gallery)", "start_year": 1932, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial Neo-Classical / Art Deco Eclectic", "purpose": "Commerce, Finance & Retail"},
+  {"name": "Istana Budaya Building (Palace of Culture)", "start_year": 1999, "era": "Post-Independence (1957 Onwards)", "category": "vernacular", "specific_style": "Post Independence-Modern Vernacular (Sirih Junjung Motif)", "purpose": "Civic, Government & Administrative"},
+  {"name": "National Library of Malaysia Building", "start_year": 1992, "era": "Post-Independence (1957 Onwards)", "category": "vernacular", "specific_style": "Post Independence-Modern Vernacular (Tengkolok Headgear Motif)", "purpose": "Education & Social Clubs"},
+  {"name": "First Malayan Flag Hoisting Site and Royal Selangor Club Padang", "start_year": 1957, "era": "Post-Independence (1957 Onwards)", "category": "modern", "specific_style": "Civic Plaza & Flagpole Monument", "purpose": "Education & Social Clubs"},
+  {"name": "Perdana Botanical Garden (KL Lake Gardens)", "start_year": 1888, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "British Colonial Landscape Architecture", "purpose": "Civic, Government & Administrative"},
+  {"name": "Anti-Corruption Agency Building", "start_year": 1920, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial Utilitarian / Public Works Department", "purpose": "Civic, Government & Administrative"},
+  {"name": "Former Loke Chow Kit House Building", "start_year": 1907, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-European Baroque Mansion", "purpose": "Residential & Royal"},
+  {"name": "Industrial Court Building", "start_year": 1905, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Colonial-Mughal Eclectic (Indo-Saracenic)", "purpose": "Civic, Government & Administrative"},
+  {"name": "Telekom Museum Building", "start_year": 1928, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Neo Classical Greek Revival", "purpose": "Transportation & Public Infrastructure"},
+  {"name": "Drama Theatre Building", "start_year": 1914, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-English Country Cottage", "purpose": "Residential & Royal"},
+  {"name": "Institute for Medical Research Building", "start_year": 1900, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Neo Classical / Art Deco", "purpose": "Civic, Government & Administrative"},
+  {"name": "Guest Palace (Istana Tetamu)", "start_year": 1889, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Neo Classical Residence", "purpose": "Residential & Royal"},
+  {"name": "Central Market", "start_year": 1888, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Art Deco (1937 Facade Modernization)", "purpose": "Commerce, Finance & Retail"},
+  {"name": "P. Ramlee Memorial Library", "start_year": 1960, "era": "Post-Independence (1957 Onwards)", "category": "vernacular", "specific_style": "Post-Independence Malay Kampong Vernacular Wooden House", "purpose": "Residential & Royal"},
+  {"name": "Royal Selangor Club Building", "start_year": 1884, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Mock Tudor Revival", "purpose": "Education & Social Clubs"},
+  {"name": "Royal Malaysia Police PULAPOL Monument", "start_year": 1904, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial Military Institutional Commemorative Monument", "purpose": "Civic, Government & Administrative"},
+  {"name": "Federal House", "start_year": 1954, "era": "Colonial Era (Pre-1957)", "category": "colonial", "specific_style": "Colonial-Utilitarian Modernist Office", "purpose": "Commerce, Finance & Retail"},
+  {"name": "National Stadium (Stadium Negara)", "start_year": 1962, "era": "Post-Independence (1957 Onwards)", "category": "modern", "specific_style": "Post Independence-Modern Structural Suspended Roof", "purpose": "Education & Social Clubs"},
+  {"name": "Vivekananda Ashrama Building", "start_year": 1904, "era": "Colonial Era (Pre-1957)", "category": "vernacular", "specific_style": "Colonial-Indian Renaissance / Southern Indian Vernacular", "purpose": "Places of Worship & Religious Institutions"},
+  {"name": "Sin Sze Si Ya Temple", "start_year": 1864, "era": "Colonial Era (Pre-1957)", "category": "vernacular", "specific_style": "Traditional Chinese Temple Vernacular", "purpose": "Places of Worship & Religious Institutions"},
+  {"name": "Maxwell Secondary School", "start_year": 1917, "era": "Colonial Era (Pre-1957)", "category": "colonial islamic", "specific_style": "Colonial-Moorish and Gothic Eclectic", "purpose": "Education & Social Clubs"},
+  {"name": "Chan She Shu Yuen Clan Ancestral Hall", "start_year": 1906, "era": "Colonial Era (Pre-1957)", "category": "vernacular", "specific_style": "Classic Southern Chinese Cantonese Temple Vernacular", "purpose": "Places of Worship & Religious Institutions"}
 ]
