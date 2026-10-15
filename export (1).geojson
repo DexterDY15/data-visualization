@@ -1,1313 +1,837 @@
 {
   "type": "FeatureCollection",
+  "generator": "Kuala Lumpur Heritage Architecture Dataset",
   "features": [
     {
       "type": "Feature",
+      "id": "node/sin_sze_si_ya",
       "properties": {
-        "id": 1,
-        "name": "Bangunan Bekas JKR Selangor (Muzium Tekstil)",
-        "location": "Jalan Sultan Hishamuddin",
-        "category": "Building",
-        "style": "Colonial-Mughal Eclectic",
-        "purpose": "Gallery/Museum",
-        "heritage_category": "National Heritage",
-        "start_date": "1905"
+        "original_name": "Sin Sze Si Ya Temple",
+        "current_name": "Sin Sze Si Ya Temple",
+        "start_date": "1864",
+        "addr:street": "Lebuh Pudu / Jalan Tun H.S. Lee",
+        "architectural_style": "Traditional Chinese Taoist",
+        "cultural_significance": "Founded by Yap Ah Loy; oldest Taoist temple in KL and spiritual anchor of early tin-mining pioneers."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69406, 3.14675]
+        "coordinates": [101.69639, 3.14565]
       }
     },
     {
       "type": "Feature",
+      "id": "node/sri_maha_mariamman",
       "properties": {
-        "id": 2,
-        "name": "Bangunan Canseleri, Dewan Tunku Canselor dan Panggung Eksperimen",
-        "location": "Universiti Malaya",
-        "category": "Building",
-        "style": "Post Independence-Modern",
-        "purpose": "University",
-        "heritage_category": "National Heritage",
-        "start_date": "1965"
+        "original_name": "Sri Maha Mariamman Temple",
+        "current_name": "Sri Mahamariamman Temple",
+        "start_date": "1873",
+        "addr:street": "Jalan Tun H.S. Lee",
+        "architectural_style": "South Indian Dravidian",
+        "cultural_significance": "Oldest Hindu temple in KL; traditional start point for the annual Thaipusam procession to Batu Caves."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.65768, 3.12026]
+        "coordinates": [101.6964, 3.1444]
       }
     },
     {
       "type": "Feature",
+      "id": "node/st_johns_church",
       "properties": {
-        "id": 3,
-        "name": "Bangunan Carcosa",
-        "location": "Taman Tasik Perdana",
-        "category": "Building",
-        "style": "Colonial-Neo Gothic and Tudor",
-        "purpose": "Empty/Idle",
-        "heritage_category": "National Heritage",
-        "start_date": "1896"
+        "original_name": "St. John's Church",
+        "current_name": "St. John's Cathedral",
+        "start_date": "1883",
+        "addr:street": "Jalan Bukit Nanas",
+        "architectural_style": "Neo-Gothic Revival",
+        "cultural_significance": "Mother church of the Roman Catholic Archdiocese of Kuala Lumpur."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.68028, 3.14417]
+        "coordinates": [101.6994214, 3.1498591]
       }
     },
     {
       "type": "Feature",
+      "id": "node/selangor_club",
       "properties": {
-        "id": 4,
-        "name": "Bangunan Dewan Bandaraya (Panggung Bandaraya)",
-        "location": "Jalan Raja",
-        "category": "Building",
-        "style": "Colonial-Mughal Eclectic",
-        "purpose": "Empty/Idle",
-        "heritage_category": "National Heritage",
-        "start_date": "1896"
+        "original_name": "Selangor Club",
+        "current_name": "Royal Selangor Club",
+        "start_date": "1884",
+        "addr:street": "Dataran Merdeka",
+        "architectural_style": "Mock Tudor / Colonial Revival",
+        "cultural_significance": "Historic colonial social hub facing the padang where Malayan independence was declared."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69444, 3.14917]
+        "coordinates": [101.6933, 3.1491]
       }
     },
     {
       "type": "Feature",
+      "id": "node/central_market_orig",
       "properties": {
-        "id": 5,
-        "name": "Bangunan Ibu Pejabat Keretapi (KTM)",
-        "location": "Jalan Sultan Hishamuddin",
-        "category": "Building",
-        "style": "Colonial-Mughal Eclectic",
-        "purpose": "Train Station",
-        "heritage_category": "National Heritage",
-        "start_date": "1917"
+        "original_name": "Central Market (Original Structure)",
+        "current_name": "Pasar Seni (Central Market)",
+        "start_date": "1888",
+        "addr:street": "Jalan Hang Kasturi",
+        "architectural_style": "Pre-war Market Structure / Art Deco",
+        "cultural_significance": "Evolved from a 19th-century wet market into KL's central hub for Malaysian arts, crafts, and heritage."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69361, 3.13972]
+        "coordinates": [101.6954609, 3.1457163]
       }
     },
     {
       "type": "Feature",
+      "id": "node/kwan_tai_temple",
       "properties": {
-        "id": 6,
-        "name": "Bangunan Bekas Jabatan Penerangan (Blok D)",
-        "location": "Jalan Tun Perak",
-        "category": "Building",
-        "style": "Colonial-Mughal Eclectic",
-        "purpose": "Empty/Idle",
-        "heritage_category": "National Heritage",
-        "start_date": "1905"
+        "original_name": "Kwan Tai Temple",
+        "current_name": "Guan Di Temple",
+        "start_date": "1888",
+        "addr:street": "Jalan Tun H.S. Lee",
+        "architectural_style": "Traditional Chinese Cantonese",
+        "cultural_significance": "Iconic shrine dedicated to the Taoist God of War, famous for housing a 59kg Guan Dao sword."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69528, 3.14889]
+        "coordinates": [101.69658, 3.14407]
       }
     },
     {
       "type": "Feature",
+      "id": "node/loke_yew_mansion",
       "properties": {
-        "id": 7,
-        "name": "Bangunan Mahkamah Tinggi",
-        "location": "Jalan Raja",
-        "category": "Building",
-        "style": "Colonial-Mughal Eclectic",
-        "purpose": "Empty/Idle",
-        "heritage_category": "National Heritage",
-        "start_date": "1915"
+        "original_name": "Loke Yew Mansion",
+        "current_name": "Loke Yew Mansion",
+        "start_date": "1892",
+        "addr:street": "Jalan Medan Tuanku",
+        "architectural_style": "Eclectic Chinese, Dutch & Colonial",
+        "cultural_significance": "Residence of Loke Yew, one of KL's most influential Chinese industrialists and philanthropists."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69417, 3.14944]
+        "coordinates": [101.6983, 3.1593]
       }
     },
     {
       "type": "Feature",
+      "id": "node/kwang_tong_cemetery",
       "properties": {
-        "id": 8,
-        "name": "Bangunan Masjid Sultan Abdul Samad (Masjid Jamek)",
-        "location": "Jalan Tun Perak",
-        "category": "Building",
-        "style": "Colonial-Mughal Eclectic",
-        "purpose": "Mosque/House of Worship",
-        "heritage_category": "National Heritage",
-        "start_date": "1909"
+        "original_name": "Kwang Tong Cemetery",
+        "current_name": "Kwang Tong Cemetery Complex",
+        "start_date": "1893",
+        "addr:street": "Bukit Petaling / Jalan San Peng",
+        "architectural_style": "Historic Cantonese Cemetery Architecture",
+        "cultural_significance": "Historic Cantonese resting place and architectural complex preserving early KL pioneer heritage."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69639, 3.14806]
+        "coordinates": [101.7028, 3.1286]
       }
     },
     {
       "type": "Feature",
+      "id": "node/victoria_institution_orig",
       "properties": {
-        "id": 9,
-        "name": "Bangunan Parlimen",
-        "location": "Jalan Parlimen",
-        "category": "Building",
-        "style": "Post Independence-Modern",
-        "purpose": "Parliament",
-        "heritage_category": "National Heritage",
-        "start_date": "1963"
+        "original_name": "Victoria Institution (Original Site)",
+        "current_name": "Victoria Institution (Original Site)",
+        "start_date": "1893",
+        "addr:street": "Brickfields / Jalan Hang Tuah",
+        "architectural_style": "British Colonial Scholastic",
+        "cultural_significance": "Premier pioneer school established to commemorate Queen Victoria's Diamond Jubilee."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.67917, 3.14972]
+        "coordinates": [101.7028, 3.1396]
       }
     },
     {
       "type": "Feature",
+      "id": "node/buddhist_maha_vihara",
       "properties": {
-        "id": 10,
-        "name": "Bangunan Pejabat Pengawal Pos Wilayah Persekutuan (Pustaka Peringatan KL)",
-        "location": "Jalan Raja",
-        "category": "Building",
-        "style": "Colonial-Mughal Eclectic",
-        "purpose": "Cafe",
-        "heritage_category": "National Heritage",
-        "start_date": "1907"
+        "original_name": "Buddhist Maha Vihara",
+        "current_name": "Buddhist Maha Vihara",
+        "start_date": "1894",
+        "addr:street": "Jalan Berhala, Brickfields",
+        "architectural_style": "Sri Lankan / Buddhist Architecture",
+        "cultural_significance": "Founded by the Sinhalese community; primary hub for Theravada Buddhism and Wesak Celebrations in KL."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69389, 3.14778]
+        "coordinates": [101.6879, 3.1332]
       }
     },
     {
       "type": "Feature",
+      "id": "node/st_marys_church",
       "properties": {
-        "id": 11,
-        "name": "Bangunan Pejabat Pos Besar (Mahkamah Agong)",
-        "location": "Jalan Raja",
-        "category": "Building",
-        "style": "Colonial-Mughal Eclectic",
-        "purpose": "Government Office",
-        "heritage_category": "National Heritage",
-        "start_date": "1911"
+        "original_name": "St. Mary's Church",
+        "current_name": "St. Mary's Cathedral",
+        "start_date": "1894",
+        "addr:street": "Dataran Merdeka / Jalan Raja",
+        "architectural_style": "Early English Gothic Revival",
+        "cultural_significance": "Mother church of the Anglican Diocese of West Malaysia, designed by A.C. Norman."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69361, 3.14722]
+        "coordinates": [101.6938, 3.1503]
       }
     },
     {
       "type": "Feature",
+      "id": "node/pudoh_gaol",
       "properties": {
-        "id": 12,
-        "name": "Bangunan Pejabat Ugama Islam W.Persekutuan (Muzium Muzik)",
-        "location": "Jalan Raja",
-        "category": "Building",
-        "style": "Colonial-Mughal Eclectic",
-        "purpose": "Empty/Idle",
-        "heritage_category": "National Heritage",
-        "start_date": "1888"
+        "original_name": "Pudoh Gaol",
+        "current_name": "Pudu Prison Gatehouse & Wall",
+        "start_date": "1895",
+        "addr:street": "Jalan Hang Tuah",
+        "architectural_style": "Colonial Prison Architecture",
+        "cultural_significance": "Historic colonial penal facility; the gatehouse stands as a memorial to KL's criminal justice history."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69417, 3.14833]
+        "coordinates": [101.7071, 3.1415]
       }
     },
     {
       "type": "Feature",
+      "id": "node/carcosa_seri_negara",
       "properties": {
-        "id": 13,
-        "name": "Bangunan Residensi",
-        "location": "Jalan Dato' Onn",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Gallery/Museum",
-        "heritage_category": "National Heritage",
-        "start_date": "1888"
+        "original_name": "Carcosa & Seri Negara",
+        "current_name": "Carcosa Seri Negara",
+        "start_date": "1896",
+        "addr:street": "Perdana Botanical Garden",
+        "architectural_style": "Colonial Italianate Residence",
+        "cultural_significance": "Former residence of Sir Frank Swettenham; birthplace of the Federal Constitution draft in 1957."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69139, 3.15389]
+        "coordinates": [101.6805069, 3.1445415]
       }
     },
     {
       "type": "Feature",
+      "id": "node/chan_she_shu_yuen",
       "properties": {
-        "id": 14,
-        "name": "Sekolah Menengah St. John",
-        "location": "Jalan Bukit Nanas",
-        "category": "Building",
-        "style": "Colonial-Early Romanesque and European Baroque",
-        "purpose": "School",
-        "heritage_category": "National Heritage",
-        "start_date": "1904"
+        "original_name": "Chan She Shu Yuen Clan Hall",
+        "current_name": "Chan See Shu Yuen Clan Hall",
+        "start_date": "1896",
+        "addr:street": "Jalan Petaling",
+        "architectural_style": "Lingnan / Cantonese Clan Architecture",
+        "cultural_significance": "Iconic Cantonese clan hall known for its elaborate Shek Wan terracotta roof figurines."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.70250, 3.15083]
+        "coordinates": [101.6984541, 3.1402986]
       }
     },
     {
       "type": "Feature",
+      "id": "node/town_hall",
       "properties": {
-        "id": 15,
-        "name": "Bangunan Stesyen Keretapi",
-        "location": "Jalan Sultan Hishamuddin",
-        "category": "Building",
-        "style": "Colonial-Mughal Eclectic",
-        "purpose": "Train Station",
-        "heritage_category": "National Heritage",
-        "start_date": "1910"
+        "original_name": "Town Hall",
+        "current_name": "Panggung Bandaraya DBKL",
+        "start_date": "1896",
+        "addr:street": "Jalan Raja / Jalan Raja Laut",
+        "architectural_style": "Indo-Saracenic Revival",
+        "cultural_significance": "KL's first dedicated theater house, hosting historical performing arts and municipal gatherings."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69333, 3.13944]
+        "coordinates": [101.6947, 3.1501]
       }
     },
     {
       "type": "Feature",
+      "id": "node/government_offices",
       "properties": {
-        "id": 16,
-        "name": "Bangunan Sultan Abdul Samad (Mahkamah Agong), Blok A",
-        "location": "Jalan Raja",
-        "category": "Building",
-        "style": "Colonial-Mughal Eclectic",
-        "purpose": "Government Office",
-        "heritage_category": "National Heritage",
-        "start_date": "1897"
+        "original_name": "Government Offices (New Government Offices)",
+        "current_name": "Bangunan Sultan Abdul Samad",
+        "start_date": "1897",
+        "addr:street": "Jalan Raja, Dataran Merdeka",
+        "architectural_style": "Indo-Saracenic / Moorish Revival",
+        "cultural_significance": "Ultimate symbol of colonial KL and backdrop for the 1957 independence declaration."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69444, 3.14861]
+        "coordinates": [101.6945402, 3.1482731]
       }
     },
     {
       "type": "Feature",
+      "id": "node/anglo_chinese_school",
       "properties": {
-        "id": 17,
-        "name": "Dewan Perhimpunan Cina Kuala Lumpur dan Selangor",
-        "location": "Jalan Maharajalela",
-        "category": "Building",
-        "style": "Colonial-Neo Classical",
-        "purpose": "Hall",
-        "heritage_category": "National Heritage",
-        "start_date": "1934"
+        "original_name": "Anglo-Chinese School",
+        "current_name": "Methodist Boys' School (MBSSKL)",
+        "start_date": "1897",
+        "addr:street": "Jalan Hang Jebat",
+        "architectural_style": "Anglo-Colonial Scholastic",
+        "cultural_significance": "Key mission school contributing over a century to Malaysian public education."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69833, 3.13889]
+        "coordinates": [101.7011, 3.1432]
       }
     },
     {
       "type": "Feature",
+      "id": "node/victoria_fountain",
       "properties": {
-        "id": 18,
-        "name": "Gereja St. Mary",
-        "location": "Jalan Raja",
-        "category": "Building",
-        "style": "Colonial-Early English Gothic",
-        "purpose": "Church/House of Worship",
-        "heritage_category": "National Heritage",
-        "start_date": "1894"
+        "original_name": "Victoria Fountain",
+        "current_name": "Victorian Fountain",
+        "start_date": "1897",
+        "addr:street": "Dataran Merdeka",
+        "architectural_style": "Victorian Cast Iron Fountain",
+        "cultural_significance": "Cast-iron fountain brought from England, built to honor the Inspector of the Selangor Military Police."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69417, 3.15028]
+        "coordinates": [101.6937, 3.1486]
       }
     },
     {
       "type": "Feature",
+      "id": "node/convent_chij",
       "properties": {
-        "id": 19,
-        "name": "Institut Penyelidikan Getah Malaysia",
-        "location": "Jalan Ampang",
-        "category": "Building",
-        "style": "Colonial-Early Modern",
-        "purpose": "Research Institute",
-        "heritage_category": "National Heritage",
-        "start_date": "1936"
+        "original_name": "Convent of the Holy Infant Jesus",
+        "current_name": "Convent Bukit Nanas",
+        "start_date": "1899",
+        "addr:street": "Jalan Bukit Nanas",
+        "architectural_style": "Neo-Gothic Scholastic",
+        "cultural_significance": "Historic Catholic girls' school and designated national heritage landmark."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.71722, 3.15944]
+        "coordinates": [101.7008, 3.1511]
       }
     },
     {
       "type": "Feature",
+      "id": "node/malay_agri_settlement",
       "properties": {
-        "id": 20,
-        "name": "Istana Negara",
-        "location": "Jalan Istana",
-        "category": "Building",
-        "style": "Colonial-Neo Classical",
-        "purpose": "Gallery/Museum",
-        "heritage_category": "National Heritage",
-        "start_date": "1928"
+        "original_name": "Malay Agricultural Settlement (M.A.S.)",
+        "current_name": "Kampung Baru Traditional Houses",
+        "start_date": "1899",
+        "addr:street": "Kampung Baru",
+        "architectural_style": "Traditional Malay Vernacular",
+        "cultural_significance": "Enclave preserving Malay vernacular timber architecture and urban Malay community identity."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69611, 3.13028]
+        "coordinates": [101.7032, 3.161]
       }
     },
     {
       "type": "Feature",
+      "id": "node/govt_printing_office",
       "properties": {
-        "id": 21,
-        "name": "Masjid Negara dan Makam Pahlawan",
-        "location": "Jalan Perdana",
-        "category": "Building",
-        "style": "Post Independence-Modern Vernacular",
-        "purpose": "Mosque/House of Worship",
-        "heritage_category": "National Heritage",
-        "start_date": "1965"
+        "original_name": "Government Printing Office",
+        "current_name": "KL City Gallery",
+        "start_date": "1899",
+        "addr:street": "Dataran Merdeka",
+        "architectural_style": "Indo-Saracenic / Neo-Gothic",
+        "cultural_significance": "Printed official British Malaya gazettes; now documents KL's architectural transformation."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69167, 3.14167]
+        "coordinates": [101.69363, 3.14781]
       }
     },
     {
       "type": "Feature",
+      "id": "node/loke_chow_kit_mansion",
       "properties": {
-        "id": 22,
-        "name": "Bangunan Sekolah Menengah Kebangsaan Victoria",
-        "location": "Jalan Hang Tuah",
-        "category": "Building",
-        "style": "Colonial-British Colonial",
-        "purpose": "School",
-        "heritage_category": "National Heritage",
-        "start_date": "1929"
+        "original_name": "Loke Chow Kit Mansion",
+        "current_name": "Rumah Tangsi",
+        "start_date": "1903",
+        "addr:street": "Jalan Tangsi",
+        "architectural_style": "European Neo-Renaissance Mansion",
+        "cultural_significance": "Built for prominent merchant Loke Chow Kit; later served as the Empire Hotel and heritage space."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.70278, 3.14139]
+        "coordinates": [101.6917, 3.1508]
       }
     },
     {
       "type": "Feature",
+      "id": "node/holy_rosary_church",
       "properties": {
-        "id": 23,
-        "name": "Stadium Merdeka",
-        "location": "Jalan Stadium",
-        "category": "Building",
-        "style": "Independence Era-Modern",
-        "purpose": "Stadium",
-        "heritage_category": "National Heritage",
-        "start_date": "1957"
+        "original_name": "Holy Rosary Church",
+        "current_name": "Holy Rosary Church",
+        "start_date": "1904",
+        "addr:street": "Jalan Brickfields",
+        "architectural_style": "French Neo-Gothic Revival",
+        "cultural_significance": "Neo-Gothic church established to serve KL's early Chinese Catholic community."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.70111, 3.14111]
+        "coordinates": [101.6922, 3.1381]
       }
     },
     {
       "type": "Feature",
+      "id": "node/st_johns_institution",
       "properties": {
-        "id": 24,
-        "name": "Tugu Negara",
-        "location": "Jalan Parlimen",
-        "category": "Monument",
-        "style": "Post Independence-Not applicable",
-        "purpose": "Monument",
-        "heritage_category": "National Heritage",
-        "start_date": "1966"
+        "original_name": "St. John's Institution",
+        "current_name": "St. John's Institution",
+        "start_date": "1904",
+        "addr:street": "Jalan Bukit Nanas",
+        "architectural_style": "Greco-Roman / Neo-Classical",
+        "cultural_significance": "Historic La Sallian boys' school known for its distinctive red-and-white brickwork."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.68389, 3.15028]
+        "coordinates": [101.7001, 3.1495]
       }
     },
     {
       "type": "Feature",
+      "id": "node/vivekananda_ashram",
       "properties": {
-        "id": 25,
-        "name": "Muzium Negara",
-        "location": "Jalan Damansara",
-        "category": "Building",
-        "style": "Post Independence-Modern Vernacular",
-        "purpose": "Museum",
-        "heritage_category": "National Heritage",
-        "start_date": "1963"
+        "original_name": "Vivekananda Ashram",
+        "current_name": "Vivekananda Ashram",
+        "start_date": "1904",
+        "addr:street": "Jalan Tun Sambanthan, Brickfields",
+        "architectural_style": "Colonial Tamil / Indo-Classical",
+        "cultural_significance": "Cultural monument established by the Jaffna Tamil community to promote education and spiritual study."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.68833, 3.13750]
+        "coordinates": [101.6856424, 3.1304607]
       }
     },
     {
       "type": "Feature",
+      "id": "node/fms_railway_hq",
       "properties": {
-        "id": 26,
-        "name": "Bangunan Lama Pusat Pelancongan Malaysia (MaTiC) dan Dewan Tunku Abdul Rahman",
-        "location": "Jalan Ampang",
-        "category": "Building",
-        "style": "Colonial-Neo Classical",
-        "purpose": "Hall",
-        "heritage_category": "National Heritage",
-        "start_date": "1935"
+        "original_name": "FMS Railway Headquarters Building",
+        "current_name": "National Textiles Museum",
+        "start_date": "1905",
+        "addr:street": "Jalan Sultan Hishamuddin",
+        "architectural_style": "Indo-Saracenic / Moorish Revival",
+        "cultural_significance": "Former Railway Headquarters; now showcases Malaysia's ethnic textile heritage (Batik, Songket)."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.70611, 3.15889]
+        "coordinates": [101.69427, 3.14738]
       }
     },
     {
       "type": "Feature",
+      "id": "node/medan_pasar_clock_tower",
       "properties": {
-        "id": 27,
-        "name": "Bangunan Lama Dewan Bahasa dan Pustaka",
-        "location": "Jalan Dewan Bahasa",
-        "category": "Building",
-        "style": "Post Independence-Modern",
-        "purpose": "DBP Gallery",
-        "heritage_category": "National Heritage",
-        "start_date": "1962"
+        "original_name": "Old Market Square Clock Tower",
+        "current_name": "Old Market Square Clock Tower",
+        "start_date": "1907",
+        "addr:street": "Medan Pasar",
+        "architectural_style": "Neo-Classical Commemorative Monument",
+        "cultural_significance": "Built to commemorate the coronation of King George VI; landmark of early commercial KL."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.70333, 3.13444]
+        "coordinates": [101.6961, 3.1467]
       }
     },
     {
       "type": "Feature",
+      "id": "node/masjid_jamek",
       "properties": {
-        "id": 28,
-        "name": "Bangunan Sulaiman (Mahkamah Syariah Wilayah Persekutuan)",
-        "location": "Jalan Sultan Hishamuddin",
-        "category": "Building",
-        "style": "Colonial-Art Deco",
-        "purpose": "Hotel",
-        "heritage_category": "National Heritage",
-        "start_date": "1930"
+        "original_name": "Surau / Masjid Jamek",
+        "current_name": "Masjid Jamek Sultan Abdul Samad",
+        "start_date": "1909",
+        "addr:street": "Jalan Tun Perak",
+        "architectural_style": "Indo-Saracenic / Moorish Revival",
+        "cultural_significance": "Built at the confluence of the Klang and Gombak rivers—the actual birthplace of Kuala Lumpur."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69336, 3.13812]
+        "coordinates": [101.695692, 3.148806]
       }
     },
     {
       "type": "Feature",
+      "id": "node/kelab_sultan_sulaiman",
       "properties": {
-        "id": 29,
-        "name": "Bangunan Hotel Majestic (Bekas Balai Seni Lukis)",
-        "location": "Jalan Sultan Hishamuddin",
-        "category": "Building",
-        "style": "Colonial Mughal Eclectic",
-        "purpose": "Hotel",
-        "heritage_category": "National Heritage",
-        "start_date": "1932"
+        "original_name": "Kelab Sultan Sulaiman",
+        "current_name": "Kelab Sultan Sulaiman",
+        "start_date": "1909",
+        "addr:street": "Kampung Baru",
+        "architectural_style": "Colonial Malay Club Architecture",
+        "cultural_significance": "Historic Malay social and political club; birthplace of early Malay nationalist movements."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69250, 3.13889]
+        "coordinates": [101.7001, 3.1598]
       }
     },
     {
       "type": "Feature",
+      "id": "node/kl_central_station",
       "properties": {
-        "id": 30,
-        "name": "Bangunan Istana Budaya",
-        "location": "Jalan Tun Razak",
-        "category": "Building",
-        "style": "Post Independence-Modern",
-        "purpose": "Stage",
-        "heritage_category": "National Heritage",
-        "start_date": "1999"
+        "original_name": "Kuala Lumpur Central Station",
+        "current_name": "Kuala Lumpur Railway Station",
+        "start_date": "1910",
+        "addr:street": "Jalan Sultan Hishamuddin",
+        "architectural_style": "Indo-Saracenic / Neo-Moorish",
+        "cultural_significance": "Iconic Neo-Moorish transit hub designed by A.B. Hubback; central link of Malayan rail transport."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.70306, 3.17361]
+        "coordinates": [101.693779, 3.13989]
       }
     },
     {
       "type": "Feature",
+      "id": "node/kwai_chai_hong",
       "properties": {
-        "id": 31,
-        "name": "Bangunan Perpustakaan Negara Malaysia",
-        "location": "Jalan Tun Razak",
-        "category": "Building",
-        "style": "Post Independence-Modern",
-        "purpose": "Library",
-        "heritage_category": "National Heritage",
-        "start_date": "1992"
+        "original_name": "Kwai Chai Hong",
+        "current_name": "Kwai Chai Hong",
+        "start_date": "1910",
+        "addr:street": "Lorong Panggung",
+        "architectural_style": "Pre-war Heritage Shophouses",
+        "cultural_significance": "Preserved laneway capturing daily life, trades, and folklore of early Chinatown residents."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.70361, 3.17194]
+        "coordinates": [101.6975, 3.1418]
       }
     },
     {
       "type": "Feature",
+      "id": "node/the_residency",
       "properties": {
-        "id": 32,
-        "name": "Tapak Tiang Bendera Malaya Dinaikkan Buat Pertama Kali dan Padang Kelab Selangor",
-        "location": "Jalan Raja",
-        "category": "Monument",
-        "style": "Post Independence-Not related",
-        "purpose": "Square",
-        "heritage_category": "National Heritage",
-        "start_date": "1957"
+        "original_name": "The Residency",
+        "current_name": "Tunku Abdul Rahman Memorial",
+        "start_date": "1912",
+        "addr:street": "Jalan Dato' Onn",
+        "architectural_style": "British Colonial Office Residence",
+        "cultural_significance": "Former British Residency and official home of Malaysia's first Prime Minister (Bapa Kemerdekaan)."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69361, 3.14833]
+        "coordinates": [101.6919, 3.1539]
       }
     },
     {
       "type": "Feature",
+      "id": "node/fms_railway_admin",
       "properties": {
-        "id": 33,
-        "name": "Taman Botani Perdana (Taman Tasik Perdana)",
-        "location": "Jalan Perdana",
-        "category": "Landscape Site",
-        "style": "Not related",
-        "purpose": "Garden",
-        "heritage_category": "National Heritage",
-        "start_date": "1888"
+        "original_name": "FMS Railway Administration Building",
+        "current_name": "Malayan Railway Administration",
+        "start_date": "1917",
+        "addr:street": "Jalan Sultan Hishamuddin",
+        "architectural_style": "Indo-Saracenic Revival",
+        "cultural_significance": "Seat of Malayan rail infrastructure; notable for its Moorish arcades and corner domes."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.68611, 3.14583]
+        "coordinates": [101.6934, 3.1404]
       }
     },
     {
       "type": "Feature",
+      "id": "node/coliseum_theatre_cafe",
       "properties": {
-        "id": 34,
-        "name": "Bangunan Badan Pencegah Rasuah",
-        "location": "Jalan Sultan Sulaiman",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Heritage Development Centre",
-        "heritage_category": "Heritage",
-        "start_date": "1920"
+        "original_name": "Coliseum Theatre & Cafe",
+        "current_name": "Coliseum Theatre & Cafe",
+        "start_date": "1920",
+        "addr:street": "Jalan Tuanku Abdul Rahman",
+        "architectural_style": "Art Deco / Pre-war Cinema",
+        "cultural_significance": "Oldest operating cinema and colonial steakhouse, frequented by rubber planters and literary figures."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69528, 3.13861]
+        "coordinates": [101.6963, 3.1537]
       }
     },
     {
       "type": "Feature",
+      "id": "node/rumah_penghulu",
       "properties": {
-        "id": 35,
-        "name": "Bangunan Bekas Rumah Loke Chow Kit",
-        "location": "Jalan Tangsi",
-        "category": "Building",
-        "style": "Colonial-European Baroque",
-        "purpose": "Office building",
-        "heritage_category": "Heritage",
-        "start_date": "1907"
+        "original_name": "Rumah Penghulu Abu Seman",
+        "current_name": "Rumah Penghulu Abu Seman",
+        "start_date": "1920",
+        "addr:street": "Jalan Stonor",
+        "architectural_style": "Traditional Kedah Vernacular Timber",
+        "cultural_significance": "Traditional Kedah Malay timber house relocated to KL to preserve national Malay woodwork heritage."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69389, 3.15278]
+        "coordinates": [101.7156, 3.1511]
       }
     },
     {
       "type": "Feature",
+      "id": "node/rumah_pusaka_chow_kit",
       "properties": {
-        "id": 36,
-        "name": "Bangunan Mahkamah Perusahaan",
-        "location": "Jalan Belanda",
-        "category": "Building",
-        "style": "Colonial-Mughal Eclectic",
-        "purpose": "Empty/Idle",
-        "heritage_category": "Heritage",
-        "start_date": "1905"
+        "original_name": "Rumah Pusaka Chow Kit",
+        "current_name": "Rumah Degil",
+        "start_date": "1926",
+        "addr:street": "Chow Kit",
+        "architectural_style": "Traditional Mandailing / Malay Timber",
+        "cultural_significance": "Rare surviving Mandailing Malay timber house built without nails, preserving regional migrant history."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69556, 3.14722]
+        "coordinates": [101.6989, 3.1641]
       }
     },
     {
       "type": "Feature",
+      "id": "node/residence_chan_wing",
       "properties": {
-        "id": 37,
-        "name": "Bangunan Muzium Telekom",
-        "location": "Jalan Raja Chulan",
-        "category": "Building",
-        "style": "Colonial-Neo Classical Greek",
-        "purpose": "Museum/Gallery",
-        "heritage_category": "Heritage",
-        "start_date": "1928"
+        "original_name": "Residence of Chan Wing",
+        "current_name": "Old Istana Negara",
+        "start_date": "1928",
+        "addr:street": "Jalan Istana",
+        "architectural_style": "Colonial Italianate Palace",
+        "cultural_significance": "Residence of the Yang di-Pertuan Agong from 1957 to 2011; symbol of Malaysia's constitutional monarchy."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69889, 3.14861]
+        "coordinates": [101.6961, 3.1325]
       }
     },
     {
       "type": "Feature",
+      "id": "node/sulaiman_building",
       "properties": {
-        "id": 38,
-        "name": "Bangunan Panggung Drama",
-        "location": "Jalan Bandar",
-        "category": "Building",
-        "style": "Colonial-English Cottage",
-        "purpose": "Empty/Idle",
-        "heritage_category": "Heritage",
-        "start_date": "1914"
+        "original_name": "Sulaiman Building",
+        "current_name": "Bangunan Sulaiman",
+        "start_date": "1930",
+        "addr:street": "Jalan Sultan Hishamuddin",
+        "architectural_style": "Anglo-Moorish / Art Deco Transition",
+        "cultural_significance": "Historic Art Deco/Moorish civil building; hosted the High Court and Syariah Judiciary."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69667, 3.14361]
+        "coordinates": [101.6925, 3.1389]
       }
     },
     {
       "type": "Feature",
+      "id": "node/selangor_chinese_assembly_hall",
       "properties": {
-        "id": 39,
-        "name": "Bangunan Pusat Penyelidikan Perubatan",
-        "location": "Jalan Pahang",
-        "category": "Building",
-        "style": "Colonial-Art Deco",
-        "purpose": "Research Institute",
-        "heritage_category": "Heritage",
-        "start_date": "1900"
+        "original_name": "Selangor Chinese Assembly Hall",
+        "current_name": "KL Chinese Assembly Hall (KLCAC)",
+        "start_date": "1934",
+        "addr:street": "Jalan Maharajalela",
+        "architectural_style": "Neoclassical / Art Deco Chinese",
+        "cultural_significance": "Central assembly site for the Chinese community in civil, cultural, and political discussions."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.70194, 3.17028]
+        "coordinates": [101.6978, 3.1391]
       }
     },
     {
       "type": "Feature",
+      "id": "node/eu_tong_sen_residence",
       "properties": {
-        "id": 40,
-        "name": "Istana Tetamu",
-        "location": "Taman Tasik Perdana",
-        "category": "Building",
-        "style": "Colonial-Neo Classical",
-        "purpose": "Empty/Idle",
-        "heritage_category": "Heritage",
-        "start_date": "1889"
+        "original_name": "Eu Tong Sen Residence",
+        "current_name": "MaTiC Main Mansion",
+        "start_date": "1935",
+        "addr:street": "Jalan Ampang",
+        "architectural_style": "Colonial Plantation Estate Mansion",
+        "cultural_significance": "Wealthy estate of Eu Tong Sen; used as the military HQ by Japanese forces during WWII."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.68222, 3.14611]
+        "coordinates": [101.7056, 3.1568]
       }
     },
     {
       "type": "Feature",
+      "id": "node/rri_malaya",
       "properties": {
-        "id": 41,
-        "name": "Pasar Seni",
-        "location": "Jalan Hang Kasturi",
-        "category": "Building",
-        "style": "Colonial-Art Deco",
-        "purpose": "Market/ Complex",
-        "heritage_category": "Heritage",
-        "start_date": "1888"
+        "original_name": "Rubber Research Institute of Malaya",
+        "current_name": "Rubber Research Institute (RRI)",
+        "start_date": "1936",
+        "addr:street": "Jalan Ampang",
+        "architectural_style": "Art Deco / Modernist Brickwork",
+        "cultural_significance": "Headquarters driving Malaya's rise as the world's leading natural rubber producer."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69528, 3.14528]
+        "coordinates": [101.7161, 3.1583]
       }
     },
     {
       "type": "Feature",
+      "id": "node/asian_heritage_row",
       "properties": {
-        "id": 42,
-        "name": "Pustaka Peringatan P.Ramlee",
-        "location": "Jalan Dedap",
-        "category": "Building",
-        "style": "Post Independence-Modern",
-        "purpose": "Gallery",
-        "heritage_category": "Heritage",
-        "start_date": "1960"
+        "original_name": "Asian Heritage Row",
+        "current_name": "The Row KL",
+        "start_date": "1940",
+        "addr:street": "Jalan Doraisamy",
+        "architectural_style": "Pre-war Commercial Shophouses",
+        "cultural_significance": "Preserved row of 1940s shophouses reflecting pre-war suburban commerce."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.71028, 3.19472]
+        "coordinates": [101.6998, 3.1583]
       }
     },
     {
       "type": "Feature",
+      "id": "node/chin_woo_stadium",
       "properties": {
-        "id": 43,
-        "name": "Bangunan Kelab DiRaja Selangor (Kelab Selangor)",
-        "location": "Jalan Raja",
-        "category": "Building",
-        "style": "Colonial-Mock Tudor",
-        "purpose": "Club Building",
-        "heritage_category": "Heritage",
-        "start_date": "1884"
+        "original_name": "Chin Woo Auditorium & Stadium",
+        "current_name": "Chin Woo Stadium",
+        "start_date": "1953",
+        "addr:street": "Jalan Hang Jebat",
+        "architectural_style": "Art Deco / Mid-Century Modern",
+        "cultural_significance": "Cultural landmark for martial arts, sports, and community gatherings overlooking Chinatown."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.69333, 3.14917]
+        "coordinates": [101.7011, 3.1414]
       }
     },
     {
       "type": "Feature",
+      "id": "node/lee_rubber_building",
       "properties": {
-        "id": 44,
-        "name": "Asrama Anak-anak Polis Lelaki PULAPOL (JKR 2003)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
+        "original_name": "Lee Rubber Building",
+        "current_name": "Lee Rubber Building",
+        "start_date": "1953",
+        "addr:street": "Jalan Tun H.S. Lee",
+        "architectural_style": "Art Deco / Modernist",
+        "cultural_significance": "Art Deco landmark commissioned by Lee Kong Chian; occupied by Japanese military police in WWII."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.72306, 3.17639]
+        "coordinates": [101.6963, 3.1438]
       }
     },
     {
       "type": "Feature",
+      "id": "node/bazaar_baru_chow_kit",
       "properties": {
-        "id": 45,
-        "name": "Asrama Anak-anak Polis Wanita PULAPOL (JKR 1744-1755)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
+        "original_name": "Bazaar Baru Chow Kit",
+        "current_name": "Bazaar Baru Chow Kit",
+        "start_date": "1955",
+        "addr:street": "Jalan Raja Laut",
+        "architectural_style": "Mid-Century Market Hall Architecture",
+        "cultural_significance": "Heart of traditional Malay market culture and community commerce in northern central KL."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.72333, 3.17667]
+        "coordinates": [101.6983, 3.1643]
       }
     },
     {
       "type": "Feature",
+      "id": "node/wisma_putra_old",
       "properties": {
-        "id": 46,
-        "name": "Bangunan Cawangan Pancaragam PULAPOL (JKR 1878)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
+        "original_name": "Wisma Putra",
+        "current_name": "Old Wisma Putra",
+        "start_date": "1956",
+        "addr:street": "Bukit Petaling",
+        "architectural_style": "Mid-Century Modern Civic Architecture",
+        "cultural_significance": "First headquarters of independent Malaya's Ministry of Foreign Affairs."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.72361, 3.17694]
+        "coordinates": [101.7019, 3.1362]
       }
     },
     {
       "type": "Feature",
+      "id": "node/stadium_merdeka",
       "properties": {
-        "id": 47,
-        "name": "Bangunan Cyberpool PULAPOL (JKR 1876)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
+        "original_name": "Stadium Merdeka",
+        "current_name": "Merdeka Stadium",
+        "start_date": "1957",
+        "addr:street": "Jalan Stadium",
+        "architectural_style": "Mid-Century International Style",
+        "cultural_significance": "National site where Tunku Abdul Rahman declared Malayan Independence (Merdeka!) on August 31, 1957."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.72389, 3.17722]
+        "coordinates": [101.7018, 3.1408]
       }
     },
     {
       "type": "Feature",
+      "id": "node/stadium_negara",
       "properties": {
-        "id": 48,
-        "name": "Bangunan Kantin PULAPOL (JKR 1879)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
+        "original_name": "Stadium Negara",
+        "current_name": "Stadium Negara",
+        "start_date": "1962",
+        "addr:street": "Jalan Stadium",
+        "architectural_style": "Mid-Century Modern Shell Structure",
+        "cultural_significance": "Malaysia's first indoor sports stadium, hosting major international cultural concerts and sporting events."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.72417, 3.17750]
+        "coordinates": [101.7032, 3.1415]
       }
     },
     {
       "type": "Feature",
+      "id": "node/muzium_negara",
       "properties": {
-        "id": 49,
-        "name": "Pejabat Kem Komandan, (Balai Pengawal) PULAPOL (JKR 1786)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
+        "original_name": "Muzium Negara",
+        "current_name": "Muzium Negara (National Museum)",
+        "start_date": "1963",
+        "addr:street": "Jalan Damansara",
+        "architectural_style": "Modern Malay Vernacular / Modernist",
+        "cultural_significance": "Primary repository of Malaysian history and culture, featuring large-scale Malay vernacular murals."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.72444, 3.17778]
+        "coordinates": [101.687381, 3.137709]
       }
     },
     {
       "type": "Feature",
+      "id": "node/parliament_house",
       "properties": {
-        "id": 50,
-        "name": "Pejabat Kewangan PULAPOL (JKR 2004)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
+        "original_name": "Parliament House of Malaysia",
+        "current_name": "Parliament House of Malaysia",
+        "start_date": "1963",
+        "addr:street": "Lake Gardens / Jalan Parlimen",
+        "architectural_style": "Modernist International Style",
+        "cultural_significance": "Symbol of Malaysian democracy and legislative governance following the formation of Malaysia."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.72472, 3.17806]
+        "coordinates": [101.6791, 3.1498]
       }
     },
     {
       "type": "Feature",
+      "id": "node/masjid_negara",
       "properties": {
-        "id": 51,
-        "name": "Pejabat Komandan PULAPOL (JKR 2019)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
+        "original_name": "Masjid Negara",
+        "current_name": "Masjid Negara (National Mosque)",
+        "start_date": "1965",
+        "addr:street": "Jalan Perdana",
+        "architectural_style": "Modernist Tropical Islamic",
+        "cultural_significance": "Symbol of a modern, independent Islamic nation with a signature 16-pointed star umbrella roof."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.72500, 3.17833]
+        "coordinates": [101.6916776, 3.1419718]
       }
     },
     {
       "type": "Feature",
+      "id": "node/makam_pahlawan",
       "properties": {
-        "id": 52,
-        "name": "Pejabat Seni Mempertahankan Diri PULAPOL (SMD) (JKR 1874)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
+        "original_name": "Makam Pahlawan",
+        "current_name": "Makam Pahlawan (Heroes' Mausoleum)",
+        "start_date": "1965",
+        "addr:street": "Masjid Negara Complex",
+        "architectural_style": "Modernist Islamic Memorial",
+        "cultural_significance": "Resting place of Malaysia's prominent national leaders and Prime Ministers."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [101.72528, 3.17861]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 53,
-        "name": "Sekolah Batu Lama PULAPOL (JKR 2006)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72556, 3.17889]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 54,
-        "name": "Bangunan Sukan (Gimnasium) PULAPOL (JKR 1877)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72583, 3.17917]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 55,
-        "name": "Bangunan Tadika Kemas PULAPOL (JKR 1869)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72611, 3.17944]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 56,
-        "name": "Bangunan Ujian Kecerdasan Fizikal (UKF) PULAPOL (JKR 1875)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72639, 3.17972]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 57,
-        "name": "Bangunan Wisma Sukan PULAPOL (JKR 2076)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72667, 3.18000]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 58,
-        "name": "Bengkel Senjata Pusat dan Persenjataan PULAPOL (JKR 2005)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72694, 3.18028]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 59,
-        "name": "Berek Bujang Lelaki PULAPOL (JKR 341)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72722, 3.18056]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 60,
-        "name": "Berek Bujang Lelaki PULAPOL (JKR 342)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72750, 3.18083]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 61,
-        "name": "Berek Bujang Lelaki PULAPOL (JKR 394)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72778, 3.18111]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 62,
-        "name": "Berek Bujang Wanita PULAPOL (JKR 386)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72806, 3.18139]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 63,
-        "name": "Dewan Satu PULAPOL (JKR 2006)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72833, 3.18167]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 64,
-        "name": "Gurdwara Sahib PULAPOL (JKR 2078)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72861, 3.18194]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 65,
-        "name": "Kediaman Ajutan PULAPOL (JKR 1331)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72889, 3.18222]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 66,
-        "name": "Kediaman Komandan (PULAPOL) (JKR 817)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72917, 3.18250]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 67,
-        "name": "Kediaman Timbalan Komandan PULAPOL (Latihan) (JKR 1332)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72944, 3.18278]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 68,
-        "name": "Kediaman Timbalan Komandan (Pentadbiran dan Garaj) PULAPOL (JKR 1333)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.72972, 3.18306]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 69,
-        "name": "Rumah Kelamin Kelas F PULAPOL (JKR 1541-1544)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.73000, 3.18333]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 70,
-        "name": "Surau PULAPOL (JKR 2085)",
-        "location": "Jalan Semarak",
-        "category": "Building",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.73028, 3.18361]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 71,
-        "name": "Tugu Polis Diraja Malaysia PULAPOL",
-        "location": "Jalan Semarak",
-        "category": "Monument",
-        "style": "Colonial-No information",
-        "purpose": "Institution",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.73056, 3.18389]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 72,
-        "name": "Rumah Persekutuan",
-        "location": "Jalan Sultan Hishamuddin",
-        "category": "Building",
-        "style": "Colonial-Utilitarian style",
-        "purpose": "Government Office",
-        "heritage_category": "Heritage",
-        "start_date": "1954"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.69361, 3.14111]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 73,
-        "name": "Stadium Negara",
-        "location": "Jalan Stadium",
-        "category": "Building",
-        "style": "Post Independence-Modern",
-        "purpose": "Stadium",
-        "heritage_category": "Heritage",
-        "start_date": "1962"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.70222, 3.14083]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 74,
-        "name": "Bangunan Vivekananda Ashrama",
-        "location": "Jalan Tun Sambanthan",
-        "category": "Building",
-        "style": "Colonial-Indian Renaissance",
-        "purpose": "School",
-        "heritage_category": "Heritage",
-        "start_date": "1904"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.68722, 3.13194]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 75,
-        "name": "Tokong Sin Sze Si Ya",
-        "location": "Jalan Tun H S Lee",
-        "category": "Building",
-        "style": "Colonial-Traditional Chinese",
-        "purpose": "Temple/ House of worship",
-        "heritage_category": "Heritage",
-        "start_date": "1864"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.69667, 3.14583]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 76,
-        "name": "Sekolah Menengah Kebangsaan Maxwell",
-        "location": "Jalan Tun Ismail",
-        "category": "Building",
-        "style": "Colonial-Moorish and Gothic",
-        "purpose": "School",
-        "heritage_category": "Heritage",
-        "start_date": "1917"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.69139, 3.16722]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 77,
-        "name": "Bangunan Chan She Shu Yuen",
-        "location": "Jalan Petaling",
-        "category": "Building",
-        "style": "Classic Chinese",
-        "purpose": "Association Building",
-        "heritage_category": "Heritage",
-        "start_date": "1906"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.69861, 3.14028]
+        "coordinates": [101.6912, 3.1415]
       }
     }
   ]
