@@ -1,0 +1,81 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "National Heritage vs. Heritage Status of KL Heritage Buildings",
+    "subtitle": "Warisan Kebangsaan (gazetted National Heritage) compared with standard Warisan",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "offset": 15
+  },
+  "width": 320,
+  "height": 320,
+  "padding": 20,
+  "background": "#fafafa",
+  "view": {"stroke": null},
+  "data": {
+    "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/data-basic.json",
+    "format": {"type": "json"}
+  },
+  "transform": [
+    {"filter": "isValid(datum.heritage_status)"},
+    {
+      "aggregate": [{"op": "count", "as": "building_count"}],
+      "groupby": ["heritage_status"]
+    },
+    {
+      "joinaggregate": [{"op": "sum", "field": "building_count", "as": "total"}]
+    },
+    {"calculate": "datum.building_count / datum.total", "as": "share"},
+    {"calculate": "datum.building_count + ' (' + format(datum.share, '.0%') + ')'", "as": "label"},
+    {"calculate": "indexof(['National Heritage (Warisan Kebangsaan)','Heritage (Warisan)'], datum.heritage_status)", "as": "sort_idx"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 85, "outerRadius": 150, "stroke": "#ffffff", "strokeWidth": 3},
+      "encoding": {
+        "theta": {"field": "building_count", "type": "quantitative", "stack": true},
+        "order": {"field": "sort_idx", "type": "quantitative"},
+        "color": {
+          "field": "heritage_status",
+          "type": "nominal",
+          "title": "Heritage Status",
+          "scale": {
+            "domain": ["National Heritage (Warisan Kebangsaan)", "Heritage (Warisan)"],
+            "range": ["#8B4513", "#2E8B57"]
+          },
+          "legend": {"orient": "bottom", "direction": "vertical"}
+        },
+        "tooltip": [
+          {"field": "heritage_status", "type": "nominal", "title": "Status"},
+          {"field": "building_count", "type": "quantitative", "title": "Buildings"},
+          {"field": "share", "type": "quantitative", "title": "Share", "format": ".1%"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "radius": 118, "fontSize": 13, "fontWeight": "bold", "color": "#ffffff"},
+      "encoding": {
+        "theta": {"field": "building_count", "type": "quantitative", "stack": true},
+        "order": {"field": "sort_idx", "type": "quantitative"},
+        "text": {"field": "label", "type": "nominal"}
+      }
+    },
+    {
+      "mark": {"type": "text", "fontSize": 34, "fontWeight": "bold", "color": "#333333", "dy": -8},
+      "encoding": {
+        "x": {"value": 160},
+        "y": {"value": 160},
+        "text": {"field": "total", "type": "quantitative"}
+      }
+    },
+    {
+      "mark": {"type": "text", "fontSize": 12, "color": "#666666", "dy": 18},
+      "encoding": {
+        "x": {"value": 160},
+        "y": {"value": 160},
+        "text": {"value": "buildings"}
+      }
+    }
+  ]
+}
