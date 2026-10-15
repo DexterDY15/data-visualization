@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "National Heritage vs. Heritage Status of KL Heritage Buildings",
-    "subtitle": "Warisan Kebangsaan (gazetted National Heritage) compared with standard Warisan",
+    "text": "National Heritage vs. Heritage Status",
+    "subtitle": "KL Heritage Buildings",
     "fontSize": 16,
     "subtitleFontSize": 12,
     "anchor": "start",
