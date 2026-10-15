@@ -146,6 +146,12 @@
         margin-right: auto;
       }
 
+      #state-map canvas.marks,
+      #state-map svg {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
       .chart-frame.vega-embed .vega-bindings {
         display: flex;
         justify-content: flex-end;
@@ -201,25 +207,20 @@
       </section>
 
       <div class="chart-grid">
+        <section class="chart-card" aria-labelledby="state-map-title">
+          <h2 id="state-map-title">Proportional Symbol Map — Heritage Landmarks in Each State</h2>
+          <div class="chart-frame" id="state-map" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
+        </section>
+
         <section class="chart-card" aria-labelledby="dot-map-title">
           <h2 id="dot-map-title">Once Upon a Muddy Confluence</h2>
           <div class="feature-layout">
             <div class="feature-description">
-              <p>Select the Map Areas to explore heritage landmarks in specific areas.</p>
+              <p>This visually illustrates the geographic distribution of historical landmarks across the city, where each brown point represents a single heritage building. As shown in the spatial mapping, there is a pronounced spatial clustering of these structures surrounding the river channels, specifically tightly concentrated around the historical river confluence. This dense aggregation directly mirrors Kuala Lumpur’s origins—historically founded at the "muddy confluence" of the Klang and Gombak Rivers—highlighting how early urban development, trade, and architectural heritage naturally anchored around this vital geographical intersection. Select the Map Areas to explore heritage landmarks in specific areas.</p>
             </div>
             <div class="chart-frame" id="dot-map" aria-live="polite">
-              <p class="chart-status">Loading chart…</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="chart-card" aria-labelledby="state-map-title">
-          <h2 id="state-map-title">Proportional Symbol Map — Heritage Landmarks in Each State</h2>
-          <div class="feature-layout">
-            <div class="feature-description">
-              <p>Compare the estimated number of heritage buildings across Malaysian states. Larger circles indicate states with more recorded buildings; hover over a circle to see its state and count.</p>
-            </div>
-            <div class="chart-frame" id="state-map" aria-live="polite">
               <p class="chart-status">Loading chart…</p>
             </div>
           </div>
