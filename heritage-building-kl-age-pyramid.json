@@ -1,0 +1,85 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Age Pyramid of Kuala Lumpur Heritage Buildings (as of 2026)",
+    "subtitle": "Distribution of heritage structures across 10-year age brackets by historical era",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "offset": 15
+  },
+  "width": 650,
+  "height": 450,
+  "background": "#fafafa",
+  "data": {
+    "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/data-basic.json",
+    "format": {"type": "json"}
+  },
+  "transform": [
+    {"filter": "isValid(datum.start_year) && datum.start_year > 0"},
+    {"calculate": "2026 - datum.start_year", "as": "age"},
+    {"calculate": "floor(datum.age / 10) * 10", "as": "age_bin_floor"},
+    {"calculate": "datum.age_bin_floor + '–' + (datum.age_bin_floor + 9) + ' yrs'", "as": "age_group"},
+    {"calculate": "datum.start_year < 1957 ? 'Colonial Era (Pre-1957)' : 'Post-Independence (1957+)'", "as": "era_label"},
+    {"calculate": "datum.start_year < 1957 ? -1 : 1", "as": "dir"},
+    {
+      "aggregate": [{"op": "count", "as": "building_count"}],
+      "groupby": ["age_bin_floor", "age_group", "era_label", "dir"]
+    },
+    {"calculate": "datum.building_count * datum.dir", "as": "signed_count"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "bar", "stroke": "#ffffff", "strokeWidth": 1},
+      "encoding": {
+        "y": {
+          "field": "age_bin_floor",
+          "type": "ordinal",
+          "sort": "descending",
+          "title": "Building Age Bracket (Years)",
+          "axis": {"labelExpr": "datum.value + '–' + (datum.value + 9) + ' yrs'"}
+        },
+        "x": {
+          "field": "signed_count",
+          "type": "quantitative",
+          "title": "← Colonial Era (Count) | Post-Independence (Count) →",
+          "axis": {"labelExpr": "abs(datum.value)", "tickCount": 7}
+        },
+        "color": {
+          "field": "era_label",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Colonial Era (Pre-1957)", "Post-Independence (1957+)"],
+            "range": ["#8B4513", "#2E8B57"]
+          },
+          "legend": {"title": "Historical Era", "orient": "bottom"}
+        },
+        "tooltip": [
+          {"field": "age_group", "type": "nominal", "title": "Age Bracket"},
+          {"field": "era_label", "type": "nominal", "title": "Historical Era"},
+          {"field": "building_count", "type": "quantitative", "title": "Building Count"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": {"expr": "datum.signed_count < 0 ? 'right' : 'left'"},
+        "dx": {"expr": "datum.signed_count < 0 ? -5 : 5"},
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {"field": "age_bin_floor", "type": "ordinal", "sort": "descending"},
+        "x": {"field": "signed_count", "type": "quantitative"},
+        "text": {"field": "building_count", "type": "quantitative"},
+        "color": {"value": "#333333"}
+      }
+    },
+    {
+      "data": {"values": [{"x": 0}]},
+      "mark": {"type": "rule", "color": "#666666", "strokeWidth": 1.5, "strokeDash": [4, 4]},
+      "encoding": {"x": {"field": "x", "type": "quantitative"}}
+    }
+  ]
+}
