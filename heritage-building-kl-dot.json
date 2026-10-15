@@ -1,0 +1,123 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": 550,
+  "background": "#fafafa",
+  "title": "Kuala Lumpur Heritage Buildings: Spatial Location",
+  "params": [
+    {"name": "c_lon", "value": 101.6965},
+    {"name": "c_lat", "value": 3.145},
+    {"name": "overview_zoom", "value": 1000000},
+    {"name": "focus_zoom", "value": 2500000},
+    {
+      "name": "center_to",
+      "value": [101.6965, 3.145],
+      "bind": {
+        "input": "select",
+        "options": [
+          [101.6965, 3.145],
+          [101.6937, 3.1479],
+          [101.6960, 3.1497],
+          [101.6955, 3.1451],
+          [101.6970, 3.1431],
+          [101.6869, 3.1343],
+          [101.6985, 3.1667]
+        ],
+        "labels": [
+          "Whole Area",
+          "Merdeka Square",
+          "Masjid Jamek",
+          "Central Market",
+          "Chinatown / Petaling Street",
+          "KL Sentral / Brickfields",
+          "Chow Kit"
+        ],
+        "name": "Map Area: "
+      }
+    },
+    {
+      "name": "zoom_level",
+      "expr": "(center_to[0] == c_lon && center_to[1] == c_lat) ? overview_zoom : focus_zoom"
+    }
+  ],
+  "projection": {
+    "type": "mercator",
+    "center": {"expr": "center_to"},
+    "scale": {"expr": "zoom_level"}
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/export%20(4).geojson",
+        "format": {"type": "json", "property": "features"}
+      },
+      "transform": [
+        {"filter": "datum.properties.highway"}
+      ],
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#bbbbbb",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/export%20(4).geojson",
+        "format": {"type": "json", "property": "features"}
+      },
+      "transform": [
+        {"filter": "datum.properties.waterway"}
+      ],
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#8ec5e8",
+        "strokeWidth": 3
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/export%20(1).geojson",
+        "format": {"type": "json", "property": "features"}
+      },
+      "transform": [
+        {"filter": "datum.geometry.type == 'Point' && datum.properties.name"},
+        {"calculate": "datum.geometry.coordinates[0]", "as": "lon"},
+        {"calculate": "datum.geometry.coordinates[1]", "as": "lat"},
+        {"calculate": "datum.properties.name", "as": "name"},
+        {"calculate": "toNumber(substring(datum.properties.start_date, 0, 4))", "as": "year"},
+        {"filter": "isValid(datum.year) && datum.year > 0"}
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 90,
+        "opacity": 0.8,
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "color": {
+          "datum": "1 dot = 1 building",
+          "type": "nominal",
+          "scale": {"range": ["#8B4513"]},
+          "legend": {
+            "title": null,
+            "symbolType": "circle",
+            "symbolSize": 90,
+            "symbolStrokeColor": "white",
+            "symbolOpacity": 0.8,
+            "labelFontSize": 12,
+            "orient": "bottom"
+          }
+        },
+        "tooltip": [
+          {"field": "name", "type": "nominal", "title": "Building Name"},
+          {"field": "year", "type": "quantitative", "title": "Year Constructed"}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {"state": "Kelantan",                      "count": 3,  "lat": 5.40, "lon": 102.00},
+  {"state": "Terengganu",                    "count": 3,  "lat": 4.90, "lon": 103.00},
+  {"state": "Pahang",                        "count": 0,  "lat": 3.90, "lon": 102.80},
+  {"state": "Kedah",                         "count": 0,  "lat": 6.10, "lon": 100.60},
+  {"state": "Pulau Pinang",                  "count": 6,  "lat": 5.40, "lon": 100.30},
+  {"state": "Perlis",                        "count": 0,  "lat": 6.45, "lon": 100.20},
+  {"state": "Melaka",                        "count": 6,  "lat": 2.20, "lon": 102.25},
+  {"state": "Negeri Sembilan",               "count": 2,  "lat": 2.75, "lon": 102.25},
+  {"state": "Johor",                         "count": 0,  "lat": 2.00, "lon": 103.30},
+  {"state": "Selangor",                      "count": 4,  "lat": 3.35, "lon": 101.50},
+  {"state": "Perak",                         "count": 11, "lat": 4.60, "lon": 101.10},
+  {"state": "Wilayah Persekutuan Kuala Lumpur", "count": 30, "lat": 3.14, "lon": 101.69}
+]
