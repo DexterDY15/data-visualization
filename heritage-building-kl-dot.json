@@ -7,21 +7,21 @@
   "params": [
     {"name": "c_lon", "value": 101.6965},
     {"name": "c_lat", "value": 3.152},
-    {"name": "overview_zoom", "value": 690000},
+    {"name": "overview_zoom", "value": 700000},
     {"name": "focus_zoom", "value": 2500000},
     {
-      "name": "center_to",
-      "value": [101.6965, 3.152],
+      "name": "selected_area",
+      "value": "whole",
       "bind": {
         "input": "select",
         "options": [
-          [101.6965, 3.151],
-          [101.6937, 3.1479],
-          [101.6960, 3.1497],
-          [101.6955, 3.1451],
-          [101.6970, 3.1431],
-          [101.6869, 3.1343],
-          [101.6985, 3.1667]
+          "whole",
+          "merdeka",
+          "masjid_jamek",
+          "central_market",
+          "chinatown",
+          "kl_sentral",
+          "chow_kit"
         ],
         "labels": [
           "Whole Area",
@@ -36,8 +36,12 @@
       }
     },
     {
+      "name": "center_to",
+      "expr": "selected_area == 'merdeka' ? [101.6937, 3.1479] : selected_area == 'masjid_jamek' ? [101.6960, 3.1497] : selected_area == 'central_market' ? [101.6955, 3.1451] : selected_area == 'chinatown' ? [101.6970, 3.1431] : selected_area == 'kl_sentral' ? [101.6869, 3.1343] : selected_area == 'chow_kit' ? [101.6985, 3.1667] : [c_lon, c_lat]"
+    },
+    {
       "name": "zoom_level",
-      "expr": "(abs(center_to[0] - c_lon) < 0.0001 && abs(center_to[1] - c_lat) < 0.0001) ? overview_zoom : focus_zoom"
+      "expr": "selected_area == 'whole' ? overview_zoom : focus_zoom"
     }
   ],
   "projection": {
