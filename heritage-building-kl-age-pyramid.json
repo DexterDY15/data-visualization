@@ -1,5 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "usermeta": {
+    "dataSource": {
+      "title": "Kuala Lumpur Heritage Buildings List",
+      "url": "https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf",
+      "page": "B1-61"
+    }
+  },
   "title": {
     "text": "Age Pyramid of Kuala Lumpur Heritage Buildings (as of 2026)",
     "subtitle": "Distribution of heritage structures across 10-year age brackets by historical era",

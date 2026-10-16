@@ -52,7 +52,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/export%20(4).geojson",
+        "url": "base-map.geojson",
         "format": {"type": "json", "property": "features"}
       },
       "transform": [
@@ -67,7 +67,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/export%20(4).geojson",
+        "url": "base-map.geojson",
         "format": {"type": "json", "property": "features"}
       },
       "transform": [
@@ -82,7 +82,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/export%20(1).geojson",
+        "url": "data-dot-map.geojson",
         "format": {"type": "json", "property": "features"}
       },
       "transform": [
