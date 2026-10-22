@@ -3,7 +3,6 @@
   "width": 520,
   "height": 360,
   "background": "#fafafa",
-  "title": "Estimated Heritage Buildings in Peninsular Malaysia",
   "projection": {
     "type": "mercator",
     "center": [101.9, 4.2],

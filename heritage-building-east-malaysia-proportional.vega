@@ -3,11 +3,10 @@
   "width": 520,
   "height": 360,
   "background": "#fafafa",
-  "title": "Estimated Heritage Buildings in Sabah and Sarawak",
   "projection": {
     "type": "mercator",
     "center": [114.5, 4.5],
-    "scale": 2250
+    "scale": 2300
   },
   "layer": [
     {
