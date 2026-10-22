@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 900,
+  "width": 740,
   "height": 480,
   "background": "#fafafa",
   "projection": {
     "type": "mercator",
     "center": [109.5, 4.1],
-    "scale": 2450
+    "scale": 2000
   },
   "layer": [
     {
@@ -44,10 +44,17 @@
         "size": {
           "field": "size_class",
           "type": "ordinal",
-          "legend": null,
           "scale": {
             "domain": ["0–49", "50–99", "100–499", "500–1,000", "> 1,000"],
             "range": [100, 1000, 2000, 3000, 10000]
+          },
+          "legend": {
+            "title": "Heritage buildings",
+            "orient": "right",
+            "symbolType": "circle",
+            "symbolFillColor": "#8B4513",
+            "symbolOpacity": 0.7,
+            "labelFontSize": 12
           }
         },
         "order": {"field": "heritage_buildings_count", "type": "quantitative", "sort": "descending"},
