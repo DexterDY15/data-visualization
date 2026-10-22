@@ -35,7 +35,7 @@
       "type": "quantitative",
       "title": "Number of Buildings",
       "scale": {"domain": [0, 13]},
-      "axis": {"tickMinStep": 1, "grid": true, "gridDash": [2, 3]}
+      "axis": {"tickMinStep": 2, "grid": true, "gridDash": [2, 3]}
     },
     "color": {
       "field": "current_function",
