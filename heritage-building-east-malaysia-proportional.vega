@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 900,
-  "height": 480,
+  "width": 520,
+  "height": 360,
   "background": "#fafafa",
   "title": "Estimated Heritage Buildings in Sabah and Sarawak",
   "projection": {
     "type": "mercator",
     "center": [114.5, 4.5],
-    "scale": 3900
+    "scale": 2250
   },
   "layer": [
     {

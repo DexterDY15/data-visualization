@@ -7,6 +7,8 @@ ________________________________________________________________________________
 
 Proportional Symbol Map - Heritage Buildings in each State
 
+As observable from the map, the Strait Settlements (Penang and Melaka, on the west coast of Peninsular Malaysia) have significantly more heritage buildings than the rest of the country. This is due to positions as longer-standing historic cities in the region's history.
+
 ______________________________________________________________________________________________________
 
 Lollipop Chart - Original Function

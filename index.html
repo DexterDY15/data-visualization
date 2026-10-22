@@ -91,6 +91,12 @@
         justify-items: end;
       }
 
+      .map-comparison {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+
       .chart-card {
         width: 100%;
         box-sizing: border-box;
@@ -192,6 +198,9 @@
         line-height: 1.5;
       }
 
+      @media (max-width: 1100px) {
+      }
+
       @media (max-width: 480px) {
         main {
           padding: 1rem 0.75rem;
@@ -208,6 +217,10 @@
         }
 
         .donut-comparison {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .map-comparison {
           grid-template-columns: minmax(0, 1fr);
         }
       }
@@ -233,19 +246,21 @@
       </section>
 
       <div class="chart-grid">
-        <section class="chart-card" aria-labelledby="state-map-title">
-          <h2 id="state-map-title">Proportional Symbol Map — Heritage Landmarks in Each State</h2>
-          <div class="chart-frame" id="state-map" aria-live="polite">
-            <p class="chart-status">Loading chart…</p>
-          </div>
-        </section>
+        <div class="map-comparison">
+          <section class="chart-card" aria-labelledby="state-map-title">
+            <h2 id="state-map-title">Proportional Symbol Map — Peninsular Malaysia</h2>
+            <div class="chart-frame" id="state-map" aria-live="polite">
+              <p class="chart-status">Loading chart…</p>
+            </div>
+          </section>
 
-        <section class="chart-card" aria-labelledby="east-malaysia-map-title">
-          <h2 id="east-malaysia-map-title">Proportional Symbol Map — Sabah and Sarawak</h2>
-          <div class="chart-frame" id="east-malaysia-map" aria-live="polite">
-            <p class="chart-status">Loading chart…</p>
-          </div>
-        </section>
+          <section class="chart-card" aria-labelledby="east-malaysia-map-title">
+            <h2 id="east-malaysia-map-title">Proportional Symbol Map — Sabah and Sarawak</h2>
+            <div class="chart-frame" id="east-malaysia-map" aria-live="polite">
+              <p class="chart-status">Loading chart…</p>
+            </div>
+          </section>
+        </div>
 
         <section class="chart-card" aria-labelledby="dot-map-title">
           <h2 id="dot-map-title">Once Upon a Muddy Confluence</h2>
