@@ -190,15 +190,6 @@
         line-height: 1.5;
       }
 
-      .trail-stops {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 0.5rem 1.5rem;
-        margin: 1rem 0 0;
-        padding-left: 1.5rem;
-        color: #555;
-      }
-
       @media (max-width: 480px) {
         main {
           padding: 1rem 0.75rem;
@@ -243,7 +234,6 @@
           <div class="chart-frame" id="malaysia-map" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
-          <p class="chart-source">Map spacing is compressed for readability; regional shapes and marker positions within each region are preserved.</p>
           <div class="chart-narrative">
             <p>
               The geographic distribution shown on the map reveals a heavy concentration of heritage sites
@@ -504,51 +494,6 @@
         </section>
       </div>
 
-      <section class="introduction" aria-labelledby="additional-exploration-title">
-        <h2 id="additional-exploration-title">Additional Exploration</h2>
-        <p>Explore the types of places represented in the list and follow an illustrative heritage trail.</p>
-      </section>
-
-      <div class="chart-grid" aria-label="Additional exploration charts">
-        <section class="chart-card" aria-labelledby="landmark-type-title">
-          <h2 id="landmark-type-title">Buildings and Non-Building Landmarks</h2>
-          <p>
-            Monuments, Perdana Botanical Garden, and the flag-hoisting site and padang are classified as
-            non-building landmarks; the other records are classified as buildings.
-          </p>
-          <div class="chart-frame" id="landmark-donut" aria-live="polite">
-            <p class="chart-status">Loading chart…</p>
-          </div>
-        </section>
-
-        <section class="chart-card" aria-labelledby="heritage-trail-title">
-          <h2 id="heritage-trail-title">Kuala Lumpur Heritage Trail</h2>
-          <p>
-            Follow the approximately 32-minute walking route from Masjid Jamek Station through seven heritage stops.
-            Hover over a numbered marker to see its stop name. The route line is illustrative.
-          </p>
-          <div class="chart-frame" id="heritage-trail" aria-live="polite">
-            <p class="chart-status">Loading chart…</p>
-          </div>
-          <ol class="trail-stops">
-            <li>DBKL City Theatre</li>
-            <li>Dataran Merdeka</li>
-            <li>Sultan Abdul Samad Building</li>
-            <li>Royal Selangor Club</li>
-            <li>Rumah Tangsi</li>
-            <li>Oriental Building</li>
-            <li>Muzium Telekom</li>
-          </ol>
-          <p class="chart-source">
-            <strong>Data source:</strong>
-            <a
-              href="https://www.behance.net/gallery/244060569/Kuala-Lumpur-City-Guide-Map-for-Prasarana-ThinkCity"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Kuala Lumpur City Guide Map for Prasarana ThinkCity (Behance)</a>
-          </p>
-        </section>
-      </div>
     </main>
 
     <script>
@@ -562,9 +507,7 @@
         { element: "donut", spec: "heritage-building-kl-donut.json" },
         { element: "community-radar", spec: "heritage-community-radar.vega" },
         { element: "original-function", spec: "heritage-building-kl-lollipop.json" },
-        { element: "current-function", spec: "heritage-building-kl-lollipop2.json" },
-        { element: "landmark-donut", spec: "heritage-building-kl-landmark-donut.json" },
-        { element: "heritage-trail", spec: "kuala-lumpur-heritage-trail.json" }
+        { element: "current-function", spec: "heritage-building-kl-lollipop2.json" }
       ];
 
       async function renderCharts() {
