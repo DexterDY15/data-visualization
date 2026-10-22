@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Cumulative Heritage Buildings by Informal Area",
+    "subtitle": "Cumulative count by recorded construction year",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "offset": 15
+  },
+  "width": 700,
+  "height": 380,
+  "background": "#fafafa",
+  "data": {
+    "url": "data-basic.json?dashboard-restructure=v1",
+    "format": {"type": "json"}
+  },
+  "transform": [
+    {"filter": "isValid(datum.start_year) && isValid(datum.central_area)"},
+    {
+      "aggregate": [{"op": "count", "as": "buildings_added"}],
+      "groupby": ["central_area", "start_year"]
+    },
+    {
+      "window": [{"op": "sum", "field": "buildings_added", "as": "cumulative_count"}],
+      "groupby": ["central_area"],
+      "sort": [{"field": "start_year", "order": "ascending"}]
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "interpolate": "step-after",
+    "point": {"filled": true, "size": 55},
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "start_year",
+      "type": "quantitative",
+      "title": "Construction Year",
+      "axis": {"format": "d", "tickCount": 8, "grid": true}
+    },
+    "y": {
+      "field": "cumulative_count",
+      "type": "quantitative",
+      "title": "Cumulative Buildings",
+      "scale": {"zero": true},
+      "axis": {"tickMinStep": 1, "grid": true, "gridDash": [2, 3]}
+    },
+    "color": {
+      "field": "central_area",
+      "type": "nominal",
+      "title": "Informal Area",
+      "scale": {
+        "domain": [
+          "Merdeka Square",
+          "Masjid Jamek",
+          "Central Market",
+          "Chinatown / Petaling Street",
+          "KL Sentral / Brickfields",
+          "Chow Kit"
+        ],
+        "range": ["#8B4513", "#2E8B57", "#3A6EA5", "#C9822B", "#7A5195", "#4A4A4A"]
+      }
+    },
+    "tooltip": [
+      {"field": "central_area", "type": "nominal", "title": "Informal Area"},
+      {"field": "start_year", "type": "quantitative", "title": "Year", "format": "d"},
+      {"field": "buildings_added", "type": "quantitative", "title": "Buildings Added"},
+      {"field": "cumulative_count", "type": "quantitative", "title": "Cumulative Total"}
+    ]
+  }
+}

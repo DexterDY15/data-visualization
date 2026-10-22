@@ -1,17 +1,34 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 740,
-  "height": 480,
+  "width": 900,
+  "height": 620,
   "background": "#fafafa",
   "projection": {
     "type": "mercator",
     "center": [109.5, 4.1],
-    "scale": 2000
+    "scale": 3000
   },
   "layer": [
     {
       "data": {
         "url": "malaysia-map.json",
+        "format": {"type": "json", "property": "features"}
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.NAME_1 !== 'Labuan' && datum.properties.NAME_1 !== 'Sabah' && datum.properties.NAME_1 !== 'Sarawak'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ece9e1",
+        "stroke": "#b5b5b5",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "east-malaysia-map.json",
         "format": {"type": "json", "property": "features"}
       },
       "mark": {
@@ -26,6 +43,7 @@
         "url": "proportional-symbol-map.json"
       },
       "transform": [
+        {"calculate": "datum.lon >= 109 ? datum.lon - 3.5 : datum.lon", "as": "display_lon"},
         {
           "calculate": "datum.heritage_buildings_count < 50 ? '0–49' : datum.heritage_buildings_count < 100 ? '50–99' : datum.heritage_buildings_count < 500 ? '100–499' : datum.heritage_buildings_count <= 1000 ? '500–1,000' : '> 1,000'",
           "as": "size_class"
@@ -39,7 +57,7 @@
         "strokeWidth": 1
       },
       "encoding": {
-        "longitude": {"field": "lon", "type": "quantitative"},
+        "longitude": {"field": "display_lon", "type": "quantitative"},
         "latitude": {"field": "lat", "type": "quantitative"},
         "size": {
           "field": "size_class",
@@ -54,7 +72,8 @@
             "symbolType": "circle",
             "symbolFillColor": "#8B4513",
             "symbolOpacity": 0.7,
-            "labelFontSize": 12
+            "labelFontSize": 12,
+            "titleFontSize": 18
           }
         },
         "order": {"field": "heritage_buildings_count", "type": "quantitative", "sort": "descending"},

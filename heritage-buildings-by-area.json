@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Heritage Buildings by Informal Central KL Area",
+    "subtitle": "Each record is assigned to its nearest existing dot-map focus point",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "offset": 15
+  },
+  "width": 650,
+  "height": 330,
+  "background": "#fafafa",
+  "data": {
+    "url": "data-basic.json?dashboard-restructure=v1",
+    "format": {"type": "json"}
+  },
+  "transform": [
+    {"filter": "isValid(datum.central_area)"},
+    {
+      "aggregate": [{"op": "count", "as": "building_count"}],
+      "groupby": ["central_area"]
+    }
+  ],
+  "mark": {"type": "bar", "color": "#8B4513", "cornerRadiusEnd": 3},
+  "encoding": {
+    "y": {
+      "field": "central_area",
+      "type": "nominal",
+      "sort": {"field": "building_count", "order": "descending"},
+      "title": null,
+      "axis": {"labelLimit": 280}
+    },
+    "x": {
+      "field": "building_count",
+      "type": "quantitative",
+      "title": "Number of Buildings",
+      "axis": {"tickMinStep": 1, "grid": true, "gridDash": [2, 3]}
+    },
+    "tooltip": [
+      {"field": "central_area", "type": "nominal", "title": "Informal Area"},
+      {"field": "building_count", "type": "quantitative", "title": "Buildings"}
+    ]
+  }
+}

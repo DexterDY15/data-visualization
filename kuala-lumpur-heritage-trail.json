@@ -1,0 +1,253 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 900,
+  "height": 600,
+  "background": "#f6f0e4",
+  "title": {
+    "text": "Kuala Lumpur Heritage Trail",
+    "subtitle": "Approx. 32-minute walk · Seven heritage stops from Masjid Jamek Station",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "offset": 12
+  },
+  "projection": {
+    "type": "mercator",
+    "center": [101.6955, 3.1482],
+    "scale": 2500000
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "base-map.geojson",
+        "format": {"type": "json", "property": "features"}
+      },
+      "transform": [{"filter": "datum.properties.highway"}],
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#c8bca9",
+        "strokeWidth": 1.1
+      }
+    },
+    {
+      "data": {
+        "url": "base-map.geojson",
+        "format": {"type": "json", "property": "features"}
+      },
+      "transform": [{"filter": "datum.properties.waterway"}],
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#79bfe0",
+        "strokeWidth": 3
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "type": "Feature",
+            "properties": {"name": "Heritage trail"},
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [101.69639, 3.14806],
+                [101.6959, 3.14855],
+                [101.69535, 3.14905],
+                [101.69444, 3.14917],
+                [101.6941, 3.14888],
+                [101.69372, 3.14853],
+                [101.69361, 3.14833],
+                [101.69404, 3.14847],
+                [101.69444, 3.14861],
+                [101.69405, 3.14896],
+                [101.6937, 3.14914],
+                [101.69333, 3.14917],
+                [101.693, 3.14948],
+                [101.6925, 3.1504],
+                [101.69267, 3.14952],
+                [101.69315, 3.14865],
+                [101.69361, 3.14833],
+                [101.69444, 3.14861],
+                [101.6951, 3.1474],
+                [101.69605, 3.14655],
+                [101.69665, 3.1461],
+                [101.69745, 3.1467],
+                [101.69805, 3.14745],
+                [101.69889, 3.14861]
+              ]
+            }
+          }
+        ]
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#ffffff",
+        "strokeWidth": 8,
+        "strokeCap": "round",
+        "strokeJoin": "round"
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "type": "Feature",
+            "properties": {"name": "Heritage trail"},
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [101.69639, 3.14806],
+                [101.6959, 3.14855],
+                [101.69535, 3.14905],
+                [101.69444, 3.14917],
+                [101.6941, 3.14888],
+                [101.69372, 3.14853],
+                [101.69361, 3.14833],
+                [101.69404, 3.14847],
+                [101.69444, 3.14861],
+                [101.69405, 3.14896],
+                [101.6937, 3.14914],
+                [101.69333, 3.14917],
+                [101.693, 3.14948],
+                [101.6925, 3.1504],
+                [101.69267, 3.14952],
+                [101.69315, 3.14865],
+                [101.69361, 3.14833],
+                [101.69444, 3.14861],
+                [101.6951, 3.1474],
+                [101.69605, 3.14655],
+                [101.69665, 3.1461],
+                [101.69745, 3.1467],
+                [101.69805, 3.14745],
+                [101.69889, 3.14861]
+              ]
+            }
+          }
+        ]
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#78483a",
+        "strokeWidth": 5,
+        "strokeCap": "round",
+        "strokeJoin": "round"
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "sequence": "START",
+            "name": "Masjid Jamek Station",
+            "lon": 101.69639,
+            "lat": 3.14806,
+            "kind": "start"
+          },
+          {
+            "sequence": "1",
+            "name": "DBKL City Theatre",
+            "lon": 101.69444,
+            "lat": 3.14917,
+            "kind": "stop"
+          },
+          {
+            "sequence": "2",
+            "name": "Dataran Merdeka",
+            "lon": 101.69361,
+            "lat": 3.14833,
+            "kind": "stop"
+          },
+          {
+            "sequence": "3",
+            "name": "Sultan Abdul Samad Building",
+            "lon": 101.69444,
+            "lat": 3.14861,
+            "kind": "stop"
+          },
+          {
+            "sequence": "4",
+            "name": "Royal Selangor Club",
+            "lon": 101.69333,
+            "lat": 3.14917,
+            "kind": "stop"
+          },
+          {
+            "sequence": "5",
+            "name": "Rumah Tangsi",
+            "lon": 101.6925,
+            "lat": 3.1504,
+            "kind": "stop"
+          },
+          {
+            "sequence": "6",
+            "name": "Oriental Building",
+            "lon": 101.69665,
+            "lat": 3.1461,
+            "kind": "stop"
+          },
+          {
+            "sequence": "7",
+            "name": "Muzium Telekom",
+            "lon": 101.69889,
+            "lat": 3.14861,
+            "kind": "end"
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "size": 780,
+        "stroke": "#ffffff",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "color": {
+          "field": "kind",
+          "type": "nominal",
+          "scale": {
+            "domain": ["start", "stop", "end"],
+            "range": ["#e6573e", "#78483a", "#a25b35"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "sequence", "type": "nominal", "title": "Trail"},
+          {"field": "name", "type": "nominal", "title": "Stop"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"sequence": "S", "lon": 101.69639, "lat": 3.14806},
+          {"sequence": "1", "lon": 101.69444, "lat": 3.14917},
+          {"sequence": "2", "lon": 101.69361, "lat": 3.14833},
+          {"sequence": "3", "lon": 101.69444, "lat": 3.14861},
+          {"sequence": "4", "lon": 101.69333, "lat": 3.14917},
+          {"sequence": "5", "lon": 101.6925, "lat": 3.1504},
+          {"sequence": "6", "lon": 101.69665, "lat": 3.1461},
+          {"sequence": "7", "lon": 101.69889, "lat": 3.14861}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#ffffff",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "sequence", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {"view": {"stroke": null}}
+}

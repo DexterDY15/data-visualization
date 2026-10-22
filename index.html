@@ -190,6 +190,15 @@
         line-height: 1.5;
       }
 
+      .trail-stops {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 0.5rem 1.5rem;
+        margin: 1rem 0 0;
+        padding-left: 1.5rem;
+        color: #555;
+      }
+
       @media (max-width: 480px) {
         main {
           padding: 1rem 0.75rem;
@@ -217,32 +226,36 @@
   <body>
     <header>
       <h1>The Muddy Beginnings of a City</h1>
-      <p>A Data Visualization of Kuala Lumpur Heritage Landmarks</p>
+      <p>Kuala Lumpur’s heritage buildings, and the limits of their protection under the National Heritage Act 2005</p>
     </header>
 
     <main>
       <section class="introduction" aria-labelledby="introduction-title">
-        <h2 id="introduction-title">Introduction</h2>
+        <h2 id="introduction-title">1. Introduction to Kuala Lumpur’s Heritage Buildings</h2>
         <p>
-          This dashboard explores Malaysia’s heritage landmarks, focusing on historic sites in Kuala Lumpur. 
-          Use the interactive charts to explore landmark locations, architectural styles, original and current 
-          functions, age, and heritage status. Hover over chart marks for details.
+          Explore where the listed heritage places are found, how they were built and used, and how their
+          construction dates span the city’s history. This project uses a selected list of 50 Kuala Lumpur
+          entries; it is not a complete census of every historic building in the city.
         </p>
       </section>
 
-      <div class="chart-grid">
+      <div class="chart-grid" aria-label="Introduction charts">
         <section class="chart-card" aria-labelledby="malaysia-map-title">
           <h2 id="malaysia-map-title">Proportional Symbol Map — Malaysia</h2>
           <div class="chart-frame" id="malaysia-map" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
+          <p class="chart-source">Map spacing is compressed for readability; regional shapes and marker positions within each region are preserved.</p>
         </section>
 
         <section class="chart-card" aria-labelledby="dot-map-title">
-          <h2 id="dot-map-title">Once Upon a Muddy Confluence</h2>
+          <h2 id="dot-map-title">Heritage Buildings in Kuala Lumpur</h2>
           <div class="feature-layout">
             <div class="feature-description">
-              <p>This visually illustrates the geographic distribution of historical landmarks across the city, where each brown point represents a single heritage building. As shown in the spatial mapping, there is a pronounced spatial clustering of these structures surrounding the river channels, specifically tightly concentrated around the historical river confluence. This dense aggregation directly mirrors Kuala Lumpur’s origins—historically founded at the "muddy confluence" of the Klang and Gombak Rivers—highlighting how early urban development, trade, and architectural heritage naturally anchored around this vital geographical intersection. Select the Map Areas to explore heritage landmarks in specific areas.</p>
+              <p>
+                Each point represents one entry in the source list. The map shows a concentration around
+                the historic city centre; use the area selector to inspect the six focus areas.
+              </p>
             </div>
             <div class="chart-frame" id="dot-map" aria-live="polite">
               <p class="chart-status">Loading chart…</p>
@@ -259,28 +272,190 @@
         </section>
 
         <section class="chart-card" aria-labelledby="treemap-title">
-          <h2 id="treemap-title">Treemap — Architectural Style</h2>
+          <h2 id="treemap-title">Architectural Styles</h2>
           <div class="chart-frame" id="treemap" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
           <div class="chart-narrative">
             <p>
-              An architectural style is a visual and structural shorthand that tells the story of the time, place, culture, and technology that created it. Rather than just decorative choices, a building's style functions as a physical record of human history.
+              An architectural style is a visual and structural shorthand that tells the story of the time,
+              place, culture, and technology that created it. Rather than just decorative choices, a building's
+              style functions as a physical record of human history.
             </p>
             <p>
-              Kuala Lumpur’s heritage landmarks tell a story of colonial adaptation, migration, and survival in a tropical environment.
+              Kuala Lumpur’s heritage buildings tell a story of colonial adaptation, migration, and survival
+              in a tropical environment.
             </p>
             <p>
-              By weaving these distinct architectural movements together, Kuala Lumpur's heritage landscape unfolds as a physical timeline of political and social evolution. Early Colonial architecture projected institutional discipline, an unyielding connection to the British homeland, and the absolute imperial authority of the crown over the colony. As governance evolved, the British attempted to legitimize their rule through the Colonial Islamic style—a romanticized attempt to construct an "official" state identity that felt visually harmonious with the local Muslim populace while framing British rule as the ultimate protector of local culture. Alongside these imperial narratives stood the Vernacular tradition, embodied by the Straits Eclectic shophouse and the Traditional Malay house. These structures demonstrated high environmental intelligence; they did not fight the tropical climate but cooperated with it entirely through passive cooling, utilizing central airwells, open layouts, raised stilts, and natural materials like timber or local clay. Finally, following independence, Modern styles swept away this ornamentation in favor of radical optimism, self-reliance, and a clean break from both feudal and colonial pasts. This bold geometry broadcasted a message to the world that the newly independent Malaysia was democratic, rational, and technologically progressive.
+              By weaving these distinct architectural movements together, Kuala Lumpur's heritage landscape
+              unfolds as a physical timeline of political and social evolution. Early Colonial architecture
+              projected institutional discipline, an unyielding connection to the British homeland, and the
+              absolute imperial authority of the crown over the colony. As governance evolved, the British
+              attempted to legitimize their rule through the Colonial Islamic style—a romanticized attempt to
+              construct an "official" state identity that felt visually harmonious with the local Muslim
+              populace while framing British rule as the ultimate protector of local culture. Alongside these
+              imperial narratives stood the Vernacular tradition, embodied by the Straits Eclectic shophouse
+              and the Traditional Malay house. These structures demonstrated high environmental intelligence;
+              they did not fight the tropical climate but cooperated with it entirely through passive cooling,
+              utilizing central airwells, open layouts, raised stilts, and natural materials like timber or
+              local clay. Finally, following independence, Modern styles swept away this ornamentation in
+              favor of radical optimism, self-reliance, and a clean break from both feudal and colonial pasts.
+              This bold geometry broadcasted a message to the world that the newly independent Malaysia was
+              democratic, rational, and technologically progressive.
+            </p>
+            <p>
+              Since most administrative, judicial, transport, and police facilities were large-scale public
+              and institutional complexes, they survived urban redevelopment intact and form the bulk of
+              gazetted inventories. Early vernacular shophouses and community buildings in the urban core were
+              frequently redeveloped into modern commercial land use zones, reducing the remaining count of
+              intact vernacular structures compared to stone/brick colonial administrative buildings.
             </p>
           </div>
         </section>
 
-        <section class="chart-card" aria-labelledby="original-function-title">
-          <h2 id="original-function-title">Lollipop Chart — Original Function</h2>
+        <section class="chart-card" aria-labelledby="age-pyramid-title">
+          <h2 id="age-pyramid-title">Landmarks per Era — Age Pyramid</h2>
           <div class="feature-layout">
             <div class="feature-description">
-              <p>See how Kuala Lumpur’s heritage landmarks were originally used, from civic buildings and schools to residences and places of worship. The lollipop length and label show the number in each category; hover for details.</p>
+              <p>
+                Ten-year age bands show the distribution of entries constructed before and after 1957.
+                Hover over a bar for the age band and count.
+              </p>
+            </div>
+            <div class="chart-frame" id="age-pyramid" aria-live="polite">
+              <p class="chart-status">Loading chart…</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="area-count-title">
+          <h2 id="area-count-title">Heritage Buildings by Central KL Area</h2>
+          <p>
+            These are informal map areas, not administrative districts. Each building is assigned once to
+            the nearest of the six focus points already used by the dot-map selector.
+          </p>
+          <div class="chart-frame" id="area-count" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="area-timeline-title">
+          <h2 id="area-timeline-title">Cumulative Buildings by Area over Time</h2>
+          <p>
+            Lines show cumulative counts by construction year. The step pattern reflects that a building
+            is added to its area when its recorded start year is reached.
+          </p>
+          <div class="chart-frame" id="area-timeline" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
+        </section>
+      </div>
+
+      <section class="introduction" aria-labelledby="limitations-title">
+        <h2 id="limitations-title">2. Limitations of Heritage Building Protection</h2>
+        <p>
+          The selected 50-entry list contains 31 entries labelled “National Heritage” and 19 labelled
+          “Heritage.” Those figures describe this list only, not the share of all Kuala Lumpur heritage
+          buildings that is gazetted. The National Heritage Act 2005 (Act 645) provides for heritage-site
+          designation and a separate National Heritage declaration; the legal process and the dataset’s
+          labels should not be treated as proof of a citywide protection gap.
+        </p>
+        <p class="chart-source">
+          <strong>Legal source:</strong>
+          <a
+            href="https://lom.agc.gov.my/ilims/upload/portal/akta/LOM/EN/Act%20645.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >National Heritage Act 2005 (Act 645), official Laws of Malaysia reprint (sections 23–30, 38, 43 and 67)</a>.
+          The source is a 2006 reprint; check for later amendments when making a current legal assessment.
+        </p>
+      </section>
+
+      <div class="chart-grid" aria-label="Heritage protection charts">
+        <section class="chart-card" aria-labelledby="donut-title">
+          <h2 id="donut-title">National Heritage and Heritage Status</h2>
+          <div class="feature-layout">
+            <div class="feature-description">
+              <p>
+                The source list classifies 31 entries as National Heritage and 19 as Heritage. The Act
+                establishes a public National Heritage Register (section 23) and allows the Minister to
+                declare registered heritage items as National Heritage (section 67). Owners of heritage
+                sites may apply for conservation grants or loans under section 43; the Act does not say
+                that this assistance is limited to National Heritage sites.
+              </p>
+              <p>
+                These categories raise a question about recognition and implementation, but the chart alone
+                cannot show unequal funding, protection priority, or public attention between categories.
+              </p>
+              <p>
+                Counts use the classifications in <code>data-basic.json</code>. Its labels differ from
+                <code>data-dot-map.geojson</code> for the First Malayan Flag Hoisting Site and Royal
+                Selangor Club Padang, and Perdana Botanical Garden; those records need authoritative
+                item-by-item reconciliation.
+              </p>
+            </div>
+            <div class="chart-frame" id="donut" aria-live="polite">
+              <p class="chart-status">Loading chart…</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="private-land-title">
+          <h2 id="private-land-title">a. Private Land and State Intervention</h2>
+          <p>
+            The Act allows heritage-site designation on land and requires notice to the owner, an opportunity
+            to object and be heard, and State Authority consent for sites in a State (sections 27–30).
+            For designated sites on alienated land, the Commissioner may arrange conservation with owners
+            or occupiers, and may contribute to repair costs where they agree (section 38). These steps make
+            coordination and implementation important; they do not amount to a blanket exclusion of private
+            property from protection. Section 30 is framed for sites situated in a State; this summary does
+            not assume that provision applies identically in the Federal Territory of Kuala Lumpur.
+          </p>
+        </section>
+
+        <section class="chart-card" aria-labelledby="minor-landmarks-title">
+          <h2 id="minor-landmarks-title">b. Recognition of Less-Prominent Landmarks</h2>
+          <p>
+            Section 24 allows the Commissioner to designate a site with natural or cultural heritage
+            significance. Protection is designation-based, so an unlisted landmark may not receive the
+            Act’s site-specific measures. However, this 50-entry dataset has no inventory of omitted places
+            or nomination history; it cannot establish that minor landmarks are systematically ignored.
+          </p>
+        </section>
+
+        <section class="chart-card" aria-labelledby="designation-gap-title">
+          <h2 id="designation-gap-title">c. Recognition Tiers and Practical Support</h2>
+          <p>
+            Heritage sites are registered under section 23, while section 67 provides for a separate
+            National Heritage declaration. This distinction may shape visibility in practice, but the Act
+            also provides for grants or loans for conservation of heritage sites (section 43). Whether
+            lower-status places receive less support requires funding and implementation records, not
+            status labels alone.
+          </p>
+        </section>
+
+        <section class="chart-card" aria-labelledby="community-radar-title">
+          <h2 id="community-radar-title">Buildings by Community Association</h2>
+          <p>
+            Community labels are working architectural and historical-context proxies, not verified
+            ethnicity, ownership, or builder data. Most National Heritage entries in this sample date from
+            before 1957 (22 of 31), but pre-1957 buildings also make up most of the list (38 of 50); the
+            National Heritage share is 22 of 38 for pre-1957 entries and 9 of 12 after 1957. This sample
+            therefore does not show that colonial-era buildings were more likely to receive that status.
+          </p>
+          <div class="chart-frame" id="community-radar" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="original-function-title">
+          <h2 id="original-function-title">Original Function</h2>
+          <div class="feature-layout">
+            <div class="feature-description">
+              <p>
+                The lollipop chart compares the functions buildings were originally constructed to serve.
+                Hover over a mark for the exact count.
+              </p>
             </div>
             <div class="chart-frame" id="original-function" aria-live="polite">
               <p class="chart-status">Loading chart…</p>
@@ -289,45 +464,66 @@
         </section>
 
         <section class="chart-card" aria-labelledby="current-function-title">
-          <h2 id="current-function-title">Lollipop Chart — Current Function</h2>
+          <h2 id="current-function-title">Current Function</h2>
           <div class="feature-layout">
             <div class="feature-description">
-              <p>Many heritage landmarks have changed purpose over time. Compare their current uses, including museums, government offices, education, and community spaces; longer lollipops represent more landmarks.</p>
+              <p>
+                The chart shows the recorded current uses of the listed buildings. Function is not a measure
+                of physical condition: buildings outside statutory designation may not receive the Act’s
+                site-specific measures, but this dataset does not record maintenance or other protections
+                and cannot show that they receive no care.
+              </p>
             </div>
             <div class="chart-frame" id="current-function" aria-live="polite">
               <p class="chart-status">Loading chart…</p>
             </div>
           </div>
         </section>
+      </div>
 
-        <section class="chart-card" aria-labelledby="age-pyramid-title">
-          <h2 id="age-pyramid-title">Age Pyramid Chart — Landmarks per Era</h2>
-          <div class="feature-layout">
-            <div class="feature-description">
-              <p>Landmarks are grouped into ten-year age bands, with Colonial Era structures shown to the left and Post-Independence structures to the right. Compare the counts across eras and hover over a bar for the exact age band and total.</p>
-            </div>
-            <div class="chart-frame" id="age-pyramid" aria-live="polite">
-              <p class="chart-status">Loading chart…</p>
-            </div>
+      <section class="introduction" aria-labelledby="additional-exploration-title">
+        <h2 id="additional-exploration-title">Additional Exploration</h2>
+        <p>Explore the types of places represented in the list and follow an illustrative heritage trail.</p>
+      </section>
+
+      <div class="chart-grid" aria-label="Additional exploration charts">
+        <section class="chart-card" aria-labelledby="landmark-type-title">
+          <h2 id="landmark-type-title">Buildings and Non-Building Landmarks</h2>
+          <p>
+            Monuments, Perdana Botanical Garden, and the flag-hoisting site and padang are classified as
+            non-building landmarks; the other records are classified as buildings.
+          </p>
+          <div class="chart-frame" id="landmark-donut" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
           </div>
         </section>
 
-        <section class="chart-card" aria-labelledby="donut-comparison-title">
-          <h2 id="donut-comparison-title">Heritage Status and Landmark Type</h2>
-          <div class="donut-comparison">
-            <div class="feature-description">
-              <p>Heritage status reflects the recognition given to each landmark. Hover over a segment to compare the counts and proportions of Heritage and National Heritage sites.</p>
-            </div>
-            <div class="chart-frame" id="donut" aria-live="polite">
-              <p class="chart-status">Loading chart…</p>
-            </div>
-            <div class="chart-frame" id="landmark-donut" aria-live="polite">
-              <p class="chart-status">Loading chart…</p>
-            </div>
-            <div class="feature-description">
-              <p>This chart compares buildings with non-building landmarks. Monuments, Perdana Botanical Garden, and the flag-hoisting site and padang are classified as non-building landmarks; the other records are classified as buildings.</p>
-            </div>
+        <section class="chart-card" aria-labelledby="heritage-trail-title">
+          <h2 id="heritage-trail-title">Kuala Lumpur Heritage Trail</h2>
+          <p>
+            Follow the approximately 32-minute walking route from Masjid Jamek Station through seven heritage stops.
+            Hover over a numbered marker to see its stop name. The route line is illustrative.
+          </p>
+          <div class="chart-frame" id="heritage-trail" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
           </div>
+          <ol class="trail-stops">
+            <li>DBKL City Theatre</li>
+            <li>Dataran Merdeka</li>
+            <li>Sultan Abdul Samad Building</li>
+            <li>Royal Selangor Club</li>
+            <li>Rumah Tangsi</li>
+            <li>Oriental Building</li>
+            <li>Muzium Telekom</li>
+          </ol>
+          <p class="chart-source">
+            <strong>Data source:</strong>
+            <a
+              href="https://www.behance.net/gallery/244060569/Kuala-Lumpur-City-Guide-Map-for-Prasarana-ThinkCity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Kuala Lumpur City Guide Map for Prasarana ThinkCity (Behance)</a>
+          </p>
         </section>
       </div>
     </main>
@@ -337,11 +533,15 @@
         { element: "dot-map", spec: "heritage-building-kl-dot.json" },
         { element: "malaysia-map", spec: "malaysia-proportional-symbol-map.vega" },
         { element: "treemap", spec: "heritage-building-kl-treemap.json" },
-        { element: "original-function", spec: "heritage-building-kl-lollipop.json" },
-        { element: "current-function", spec: "heritage-building-kl-lollipop2.json" },
+        { element: "area-count", spec: "heritage-buildings-by-area.json" },
+        { element: "area-timeline", spec: "heritage-buildings-area-timeline.json" },
         { element: "age-pyramid", spec: "heritage-building-kl-age-pyramid.json" },
         { element: "donut", spec: "heritage-building-kl-donut.json" },
-        { element: "landmark-donut", spec: "heritage-building-kl-landmark-donut.json" }
+        { element: "community-radar", spec: "heritage-community-radar.vega" },
+        { element: "original-function", spec: "heritage-building-kl-lollipop.json" },
+        { element: "current-function", spec: "heritage-building-kl-lollipop2.json" },
+        { element: "landmark-donut", spec: "heritage-building-kl-landmark-donut.json" },
+        { element: "heritage-trail", spec: "kuala-lumpur-heritage-trail.json" }
       ];
 
       async function renderCharts() {

@@ -19,7 +19,7 @@
   "data": [
     {
       "name": "raw",
-      "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/data-basic.json",
+      "url": "data-basic.json?dashboard-restructure=v1",
       "format": {"type": "json"}
     },
     {
