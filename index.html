@@ -304,6 +304,28 @@
           </p>
         </section>
 
+        <section class="chart-card" aria-labelledby="area-count-title">
+          <h2 id="area-count-title">Heritage Buildings by Central KL Area</h2>
+          <p>
+            These are informal map areas, not administrative districts. Each building is assigned once to
+            the nearest of the six focus points already used by the dot-map selector.
+          </p>
+          <div class="chart-frame" id="area-count" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="area-timeline-title">
+          <h2 id="area-timeline-title">Cumulative Buildings by Area over Time</h2>
+          <p>
+            Lines show cumulative counts by construction year. The step pattern reflects that a building
+            is added to its area when its recorded start year is reached.
+          </p>
+          <div class="chart-frame" id="area-timeline" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
+        </section>
+
         <section class="chart-card" aria-labelledby="treemap-title">
           <h2 id="treemap-title">Architectural Styles</h2>
           <div class="chart-frame" id="treemap" aria-live="polite">
@@ -347,41 +369,16 @@
         </section>
 
         <section class="chart-card" aria-labelledby="age-pyramid-title">
-          <h2 id="age-pyramid-title">Landmarks per Era — Age Pyramid</h2>
-          <div class="feature-layout">
-            <div class="feature-description">
-              <p>
-                Ten-year age bands show the distribution of entries constructed before and after 1957.
-                Hover over a bar for the age band and count.
-              </p>
-            </div>
-            <div class="chart-frame" id="age-pyramid" aria-live="polite">
-              <p class="chart-status">Loading chart…</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="chart-card" aria-labelledby="area-count-title">
-          <h2 id="area-count-title">Heritage Buildings by Central KL Area</h2>
-          <p>
-            These are informal map areas, not administrative districts. Each building is assigned once to
-            the nearest of the six focus points already used by the dot-map selector.
-          </p>
-          <div class="chart-frame" id="area-count" aria-live="polite">
+          <h2 id="age-pyramid-title">Landmarks per Era — Construction Decades</h2>
+          <div class="chart-frame" id="age-pyramid" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
+          <p>
+            Ten-year construction-year bands show the distribution of entries built before and after 1957.
+            Hover over a bar for the year range and count.
+          </p>
         </section>
 
-        <section class="chart-card" aria-labelledby="area-timeline-title">
-          <h2 id="area-timeline-title">Cumulative Buildings by Area over Time</h2>
-          <p>
-            Lines show cumulative counts by construction year. The step pattern reflects that a building
-            is added to its area when its recorded start year is reached.
-          </p>
-          <div class="chart-frame" id="area-timeline" aria-live="polite">
-            <p class="chart-status">Loading chart…</p>
-          </div>
-        </section>
       </div>
 
       <section class="introduction" aria-labelledby="limitations-title">

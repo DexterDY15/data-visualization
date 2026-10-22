@@ -8,14 +8,14 @@
     }
   },
   "title": {
-    "text": "Age Pyramid of Kuala Lumpur Heritage Buildings (as of 2026)",
-    "subtitle": "Distribution of heritage structures across 10-year age brackets by historical era",
+    "text": "Construction Decades of Kuala Lumpur Heritage Buildings",
+    "subtitle": "Distribution of heritage structures across 10-year construction-year brackets by historical era",
     "fontSize": 16,
     "subtitleFontSize": 12,
     "anchor": "start",
     "offset": 15
   },
-  "width": 650,
+  "width": "container",
   "height": 450,
   "background": "#fafafa",
   "data": {
@@ -24,14 +24,13 @@
   },
   "transform": [
     {"filter": "isValid(datum.start_year) && datum.start_year > 0"},
-    {"calculate": "2026 - datum.start_year", "as": "age"},
-    {"calculate": "floor(datum.age / 10) * 10", "as": "age_bin_floor"},
-    {"calculate": "datum.age_bin_floor + '–' + (datum.age_bin_floor + 9) + ' yrs'", "as": "age_group"},
+    {"calculate": "floor(datum.start_year / 10) * 10", "as": "year_bin_floor"},
+    {"calculate": "datum.year_bin_floor + '–' + (datum.year_bin_floor + 9)", "as": "year_group"},
     {"calculate": "datum.start_year < 1957 ? 'Colonial Era (Pre-1957)' : 'Post-Independence (1957+)'", "as": "era_label"},
     {"calculate": "datum.start_year < 1957 ? -1 : 1", "as": "dir"},
     {
       "aggregate": [{"op": "count", "as": "building_count"}],
-      "groupby": ["age_bin_floor", "age_group", "era_label", "dir"]
+      "groupby": ["year_bin_floor", "year_group", "era_label", "dir"]
     },
     {"calculate": "datum.building_count * datum.dir", "as": "signed_count"}
   ],
@@ -40,11 +39,12 @@
       "mark": {"type": "bar", "stroke": "#ffffff", "strokeWidth": 1},
       "encoding": {
         "y": {
-          "field": "age_bin_floor",
+          "field": "year_bin_floor",
           "type": "ordinal",
-          "sort": "descending",
-          "title": "Building Age Bracket (Years)",
-          "axis": {"labelExpr": "datum.value + '–' + (datum.value + 9) + ' yrs'"}
+          "sort": "ascending",
+          "scale": {"domain": [1860, 1870, 1880, 1890, 1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990]},
+          "title": "Construction Year",
+          "axis": {"labelExpr": "datum.value + '–' + (datum.value + 9)"}
         },
         "x": {
           "field": "signed_count",
@@ -62,7 +62,7 @@
           "legend": {"title": "Historical Era", "orient": "bottom"}
         },
         "tooltip": [
-          {"field": "age_group", "type": "nominal", "title": "Age Bracket"},
+          {"field": "year_group", "type": "nominal", "title": "Construction Years"},
           {"field": "era_label", "type": "nominal", "title": "Historical Era"},
           {"field": "building_count", "type": "quantitative", "title": "Building Count"}
         ]
@@ -77,7 +77,7 @@
         "fontWeight": "bold"
       },
       "encoding": {
-        "y": {"field": "age_bin_floor", "type": "ordinal", "sort": "descending"},
+        "y": {"field": "year_bin_floor", "type": "ordinal", "sort": "ascending"},
         "x": {"field": "signed_count", "type": "quantitative"},
         "text": {"field": "building_count", "type": "quantitative"},
         "color": {"value": "#333333"}
