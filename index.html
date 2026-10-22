@@ -171,7 +171,9 @@
       }
 
       #state-map canvas.marks,
-      #state-map svg {
+      #state-map svg,
+      #east-malaysia-map canvas.marks,
+      #east-malaysia-map svg {
         margin-right: auto;
         margin-left: auto;
       }
@@ -234,6 +236,13 @@
         <section class="chart-card" aria-labelledby="state-map-title">
           <h2 id="state-map-title">Proportional Symbol Map — Heritage Landmarks in Each State</h2>
           <div class="chart-frame" id="state-map" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="east-malaysia-map-title">
+          <h2 id="east-malaysia-map-title">Proportional Symbol Map — Sabah and Sarawak</h2>
+          <div class="chart-frame" id="east-malaysia-map" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
         </section>
@@ -336,6 +345,7 @@
       const charts = [
         { element: "dot-map", spec: "heritage-building-kl-dot.json" },
         { element: "state-map", spec: "heritage-building-malaysia-proportional.vega" },
+        { element: "east-malaysia-map", spec: "heritage-building-east-malaysia-proportional.vega" },
         { element: "treemap", spec: "heritage-building-kl-treemap.json" },
         { element: "original-function", spec: "heritage-building-kl-lollipop.json" },
         { element: "current-function", spec: "heritage-building-kl-lollipop2.json" },
