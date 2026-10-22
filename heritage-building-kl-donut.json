@@ -8,8 +8,8 @@
     "anchor": "start",
     "offset": 15
   },
-  "width": 320,
-  "height": 320,
+  "width": 480,
+  "height": 480,
   "padding": 20,
   "background": "#fafafa",
   "view": {"stroke": null},
@@ -32,7 +32,7 @@
   ],
   "layer": [
     {
-      "mark": {"type": "arc", "innerRadius": 85, "outerRadius": 150, "stroke": "#ffffff", "strokeWidth": 3},
+      "mark": {"type": "arc", "innerRadius": 105, "outerRadius": 190, "stroke": "#ffffff", "strokeWidth": 3},
       "encoding": {
         "theta": {"field": "building_count", "type": "quantitative", "stack": true},
         "order": {"field": "sort_idx", "type": "quantitative"},
@@ -54,7 +54,7 @@
       }
     },
     {
-      "mark": {"type": "text", "radius": 118, "fontSize": 13, "fontWeight": "bold", "color": "#ffffff"},
+      "mark": {"type": "text", "radius": 150, "fontSize": 14, "fontWeight": "bold", "color": "#ffffff"},
       "encoding": {
         "theta": {"field": "building_count", "type": "quantitative", "stack": true},
         "order": {"field": "sort_idx", "type": "quantitative"},
@@ -62,18 +62,18 @@
       }
     },
     {
-      "mark": {"type": "text", "fontSize": 34, "fontWeight": "bold", "color": "#333333", "dy": -8},
+      "mark": {"type": "text", "fontSize": 40, "fontWeight": "bold", "color": "#333333", "dy": -8},
       "encoding": {
-        "x": {"value": 160},
-        "y": {"value": 160},
+        "x": {"value": 240},
+        "y": {"value": 240},
         "text": {"field": "total", "type": "quantitative"}
       }
     },
     {
       "mark": {"type": "text", "fontSize": 12, "color": "#666666", "dy": 18},
       "encoding": {
-        "x": {"value": 160},
-        "y": {"value": 160},
+        "x": {"value": 240},
+        "y": {"value": 240},
         "text": {"value": "buildings"}
       }
     }

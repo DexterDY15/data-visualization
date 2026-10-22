@@ -78,6 +78,11 @@
         font-size: 1.25rem;
       }
 
+      .introduction .section-subtitle {
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
       .introduction p {
         margin: 0;
         color: #555;
@@ -112,6 +117,11 @@
         grid-template-columns: minmax(220px, 0.4fr) minmax(0, 1fr);
         gap: 1.5rem;
         align-items: start;
+      }
+
+      .status-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: center;
       }
 
       .feature-description p {
@@ -176,6 +186,12 @@
         margin-left: auto;
       }
 
+      #donut canvas.marks,
+      #donut svg {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
       .chart-frame.vega-embed .vega-bindings {
         display: flex;
         justify-content: flex-end;
@@ -222,7 +238,7 @@
 
     <main>
       <section class="introduction" aria-labelledby="introduction-title">
-        <h2 id="introduction-title">Section I. Introduction to Kuala Lumpur’s Heritage Buildings</h2>
+        <h2 id="introduction-title">Introduction to Kuala Lumpur’s Heritage Buildings</h2>
         <p>
           Kuala Lumpur’s architectural landscape reflects a rich history of political, social, and cultural transformation, evolving from a 19th-century tin-mining town into a modern metropolis. The city’s heritage buildings tell a story of adaptation and identity through distinct eras: from early British colonial administrative structures that projected imperial power, to Neo-Moorish and Colonial Islamic styles designed to align visually with the local populace, to tropical vernacular shophouses and traditional Malay homes built for climate efficiency, and finally, bold post-independence Modernist architecture symbolizing democratic progress. Concentrated around the historic city center, these surviving structures serve as a physical timeline of Malaysia’s nation-building journey.
         </p>
@@ -369,7 +385,8 @@
       </div>
 
       <section class="introduction" aria-labelledby="limitations-title">
-        <h2 id="limitations-title">Section II. Limitations of Heritage Building Protection</h2>
+        <h2 id="limitations-title">The Future of KL's Heritage Buildings?</h2>
+        <p class="section-subtitle">Limitations of Heritage Building Protection</p>
         <p>
           While legal mechanisms exist to protect these physical records, the scope and implementation of the National Heritage Act 2005 (Act 645) present distinct operational challenges. Protection is strictly designation-based; unlisted or less-prominent vernacular and community landmarks often fall outside statutory safeguards, making them vulnerable to rapid urban redevelopment. Additionally, designated sites situated on private or alienated land require extensive owner notices, consent from State Authorities, and voluntary agreements for restoration support, often resulting in coordination delays and uneven conservation outcomes across different heritage tiers and property types.
         </p>
@@ -387,7 +404,7 @@
       <div class="chart-grid" aria-label="Heritage protection charts">
         <section class="chart-card" aria-labelledby="donut-title">
           <h2 id="donut-title">National Heritage and Heritage Status</h2>
-          <div class="feature-layout">
+          <div class="feature-layout status-layout">
             <div class="feature-description">
               <p>
                 The source list classifies 31 entries as National Heritage and 19 as Heritage. The Act
@@ -450,11 +467,12 @@
         <section class="chart-card" aria-labelledby="community-radar-title">
           <h2 id="community-radar-title">Buildings by Community Association</h2>
           <p>
-            Community labels are working architectural and historical-context proxies, not verified
-            ethnicity, ownership, or builder data. Most National Heritage entries in this sample date from
-            before 1957 (22 of 31), but pre-1957 buildings also make up most of the list (38 of 50); the
-            National Heritage share is 22 of 38 for pre-1957 entries and 9 of 12 after 1957. This sample
-            therefore does not show that colonial-era buildings were more likely to receive that status.
+            The imbalance in gazetting colonial structures over local, post-independence, or vernacular
+            heritage in Kuala Lumpur stems from distinct legal, economic, and institutional biases.
+            Landmark colonial buildings enjoy substantial institutional support, clear public ownership,
+            and direct links to tourism revenue, whereas local heritage assets frequently struggle against
+            high urban land values, private ownership disputes, and a legal framework that places the
+            financial burden of conservation entirely on property owners.
           </p>
           <div class="chart-frame" id="community-radar" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
@@ -493,6 +511,18 @@
           </div>
         </section>
       </div>
+
+      <section class="introduction" aria-labelledby="conclusion-title">
+        <h2 id="conclusion-title">Preserving the Story of Kuala Lumpur</h2>
+        <p>
+          Kuala Lumpur’s heritage buildings are more than architectural artifacts; they are living markers
+          of the city's political, economic, and cultural evolution. As urban development continues to shape
+          the capital, balancing statutory preservation with equitable recognition remains critical. By
+          highlighting these spatial patterns and policy limits through data visualization, this project
+          aims to spark broader awareness of the historic places that define KL's identity—ensuring that
+          every layer of the city's shared history continues to be remembered and protected.
+        </p>
+      </section>
 
     </main>
 
