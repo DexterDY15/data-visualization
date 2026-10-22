@@ -126,7 +126,7 @@
           "stroke": {"value": "#ffffff"},
           "strokeWidth": {"value": 1},
           "tooltip": {
-            "signal": "{'Category': datum.category_label, 'Specific Style': datum.specific_style, 'Buildings': datum.size}"
+            "signal": "{'Category': datum.category_label, 'Style': datum.specific_style, 'Buildings': datum.size}"
           }
         },
         "hover": {"fillOpacity": {"value": 1}},
