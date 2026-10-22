@@ -63,6 +63,41 @@
         font-size: 0.9rem;
       }
 
+      .map-sources {
+        margin-top: 1rem;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      .map-sources summary {
+        color: #242424;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .map-sources p {
+        margin: 0.75rem 0;
+      }
+
+      .map-sources table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+
+      .map-sources th,
+      .map-sources td {
+        padding: 0.5rem;
+        border: 1px solid #dedede;
+        vertical-align: top;
+      }
+
+      .map-sources th {
+        background: #f3f4f6;
+        color: #242424;
+      }
+
       .introduction {
         width: 100%;
         margin: 0 0 1.25rem;
@@ -250,6 +285,102 @@
           <div class="chart-frame" id="malaysia-map" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
+          <details class="map-sources">
+            <summary>Sources and estimate notes</summary>
+            <p>
+              Source/context descriptions and estimated ranges below are from the supplied
+              <em>Estimated Count of Heritage Buildings</em> dataset. These are approximate estimates,
+              not a complete census. Symbols use the range midpoint for sizing, except open-ended
+              estimates (Penang and Perak), which use the stated lower bound. The combined Labuan and
+              Putrajaya estimate is listed here but not plotted separately.
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">State / territory</th>
+                  <th scope="col">Estimate</th>
+                  <th scope="col">Primary sources and context</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Penang</th>
+                  <td>~5,000+</td>
+                  <td>George Town UNESCO World Heritage Site contains ~4,643 cataloged pre-war shophouses and historic structures in its core and buffer zones; including mainland Seberang Perai, the total exceeds 5,000.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Melaka</th>
+                  <td>~2,000–3,000</td>
+                  <td>Melaka Historic City UNESCO Site lists ~1,700–2,000 historic shophouses and traditional structures in its protected zone; across the state, including Jonker Street, Morten Village, and Bandar Hilir, the count reaches ~3,000.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Perak</th>
+                  <td>~500–1,000+</td>
+                  <td>Over 500 heritage sites/buildings identified on the Perak State Heritage List (Perak Heritage Society study). Ipoh's Heritage Trail lists ~45 major civic structures, alongside pre-war shophouses in Taiping, Batu Gajah, and Teluk Intan.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Kuala Lumpur (Federal Territory)</th>
+                  <td>~500–800</td>
+                  <td>DBKL (Kuala Lumpur City Hall) Structure Plan identifies ~500+ heritage buildings/structures, including gazetted national sites and historic shophouse precincts such as Petaling Street, Chow Kit, and Medan Pasar.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Selangor</th>
+                  <td>~200–300</td>
+                  <td>Municipal inventories across Klang (Klang Heritage Walk), Kajang, Jugra, and Kuala Selangor; includes royal structures, colonial administrative posts, and pre-war shop lots.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sarawak</th>
+                  <td>~150–300</td>
+                  <td>Sarawak Museum Department and DBKU inventory list historic forts, colonial public buildings, Rajah Brooke-era structures, and heritage shophouses along the Kuching Waterfront, Bau, and Sibu.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Johor</th>
+                  <td>~150–250</td>
+                  <td>Johor Heritage Foundation (Yayasan Warisan Johor) cataloging, with concentrations in Johor Bahru inner city, Muar (Royal Town heritage shophouses), and Batu Pahat.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Negeri Sembilan</th>
+                  <td>~100–150</td>
+                  <td>State Museum and Heritage Board listings, including Minangkabau timber architecture such as Istana Lama Seri Menanti and colonial administrative sites in Seremban.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Kedah</th>
+                  <td>~100–150</td>
+                  <td>Heritage structures centered around Alor Setar (Pekan Rabu, Balai Besar, Rumah Merdeka) and Lenggong/Langkawi historical sites.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Pahang</th>
+                  <td>~80–120</td>
+                  <td>Local council heritage lists in Kuala Lipis, Pekan, and Fraser's Hill, including colonial administrative buildings and bungalows.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Kelantan</th>
+                  <td>~80–120</td>
+                  <td>Cultural heritage listings in Kota Bharu (Palace Zone/Cultural Zone, Istana Jahar, Bank Kapor) and traditional Malay timber houses.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sabah</th>
+                  <td>~50–100</td>
+                  <td>Sabah Museum Board records, including Atkinson Clock Tower, Agnes Keith House (Sandakan), and surviving WWII-era colonial remnants in Kota Kinabalu, Sandakan, and Kudat.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Terengganu</th>
+                  <td>~50–100</td>
+                  <td>Terengganu State Museum listings, concentrated in Kuala Terengganu's Kampung Cina shophouses and traditional Malay palaces/timber houses such as Istana Maziah.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Perlis</th>
+                  <td>~20–50</td>
+                  <td>Kangar municipal listings, including Istana Arau, colonial-era administrative buildings, and traditional Perlis houses.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Labuan &amp; Putrajaya (Federal Territories)</th>
+                  <td>&lt;20 combined</td>
+                  <td>Labuan retains WWII monuments and colonial remnants such as the Chimney and Keraman lighthouse; Putrajaya has limited preserved heritage homesteads. The combined estimate is not represented by an individual map symbol.</td>
+                </tr>
+              </tbody>
+            </table>
+          </details>
           <div class="chart-narrative">
             <p>
               The geographic distribution shown on the map reveals a heavy concentration of heritage sites

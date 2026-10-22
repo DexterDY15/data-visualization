@@ -3,160 +3,112 @@
     "state": "Penang",
     "iso_code": "MY-07",
     "heritage_buildings_count": 5000,
+    "estimated_count": "~5,000+",
     "lat": 5.40,
-    "lon": 100.30,
-    "key_local_authorities": ["MBPP", "PHT"],
-    "primary_zones": ["George Town UNESCO Core & Buffer", "Butterworth"],
-    "notes": "Includes ~1,700 Category I & II priority structures and thousands of pre-war shophouses."
+    "lon": 100.30
   },
   {
     "state": "Melaka",
     "iso_code": "MY-04",
-    "heritage_buildings_count": 500,
+    "heritage_buildings_count": 2500,
+    "estimated_count": "~2,000–3,000",
     "lat": 2.20,
-    "lon": 102.25,
-    "key_local_authorities": ["MBMB", "PERZIM"],
-    "primary_zones": ["Melaka Historic City Zone", "Ayer Keroh"],
-    "notes": "Covers Dutch, Portuguese, Straits Chinese, and British colonial structures."
-  },
-  {
-    "state": "Kuala Lumpur",
-    "iso_code": "MY-14",
-    "heritage_buildings_count": 220,
-    "lat": 3.14,
-    "lon": 101.69,
-    "key_local_authorities": ["DBKL"],
-    "primary_zones": ["Petaling Street", "Dataran Merdeka", "Kampung Baru", "Chow Kit"],
-    "notes": "Identified under the Kuala Lumpur Structure Plan (KLSP)."
+    "lon": 102.25
   },
   {
     "state": "Perak",
     "iso_code": "MY-08",
-    "heritage_buildings_count": 150,
+    "heritage_buildings_count": 500,
+    "estimated_count": "~500–1,000+",
     "lat": 4.60,
-    "lon": 101.10,
-    "key_local_authorities": ["MBI", "MPT"],
-    "primary_zones": ["Ipoh Old Town", "Taiping Heritage Trail", "Batu Gajah"],
-    "notes": "Concentrated in colonial tin-mining centers."
+    "lon": 101.10
   },
   {
-    "state": "Johor",
-    "iso_code": "MY-01",
-    "heritage_buildings_count": 100,
-    "lat": 2.00,
-    "lon": 103.30,
-    "key_local_authorities": ["MBJB", "MPM"],
-    "primary_zones": ["Johor Bahru Old Town", "Muar Royal Town", "Batu Pahat"],
-    "notes": "Focuses on royal, administrative, and pre-war commercial structures."
-  },
-  {
-    "state": "Sarawak",
-    "iso_code": "MY-13",
-    "heritage_buildings_count": 80,
-    "lat": 2.50,
-    "lon": 113.50,
-    "key_local_authorities": ["DBKU", "MBKS", "Sarawak Museum Department"],
-    "primary_zones": ["Kuching Waterfront", "Bau", "Miri"],
-    "notes": "Gazetted historic structures under the Sarawak Cultural Heritage Ordinance."
+    "state": "Kuala Lumpur",
+    "iso_code": "MY-14",
+    "heritage_buildings_count": 650,
+    "estimated_count": "~500–800",
+    "lat": 3.14,
+    "lon": 101.69
   },
   {
     "state": "Selangor",
     "iso_code": "MY-10",
-    "heritage_buildings_count": 60,
+    "heritage_buildings_count": 250,
+    "estimated_count": "~200–300",
     "lat": 3.45,
-    "lon": 101.35,
-    "key_local_authorities": ["MBDK"],
-    "primary_zones": ["Klang Royal Town", "Kuala Selangor", "Jugra"],
-    "notes": "Inventoried heritage sites and structures under Selangor State Heritage Zoning."
+    "lon": 101.35
   },
   {
-    "state": "Kedah",
-    "iso_code": "MY-02",
-    "heritage_buildings_count": 40,
-    "lat": 6.10,
-    "lon": 100.60,
-    "key_local_authorities": ["MBAS", "Lembaga Muzium Negeri Kedah"],
-    "primary_zones": ["Alor Setar Royal Zone", "Langkawi"],
-    "notes": "Includes historic royal structures, state mosques, and civic buildings."
+    "state": "Sarawak",
+    "iso_code": "MY-13",
+    "heritage_buildings_count": 225,
+    "estimated_count": "~150–300",
+    "lat": 2.50,
+    "lon": 113.50
   },
   {
-    "state": "Sabah",
-    "iso_code": "MY-12",
-    "heritage_buildings_count": 35,
-    "lat": 5.30,
-    "lon": 117.00,
-    "key_local_authorities": ["DBKK", "Sabah Museum Department"],
-    "primary_zones": ["Kota Kinabalu", "Sandakan Heritage Trail", "Kudat"],
-    "notes": "Gazetted under the Sabah Cultural Heritage Enactment."
-  },
-  {
-    "state": "Terengganu",
-    "iso_code": "MY-11",
-    "heritage_buildings_count": 30,
-    "lat": 4.90,
-    "lon": 103.00,
-    "key_local_authorities": ["MBKT"],
-    "primary_zones": ["Kampung Cina", "Kuala Terengganu Waterfront"],
-    "notes": "Includes traditional Malay timber architecture and historic shophouses."
-  },
-  {
-    "state": "Kelantan",
-    "iso_code": "MY-03",
-    "heritage_buildings_count": 25,
-    "lat": 5.40,
-    "lon": 102.00,
-    "key_local_authorities": ["MPKB-BRI"],
-    "primary_zones": ["Kota Bharu Cultural Zone"],
-    "notes": "Consists of traditional wooden palaces, historic mosques, and cultural sites."
+    "state": "Johor",
+    "iso_code": "MY-01",
+    "heritage_buildings_count": 200,
+    "estimated_count": "~150–250",
+    "lat": 2.00,
+    "lon": 103.30
   },
   {
     "state": "Negeri Sembilan",
     "iso_code": "MY-05",
-    "heritage_buildings_count": 20,
+    "heritage_buildings_count": 125,
+    "estimated_count": "~100–150",
     "lat": 2.75,
-    "lon": 102.25,
-    "key_local_authorities": ["MBS"],
-    "primary_zones": ["Seremban Old Town", "Seri Menanti Royal Town"],
-    "notes": "Highlights colonial administrative offices and Minangkabau architecture."
+    "lon": 102.25
+  },
+  {
+    "state": "Kedah",
+    "iso_code": "MY-02",
+    "heritage_buildings_count": 125,
+    "estimated_count": "~100–150",
+    "lat": 6.10,
+    "lon": 100.60
   },
   {
     "state": "Pahang",
     "iso_code": "MY-06",
-    "heritage_buildings_count": 20,
+    "heritage_buildings_count": 100,
+    "estimated_count": "~80–120",
     "lat": 3.90,
-    "lon": 102.80,
-    "key_local_authorities": ["MBK", "MPP"],
-    "primary_zones": ["Pekan Royal Town", "Kuala Lipis Heritage Trail"],
-    "notes": "Focuses on former colonial capitals and royal historic zones."
+    "lon": 102.80
+  },
+  {
+    "state": "Kelantan",
+    "iso_code": "MY-03",
+    "heritage_buildings_count": 100,
+    "estimated_count": "~80–120",
+    "lat": 5.40,
+    "lon": 102.00
+  },
+  {
+    "state": "Sabah",
+    "iso_code": "MY-12",
+    "heritage_buildings_count": 75,
+    "estimated_count": "~50–100",
+    "lat": 5.30,
+    "lon": 117.00
+  },
+  {
+    "state": "Terengganu",
+    "iso_code": "MY-11",
+    "heritage_buildings_count": 75,
+    "estimated_count": "~50–100",
+    "lat": 4.90,
+    "lon": 103.00
   },
   {
     "state": "Perlis",
     "iso_code": "MY-09",
-    "heritage_buildings_count": 10,
+    "heritage_buildings_count": 35,
+    "estimated_count": "~20–50",
     "lat": 6.45,
-    "lon": 100.20,
-    "key_local_authorities": ["MPK"],
-    "primary_zones": ["Kangar", "Arau Royal Town"],
-    "notes": "Primary civic and royal historic landmarks."
-  },
-  {
-    "state": "Federal Territory of Labuan",
-    "iso_code": "MY-15",
-    "heritage_buildings_count": 8,
-    "lat": 5.28,
-    "lon": 115.24,
-    "key_local_authorities": ["Perbadanan Labuan"],
-    "primary_zones": ["Victoria Town"],
-    "notes": "Colonial remnants and World War II historic structures."
-  },
-  {
-    "state": "Federal Territory of Putrajaya",
-    "iso_code": "MY-16",
-    "heritage_buildings_count": 2,
-    "lat": 2.93,
-    "lon": 101.69,
-    "key_local_authorities": ["Perbadanan Putrajaya"],
-    "primary_zones": ["Putrajaya Core District"],
-    "notes": "Preserved royal lodges and relocated historic heritage structures."
+    "lon": 100.20
   }
 ]
