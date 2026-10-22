@@ -11,7 +11,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/malaysia-map.json",
+        "url": "malaysia-map.json",
         "format": {"type": "json", "property": "features"}
       },
       "mark": {
@@ -23,7 +23,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/DexterDY15/data-visualization/main/proportional-symbol-map.json"
+        "url": "proportional-symbol-map.json"
       },
       "transform": [
         {
