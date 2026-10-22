@@ -91,12 +91,6 @@
         justify-items: end;
       }
 
-      .map-comparison {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0;
-      }
-
       .chart-card {
         width: 100%;
         box-sizing: border-box;
@@ -176,10 +170,8 @@
         margin-right: auto;
       }
 
-      #state-map canvas.marks,
-      #state-map svg,
-      #east-malaysia-map canvas.marks,
-      #east-malaysia-map svg {
+      #malaysia-map canvas.marks,
+      #malaysia-map svg {
         margin-right: auto;
         margin-left: auto;
       }
@@ -198,12 +190,6 @@
         line-height: 1.5;
       }
 
-      @media (max-width: 1100px) {
-        .map-comparison {
-          grid-template-columns: minmax(0, 1fr);
-        }
-      }
-
       @media (max-width: 480px) {
         main {
           padding: 1rem 0.75rem;
@@ -220,10 +206,6 @@
         }
 
         .donut-comparison {
-          grid-template-columns: minmax(0, 1fr);
-        }
-
-        .map-comparison {
           grid-template-columns: minmax(0, 1fr);
         }
       }
@@ -251,13 +233,8 @@
       <div class="chart-grid">
         <section class="chart-card" aria-labelledby="malaysia-map-title">
           <h2 id="malaysia-map-title">Proportional Symbol Map — Malaysia</h2>
-          <div class="map-comparison">
-            <div class="chart-frame" id="state-map" aria-live="polite">
-              <p class="chart-status">Loading chart…</p>
-            </div>
-            <div class="chart-frame" id="east-malaysia-map" aria-live="polite">
-              <p class="chart-status">Loading chart…</p>
-            </div>
+          <div class="chart-frame" id="malaysia-map" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
           </div>
         </section>
 
@@ -358,8 +335,7 @@
     <script>
       const charts = [
         { element: "dot-map", spec: "heritage-building-kl-dot.json" },
-        { element: "state-map", spec: "heritage-building-malaysia-proportional.vega" },
-        { element: "east-malaysia-map", spec: "heritage-building-east-malaysia-proportional.vega" },
+        { element: "malaysia-map", spec: "heritage-building-malaysia-proportional.vega" },
         { element: "treemap", spec: "heritage-building-kl-treemap.json" },
         { element: "original-function", spec: "heritage-building-kl-lollipop.json" },
         { element: "current-function", spec: "heritage-building-kl-lollipop2.json" },
