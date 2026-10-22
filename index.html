@@ -39,6 +39,24 @@
         padding: 1.5rem;
       }
 
+      .metadata {
+        padding: 1.5rem max(1.25rem, calc((100% - 1200px) / 2));
+        background: #fff;
+        border-top: 1px solid #dedede;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .metadata h2 {
+        margin: 0 0 0.5rem;
+        color: #242424;
+        font-size: 1rem;
+      }
+
+      .metadata p {
+        margin: 0;
+      }
+
       .introduction {
         width: 100%;
         margin: 0 0 1.25rem;
@@ -299,6 +317,19 @@
         </section>
       </div>
     </main>
+
+    <footer class="metadata" aria-labelledby="metadata-title">
+      <h2 id="metadata-title">Data source</h2>
+      <p>
+        Heritage buildings list: Kuala Lumpur City Plan 2040, Volume 1, Part 1 —
+        Development Control, page B1-61.
+        <a
+          href="https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >View source document (PDF)</a>
+      </p>
+    </footer>
 
     <script>
       const charts = [
