@@ -44,13 +44,26 @@
           "sort": "ascending",
           "scale": {"domain": [1860, 1870, 1880, 1890, 1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990]},
           "title": "Construction Year",
-          "axis": {"labelExpr": "datum.value + '–' + (datum.value + 9)"}
+          "axis": {
+            "labelExpr": "datum.value + '–' + (datum.value + 9)",
+            "labelFontSize": 12,
+            "titleFontSize": 15,
+            "titleFontWeight": "bold",
+            "titlePadding": 18
+          }
         },
         "x": {
           "field": "signed_count",
           "type": "quantitative",
           "title": "← Colonial Era (Count) | Post-Independence (Count) →",
-          "axis": {"labelExpr": "abs(datum.value)", "tickCount": 7}
+          "axis": {
+            "labelExpr": "abs(datum.value)",
+            "tickCount": 7,
+            "labelFontSize": 12,
+            "titleFontSize": 15,
+            "titleFontWeight": "bold",
+            "titlePadding": 18
+          }
         },
         "color": {
           "field": "era_label",

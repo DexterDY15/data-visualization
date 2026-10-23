@@ -5,10 +5,10 @@
     "subtitle": "Cumulative count by recorded construction year",
     "fontSize": 16,
     "subtitleFontSize": 12,
-    "anchor": "start",
+    "anchor": "middle",
     "offset": 15
   },
-  "width": 700,
+  "width": "container",
   "height": 380,
   "background": "#fafafa",
   "data": {
@@ -38,14 +38,30 @@
       "field": "start_year",
       "type": "quantitative",
       "title": "Construction Year",
-      "axis": {"format": "d", "tickCount": 8, "grid": true}
+      "axis": {
+        "format": "d",
+        "tickCount": 8,
+        "grid": true,
+        "labelFontSize": 12,
+        "titleFontSize": 15,
+        "titleFontWeight": "bold",
+        "titlePadding": 12
+      }
     },
     "y": {
       "field": "cumulative_count",
       "type": "quantitative",
-      "title": "Cumulative Buildings",
+      "title": "Number of Buildings",
       "scale": {"zero": true},
-      "axis": {"tickMinStep": 1, "grid": true, "gridDash": [2, 3]}
+      "axis": {
+        "tickMinStep": 1,
+        "grid": true,
+        "gridDash": [2, 3],
+        "labelFontSize": 12,
+        "titleFontSize": 15,
+        "titleFontWeight": "bold",
+        "titlePadding": 12
+      }
     },
     "color": {
       "field": "central_area",

@@ -209,6 +209,7 @@
       .chart-frame.vega-embed svg {
         display: block;
         margin-left: auto;
+        margin-right: auto;
       }
 
       #treemap canvas.marks {
@@ -281,7 +282,7 @@
 
       <div class="chart-grid" aria-label="Introduction charts">
         <section class="chart-card" aria-labelledby="malaysia-map-title">
-          <h2 id="malaysia-map-title">Proportional Symbol Map — Malaysia</h2>
+          <h2 id="malaysia-map-title">Number of Heritage Buildings in each Malaysian State</h2>
           <div class="chart-frame" id="malaysia-map" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
@@ -290,22 +291,12 @@
             <p>
               The proportional symbol map illustrates a striking geographic disparity, with the vast majority of heritage buildings concentrated along Peninsular Malaysia's western coast—most prominently within the historic Straits Settlements of Penang and Melaka. As premier maritime trading ports established under British colonial rule, these coastal territories experienced rapid urban development, dense commercial expansion, and architectural investment long before the inland regions were urbanized. The early influx of wealth, diverse migrant communities, and British administrative infrastructure spurred the construction of thousands of enduring masonry shophouses, civic complexes, and religious structures. In contrast, inland areas and East Malaysia developed later, resulting in smaller, more dispersed clusters of recognized historic sites today.
             </p>
-            <p>
-              <strong>Note on Data:</strong> Please note that the figures represented across the map are
-              estimated values based on a curated dataset rather than a complete or exhaustive census of
-              every historical building in Malaysia.
-            </p>
+      
           </div>
 
           <details class="map-sources">
-            <summary>Sources and estimate notes</summary>
-            <p>
-              Source/context descriptions and estimated ranges below are from the supplied
-              <em>Estimated Count of Heritage Buildings</em> dataset. These are approximate estimates,
-              not a complete census. Symbols use the range midpoint for sizing, except open-ended
-              estimates (Penang and Perak), which use the stated lower bound. The combined Labuan and
-              Putrajaya estimate is listed here but not plotted separately.
-            </p>
+            <summary>Data Sources:</summary>
+            
             <table>
               <thead>
                 <tr>
@@ -429,24 +420,26 @@
 
         <section class="chart-card" aria-labelledby="area-count-title">
           <h2 id="area-count-title">Heritage Buildings by Central KL Area</h2>
+          
+          <div class="chart-frame" id="area-count" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
+
           <p>
             These are informal map areas, not administrative districts. Each building is assigned once to
             the nearest of the six focus points already used by the dot-map selector.
           </p>
-          <div class="chart-frame" id="area-count" aria-live="polite">
-            <p class="chart-status">Loading chart…</p>
-          </div>
         </section>
 
         <section class="chart-card" aria-labelledby="area-timeline-title">
           <h2 id="area-timeline-title">Cumulative Buildings by Area over Time</h2>
+          <div class="chart-frame" id="area-timeline" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
           <p>
             Lines show cumulative counts by construction year. The step pattern reflects that a building
             is added to its area when its recorded start year is reached.
           </p>
-          <div class="chart-frame" id="area-timeline" aria-live="polite">
-            <p class="chart-status">Loading chart…</p>
-          </div>
         </section>
 
         <section class="chart-card" aria-labelledby="treemap-title">
@@ -496,10 +489,6 @@
           <div class="chart-frame" id="age-pyramid" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
-          <p>
-            Ten-year construction-year bands show the distribution of entries built before and after 1957.
-            Hover over a bar for the year range and count.
-          </p>
         </section>
 
       </div>

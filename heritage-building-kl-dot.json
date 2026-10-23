@@ -3,7 +3,6 @@
   "width": 700,
   "height": 550,
   "background": "#fafafa",
-  "title": "Kuala Lumpur Heritage Buildings: Spatial Location",
   "params": [
     {"name": "c_lon", "value": 101.6965},
     {"name": "c_lat", "value": 3.152},

@@ -29,7 +29,12 @@
       "type": "nominal",
       "sort": {"field": "building_count", "order": "descending"},
       "title": null,
-      "axis": {"labelLimit": 280}
+      "axis": {
+        "orient": "left",
+        "labelLimit": 280,
+        "labelPadding": 10,
+        "labelAlign": "right"
+      }
     },
     "x": {
       "field": "building_count",
