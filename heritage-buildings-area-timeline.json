@@ -64,7 +64,8 @@
     "color": {
       "field": "central_area",
       "type": "nominal",
-      "title": "Informal Area",
+      "title": "Area",
+      "legend": null,
       "scale": {
         "domain": [
           "Merdeka Square",
@@ -78,7 +79,7 @@
       }
     },
     "tooltip": [
-      {"field": "central_area", "type": "nominal", "title": "Informal Area"},
+      {"field": "central_area", "type": "nominal", "title": "Area"},
       {"field": "start_year", "type": "quantitative", "title": "Year", "format": "d"},
       {"field": "buildings_added", "type": "quantitative", "title": "Buildings Added"},
       {"field": "cumulative_count", "type": "quantitative", "title": "Cumulative Total"}

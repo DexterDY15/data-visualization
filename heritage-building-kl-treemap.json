@@ -10,7 +10,7 @@
   "title": {
     "text": "Architectural Styles of Kuala Lumpur Heritage Buildings",
     "subtitle": "Large blocks = architectural category | Tiles inside = specific style (area = number of buildings)",
-    "fontSize": 16,
+    "fontSize": 20,
     "subtitleFontSize": 12,
     "anchor": "start",
     "offset": 12

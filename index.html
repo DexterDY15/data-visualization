@@ -63,6 +63,30 @@
         font-size: 0.9rem;
       }
 
+      .area-timeline-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem 1rem;
+        margin: 0.75rem 0 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0.95rem;
+      }
+
+      .area-timeline-legend li {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .area-timeline-legend li::before {
+        width: 0.75rem;
+        height: 0.75rem;
+        flex: 0 0 0.75rem;
+        background: var(--area-color);
+        content: "";
+      }
+
       .map-sources {
         margin-top: 1rem;
         color: #555;
@@ -77,6 +101,17 @@
 
       .map-sources p {
         margin: 0.75rem 0;
+      }
+
+      .map-sources h3 {
+        margin: 1rem 0 0.25rem;
+        color: #242424;
+        font-size: 0.95rem;
+      }
+
+      .map-sources ul {
+        margin: 0.25rem 0 0.75rem;
+        padding-left: 1.25rem;
       }
 
       .map-sources table {
@@ -136,20 +171,25 @@
         box-sizing: border-box;
         min-width: 0;
         padding: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
         background: #fff;
         border: 1px solid #dedede;
         border-radius: 0.5rem;
         box-shadow: 0 1px 3px #0000000d;
       }
 
+      .chart-grid + .introduction {
+        margin-top: 2rem;
+      }
+
       .chart-card h2 {
         margin: 0 0 0.75rem;
-        font-size: 1.1rem;
+        font-size: 1.25rem;
       }
 
       .chart-card h2.chart-title {
         margin-bottom: 0.25rem;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
 
       .chart-card .disclaimer {
@@ -170,11 +210,6 @@
         grid-template-columns: minmax(220px, 0.4fr) minmax(0, 1fr);
         gap: 1.5rem;
         align-items: start;
-      }
-
-      .status-layout {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        align-items: center;
       }
 
       .feature-description p {
@@ -456,10 +491,14 @@
           <div class="chart-frame" id="area-timeline" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
-          <p>
-            Lines show cumulative counts by construction year. The step pattern reflects that a building
-            is added to its area when its recorded start year is reached.
-          </p>
+          <ul class="area-timeline-legend" aria-label="Area">
+            <li style="--area-color: #8B4513">Merdeka Square</li>
+            <li style="--area-color: #2E8B57">Masjid Jamek</li>
+            <li style="--area-color: #3A6EA5">Central Market</li>
+            <li style="--area-color: #C9822B">Chinatown</li>
+            <li style="--area-color: #7A5195">Brickfields</li>
+            <li style="--area-color: #4A4A4A">Chow Kit</li>
+          </ul>
         </section>
 
         <section class="chart-card" aria-labelledby="treemap-title">
@@ -494,76 +533,46 @@
         <h2 id="limitations-title">The Future of KL's Heritage Buildings?</h2>
         <p class="section-subtitle">Limitations of Heritage Building Protection</p>
         <p>
-          While legal mechanisms exist to protect these physical records, the scope and implementation of the National Heritage Act 2005 (Act 645) present distinct operational challenges. Protection is strictly designation-based; unlisted or less-prominent vernacular and community landmarks often fall outside statutory safeguards, making them vulnerable to rapid urban redevelopment. Additionally, designated sites situated on private or alienated land require extensive owner notices, consent from State Authorities, and voluntary agreements for restoration support, often resulting in coordination delays and uneven conservation outcomes across different heritage tiers and property types.
+          While legal mechanisms exist to protect these historical landmarks, the scope and implementation of the National Heritage Act 2005 (Act 645) present distinct operational challenges. Protection is strictly designation-based through gazettement—the official legal process of formally registering a building to grant it statutory protection against unauthorized demolition. Because of this framework, unlisted or less-prominent vernacular and community landmarks often fall outside statutory safeguards, making them vulnerable to rapid urban redevelopment. Additionally, designated sites situated on private or alienated land require extensive owner notices, consent from State Authorities, and voluntary agreements for restoration support, often resulting in coordination delays and uneven conservation outcomes across different heritage tiers and property types.
         </p>
         
       </section>
 
       <div class="chart-grid" aria-label="Heritage protection charts">
-        <section class="chart-card" aria-labelledby="donut-title">
-          <h2 id="donut-title">National Heritage and Heritage Status</h2>
-          <div class="feature-layout status-layout">
-            <div class="feature-description">
-              <p>
-                The source list classifies 31 entries as National Heritage and 19 as Heritage. The Act
-                establishes a public National Heritage Register (section 23) and allows the Minister to
-                declare registered heritage items as National Heritage (section 67). Owners of heritage
-                sites may apply for conservation grants or loans under section 43; the Act does not say
-                that this assistance is limited to National Heritage sites.
-              </p>
-              <p>
-                These categories raise a question about recognition and implementation, but the chart alone
-                cannot show unequal funding, protection priority, or public attention between categories.
-              </p>
-              <p>
-                Counts use the classifications in <code>data-basic.json</code>. Its labels differ from
-                <code>data-dot-map.geojson</code> for the First Malayan Flag Hoisting Site and Royal
-                Selangor Club Padang, and Perdana Botanical Garden; those records need authoritative
-                item-by-item reconciliation.
-              </p>
-            </div>
-            <div class="chart-frame" id="donut" aria-live="polite">
-              <p class="chart-status">Loading chart…</p>
-            </div>
+        <section class="chart-card" aria-labelledby="heritage-status-title">
+          <h2 id="heritage-status-title">Status of Heritage Buildings in KL</h2>
+          <div class="chart-frame" id="heritage-status" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
           </div>
-        </section>
-
-        <section class="chart-card" aria-labelledby="private-land-title">
-          <h2 id="private-land-title">a. Private Land and State Intervention</h2>
-          <p>
-            The Act allows heritage-site designation on land and requires notice to the owner, an opportunity
-            to object and be heard, and State Authority consent for sites in a State (sections 27–30).
-            For designated sites on alienated land, the Commissioner may arrange conservation with owners
-            or occupiers, and may contribute to repair costs where they agree (section 38). These steps make
-            coordination and implementation important; they do not amount to a blanket exclusion of private
-            property from protection. Section 30 is framed for sites situated in a State; this summary does
-            not assume that provision applies identically in the Federal Territory of Kuala Lumpur.
+          <p class="chart-source">
+            Out of the total recorded sites, 750 heritage buildings remain non-gazetted and still lack formal statutory protection under the National Heritage Act, dwarfing the 50 that are currently gazetted.
           </p>
-        </section>
-
-        <section class="chart-card" aria-labelledby="minor-landmarks-title">
-          <h2 id="minor-landmarks-title">b. Recognition of Less-Prominent Landmarks</h2>
-          <p>
-            Section 24 allows the Commissioner to designate a site with natural or cultural heritage
-            significance. Protection is designation-based, so an unlisted landmark may not receive the
-            Act’s site-specific measures. However, this 50-entry dataset has no inventory of omitted places
-            or nomination history; it cannot establish that minor landmarks are systematically ignored.
-          </p>
-        </section>
-
-        <section class="chart-card" aria-labelledby="designation-gap-title">
-          <h2 id="designation-gap-title">c. Recognition Tiers and Practical Support</h2>
-          <p>
-            Heritage sites are registered under section 23, while section 67 provides for a separate
-            National Heritage declaration. This distinction may shape visibility in practice, but the Act
-            also provides for grants or loans for conservation of heritage sites (section 43). Whether
-            lower-status places receive less support requires funding and implementation records, not
-            status labels alone.
-          </p>
+          <details class="map-sources">
+            <summary>Data sources</summary>
+            <h3>DBKL (Kuala Lumpur City Hall) Development Frameworks</h3>
+            <ul>
+              <li><a href="https://sdgcentrekl.com/programme/kuala-lumpur-structure-plan-2040-city-for-all" target="_blank" rel="noopener noreferrer">SDG Centre KL - Kuala Lumpur Structure Plan 2040 (KLSP2040)</a></li>
+              <li>Draft Kuala Lumpur Local Plan 2040 (KLLP2040) / Kuala Lumpur City Plan</li>
+            </ul>
+            <h3>National Heritage Registry (Jabatan Warisan Negara / Act 645)</h3>
+            <ul>
+              <li><a href="https://www.heritage.gov.my/ms/tapak-warisan" target="_blank" rel="noopener noreferrer">Jabatan Warisan Negara - National Heritage Register (Tapak Warisan)</a></li>
+            </ul>
+            <h3>Think City &amp; Warisan KL Initiatives</h3>
+            <ul>
+              <li><a href="https://www.warisankl.my/about" target="_blank" rel="noopener noreferrer">Warisan KL Initiative</a></li>
+              <li><a href="https://thinkcity.com.my/our-work" target="_blank" rel="noopener noreferrer">Think City - Kuala Lumpur Creative and Cultural District (KLCCD) Strategic Masterplan</a></li>
+            </ul>
+            <h3>Heritage NGO Inventories &amp; Architectural Studies</h3>
+            <ul>
+              <li><a href="https://badanwarisanmalaysia.org/visit-us/" target="_blank" rel="noopener noreferrer">Badan Warisan Malaysia (The Heritage Trust of Malaysia)</a></li>
+              <li>Pertubuhan Akitek Malaysia (PAM / Malaysian Institute of Architects)</li>
+            </ul>
+          </details>
         </section>
 
         <section class="chart-card" aria-labelledby="community-radar-title">
-          <h2 id="community-radar-title">Buildings by Community Association</h2>
+          <h2 id="community-radar-title">Gazetted Buildings by Community Association</h2>
           <p>
             The imbalance in gazetting colonial structures over local, post-independence, or vernacular
             heritage in Kuala Lumpur stems from distinct legal, economic, and institutional biases.
@@ -630,9 +639,9 @@
         { element: "malaysia-map", spec: "malaysia-proportional-symbol-map.vega?legend=right-side" },
         { element: "treemap", spec: "heritage-building-kl-treemap.json?style-labels=wrapped-v5" },
         { element: "area-count", spec: "heritage-buildings-by-area.json?chart-title=removed" },
-        { element: "area-timeline", spec: "heritage-buildings-area-timeline.json?chart-title=removed" },
+        { element: "area-timeline", spec: "heritage-buildings-area-timeline.json?legend=filled-squares" },
         { element: "age-pyramid", spec: "heritage-building-kl-age-pyramid.json?title=moved-to-section" },
-        { element: "donut", spec: "heritage-building-kl-donut.json" },
+        { element: "heritage-status", spec: "heritage-building-kl-status-bar.json" },
         { element: "community-radar", spec: "heritage-community-radar.vega" },
         { element: "original-function", spec: "heritage-building-kl-lollipop.json" },
         { element: "current-function", spec: "heritage-building-kl-lollipop2.json" }
@@ -642,7 +651,10 @@
         for (const chart of charts) {
           const container = document.getElementById(chart.element);
           try {
-            await vegaEmbed(container, chart.spec, { actions: false });
+            await vegaEmbed(container, chart.spec, {
+              actions: false,
+              config: { font: "Arial, Helvetica, sans-serif" }
+            });
           } catch (error) {
             console.error(`Unable to render ${chart.spec}`, error);
             container.replaceChildren();

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 140,
+  "background": "#fafafa",
+  "data": {
+    "values": [
+      {"group": "Gazetted", "status": "National Heritage", "count": 31, "order": 1},
+      {"group": "Gazetted", "status": "Heritage", "count": 19, "order": 2},
+      {"group": "Non-gazetted", "status": "Non-gazetted", "count": 750, "order": 3}
+    ]
+  },
+  "mark": {"type": "bar", "height": 36},
+  "encoding": {
+    "y": {
+      "field": "group",
+      "type": "nominal",
+      "sort": ["Non-gazetted", "Gazetted"],
+      "axis": {"title": null, "labelFontSize": 13, "ticks": false, "domain": false}
+    },
+    "x": {
+      "field": "count",
+      "type": "quantitative",
+      "stack": "zero",
+      "title": "Number of Heritage Buildings",
+      "scale": {"domain": [0, 800]},
+      "axis": {"tickMinStep": 100, "grid": true, "gridDash": [2, 3]}
+    },
+    "color": {
+      "field": "status",
+      "type": "nominal",
+      "sort": {"field": "order", "order": "ascending"},
+      "scale": {
+        "domain": [
+          "National Heritage",
+          "Heritage",
+          "Non-gazetted"
+        ],
+        "range": ["#2E8B57", "#8ECFEA", "#b9b9b9"]
+      },
+      "legend": {
+        "title": "Building status",
+        "orient": "bottom",
+        "direction": "horizontal",
+        "labelFontSize": 13,
+        "titleFontSize": 14
+      }
+    },
+    "order": {"field": "order", "type": "quantitative"},
+    "tooltip": [
+      {"field": "status", "type": "nominal", "title": "Status"},
+      {"field": "count", "type": "quantitative", "title": "Buildings"}
+    ]
+  }
+}
