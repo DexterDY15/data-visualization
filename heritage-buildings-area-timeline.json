@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Cumulative Heritage Buildings by Informal Area",
     "subtitle": "Cumulative count by recorded construction year",
     "fontSize": 16,
     "subtitleFontSize": 12,

@@ -43,7 +43,15 @@
         "url": "proportional-symbol-map.json"
       },
       "transform": [
-        {"calculate": "datum.lon >= 109 ? datum.lon - 3.5 : datum.lon", "as": "display_lon"}
+        {"calculate": "datum.lon >= 109 ? datum.lon - 3.5 : datum.lon", "as": "display_lon"},
+        {
+          "calculate": "datum.heritage_buildings_count <= 100 ? '1–100' : datum.heritage_buildings_count <= 250 ? '101–250' : datum.heritage_buildings_count <= 650 ? '251–650' : datum.heritage_buildings_count <= 2500 ? '651–2,500' : '2,501–5,000'",
+          "as": "building_count_class"
+        },
+        {
+          "calculate": "datum.heritage_buildings_count <= 100 ? 120 : datum.heritage_buildings_count <= 250 ? 320 : datum.heritage_buildings_count <= 650 ? 700 : datum.heritage_buildings_count <= 2500 ? 1300 : 2100",
+          "as": "building_count_symbol_size"
+        }
       ],
       "mark": {
         "type": "circle",
@@ -56,28 +64,29 @@
         "longitude": {"field": "display_lon", "type": "quantitative"},
         "latitude": {"field": "lat", "type": "quantitative"},
         "size": {
-          "field": "heritage_buildings_count",
+          "field": "building_count_symbol_size",
           "type": "quantitative",
           "scale": {
-            "domain": [0, 5000],
-            "range": [0, 3500]
+            "domain": [120, 2100],
+            "range": [120, 2100]
           },
           "legend": {
-            "title": "Heritage buildings",
+            "title": "Count class",
             "orient": "right",
             "symbolType": "circle",
             "symbolFillColor": "#8B4513",
             "symbolOpacity": 0.7,
             "labelFontSize": 12,
             "titleFontSize": 18,
-            "values": [1000, 2000, 3000, 4000, 5000],
-            "labelExpr": "format(datum.value, ',.0f')"
+            "values": [120, 320, 700, 1300, 2100],
+            "labelExpr": "datum.value == 120 ? '1–100' : datum.value == 320 ? '101–250' : datum.value == 700 ? '251–650' : datum.value == 1300 ? '651–2,500' : '2,501–5,000'"
           }
         },
         "order": {"field": "heritage_buildings_count", "type": "quantitative", "sort": "descending"},
         "tooltip": [
           {"field": "state", "type": "nominal", "title": "State"},
-          {"field": "estimated_count", "type": "nominal", "title": "Estimated count"}
+          {"field": "estimated_count", "type": "nominal", "title": "Estimated count"},
+          {"field": "building_count_class", "type": "nominal", "title": "Count class"}
         ]
       }
     }

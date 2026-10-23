@@ -152,6 +152,14 @@
         font-size: 1.5rem;
       }
 
+      .chart-card .disclaimer {
+        margin: 0 0 0.5rem;
+        color: #7a2e2a;
+        font-size: 0.95rem;
+        font-style: italic;
+        line-height: 1.5;
+      }
+
       .chart-card h3.chart-subtitle {
         margin: 0 0 0.75rem;
         font-size: 1rem;
@@ -399,6 +407,7 @@
         </section>
 
         <section class="chart-card" aria-labelledby="dot-map-title">
+          <p class="disclaimer">Disclaimer: Visualizations below only involve Heritage Buildings gazetted under the National Heritage Act 2005</p>
           <h2 id="dot-map-title" class="chart-title">Marks of the beginning</h2>
           <h3 class="chart-subtitle">Heritage Buildings in Kuala Lumpur</h3>
           <div class="feature-layout">
@@ -626,10 +635,10 @@
     <script>
       const charts = [
         { element: "dot-map", spec: "heritage-building-kl-dot.json" },
-        { element: "malaysia-map", spec: "malaysia-proportional-symbol-map.vega?legend=actual-counts" },
-        { element: "treemap", spec: "heritage-building-kl-treemap.json" },
-        { element: "area-count", spec: "heritage-buildings-by-area.json" },
-        { element: "area-timeline", spec: "heritage-buildings-area-timeline.json" },
+        { element: "malaysia-map", spec: "malaysia-proportional-symbol-map.vega?legend=right-side" },
+        { element: "treemap", spec: "heritage-building-kl-treemap.json?style-labels=wrapped-v5" },
+        { element: "area-count", spec: "heritage-buildings-by-area.json?chart-title=removed" },
+        { element: "area-timeline", spec: "heritage-buildings-area-timeline.json?chart-title=removed" },
         { element: "age-pyramid", spec: "heritage-building-kl-age-pyramid.json" },
         { element: "donut", spec: "heritage-building-kl-donut.json" },
         { element: "community-radar", spec: "heritage-community-radar.vega" },

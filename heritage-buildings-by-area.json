@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Heritage Buildings by Informal Central KL Area",
     "subtitle": "Each record is assigned to its nearest existing dot-map focus point",
     "fontSize": 16,
     "subtitleFontSize": 12,

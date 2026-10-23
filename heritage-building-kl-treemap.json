@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "Treemap of KL heritage buildings by architectural category and specific style",
-  "width": 900,
-  "height": 600,
+  "width": 980,
+  "height": 650,
   "padding": 10,
   "background": "#fafafa",
   "autosize": "none",
@@ -19,7 +19,7 @@
   "data": [
     {
       "name": "raw",
-      "url": "data-basic.json?dashboard-restructure=v1",
+      "url": "data-basic.json?dashboard-restructure=v4",
       "format": {"type": "json"}
     },
     {
@@ -44,7 +44,12 @@
         {"type": "aggregate", "groupby": ["category", "specific_style"], "ops": ["count"], "as": ["size"]},
         {"type": "formula", "as": "id", "expr": "datum.category + '|' + datum.specific_style"},
         {"type": "formula", "as": "parent", "expr": "datum.category"},
-        {"type": "formula", "as": "category_label", "expr": "upper(slice(datum.category,0,1)) + slice(datum.category,1)"}
+        {"type": "formula", "as": "category_label", "expr": "upper(slice(datum.category,0,1)) + slice(datum.category,1)"},
+        {
+          "type": "formula",
+          "as": "style_label",
+          "expr": "indexof(datum.specific_style, 'Colonial-') == 0 ? slice(datum.specific_style, 9) : indexof(datum.specific_style, 'Colonial ') == 0 ? slice(datum.specific_style, 9) : indexof(datum.specific_style, 'Post Independence-') == 0 ? slice(datum.specific_style, 18) : indexof(datum.specific_style, 'Post-Independence ') == 0 ? slice(datum.specific_style, 18) : indexof(datum.specific_style, 'Independence Era-') == 0 ? slice(datum.specific_style, 17) : datum.specific_style"
+        }
       ]
     },
     {
@@ -126,7 +131,7 @@
           "stroke": {"value": "#ffffff"},
           "strokeWidth": {"value": 1},
           "tooltip": {
-            "signal": "{'Category': datum.category_label, 'Style': datum.specific_style, 'Buildings': datum.size}"
+            "signal": "{'Category': datum.category_label, 'Style': datum.style_label, 'Buildings': datum.size}"
           }
         },
         "hover": {"fillOpacity": {"value": 1}},
@@ -158,10 +163,12 @@
           "x": {"signal": "datum.x0 + 5"},
           "y": {"signal": "datum.y0 + 4"},
           "text": {
-            "signal": "(datum.x1 - datum.x0 > 60 && datum.y1 - datum.y0 > 30) ? datum.specific_style + ' (' + datum.size + ')' : ''"
+            "signal": "(datum.x1 - datum.x0 > 55 && datum.y1 - datum.y0 > 45) ? datum.style_label : ''"
           },
-          "limit": {"signal": "datum.x1 - datum.x0 - 8"},
-          "fontSize": {"value": 10},
+          "limit": {"signal": "datum.x1 - datum.x0 - 10"},
+          "lineBreak": {"value": " "},
+          "lineHeight": {"value": 10},
+          "fontSize": {"value": 9},
           "fill": {"value": "#ffffff"},
           "baseline": {"value": "top"}
         }
