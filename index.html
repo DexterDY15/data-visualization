@@ -147,6 +147,16 @@
         font-size: 1.1rem;
       }
 
+      .chart-card h2.chart-title {
+        margin-bottom: 0.25rem;
+        font-size: 1.5rem;
+      }
+
+      .chart-card h3.chart-subtitle {
+        margin: 0 0 0.75rem;
+        font-size: 1rem;
+      }
+
       .feature-layout {
         display: grid;
         grid-template-columns: minmax(220px, 0.4fr) minmax(0, 1fr);
@@ -282,7 +292,8 @@
 
       <div class="chart-grid" aria-label="Introduction charts">
         <section class="chart-card" aria-labelledby="malaysia-map-title">
-          <h2 id="malaysia-map-title">Number of Heritage Buildings in each Malaysian State</h2>
+          <h2 id="malaysia-map-title" class="chart-title">Heritage Buildings across Malaysia</h2>
+          <h3 class="chart-subtitle">Number of Heritage Buildings in each Malaysian State</h3>
           <div class="chart-frame" id="malaysia-map" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
@@ -388,7 +399,8 @@
         </section>
 
         <section class="chart-card" aria-labelledby="dot-map-title">
-          <h2 id="dot-map-title">Heritage Buildings in Kuala Lumpur</h2>
+          <h2 id="dot-map-title" class="chart-title">Marks of the beginning</h2>
+          <h3 class="chart-subtitle">Heritage Buildings in Kuala Lumpur</h3>
           <div class="feature-layout">
             <div class="feature-description">
               <p>
@@ -454,33 +466,9 @@
               style functions as a physical record of human history.
             </p>
             <p>
-              Kuala Lumpur’s heritage buildings tell a story of colonial adaptation, migration, and survival
-              in a tropical environment.
+              Kuala Lumpur’s architectural landscape serves as a physical record of its political, social, and environmental evolution. The city’s history is reflected in four distinct movements: early Colonial architecture, which projected British imperial authority; Colonial Islamic styles, which blended British governance with local aesthetics; climate-adapted Vernacular traditions like Straits Eclectic shophouses and traditional Malay houses; and post-independence Modernism, whose bold geometries symbolized democratic optimism and progress. Because large-scale civic and administrative complexes survived urban redevelopment far better than vernacular shophouses—which were frequently demolished for commercial expansion—colonial and institutional structures make up the majority of today's gazetted heritage inventories.
             </p>
-            <p>
-              By weaving these distinct architectural movements together, Kuala Lumpur's heritage landscape
-              unfolds as a physical timeline of political and social evolution. Early Colonial architecture
-              projected institutional discipline, an unyielding connection to the British homeland, and the
-              absolute imperial authority of the crown over the colony. As governance evolved, the British
-              attempted to legitimize their rule through the Colonial Islamic style—a romanticized attempt to
-              construct an "official" state identity that felt visually harmonious with the local Muslim
-              populace while framing British rule as the ultimate protector of local culture. Alongside these
-              imperial narratives stood the Vernacular tradition, embodied by the Straits Eclectic shophouse
-              and the Traditional Malay house. These structures demonstrated high environmental intelligence;
-              they did not fight the tropical climate but cooperated with it entirely through passive cooling,
-              utilizing central airwells, open layouts, raised stilts, and natural materials like timber or
-              local clay. Finally, following independence, Modern styles swept away this ornamentation in
-              favor of radical optimism, self-reliance, and a clean break from both feudal and colonial pasts.
-              This bold geometry broadcasted a message to the world that the newly independent Malaysia was
-              democratic, rational, and technologically progressive.
-            </p>
-            <p>
-              Since most administrative, judicial, transport, and police facilities were large-scale public
-              and institutional complexes, they survived urban redevelopment intact and form the bulk of
-              gazetted inventories. Early vernacular shophouses and community buildings in the urban core were
-              frequently redeveloped into modern commercial land use zones, reducing the remaining count of
-              intact vernacular structures compared to stone/brick colonial administrative buildings.
-            </p>
+      
           </div>
         </section>
 
@@ -638,7 +626,7 @@
     <script>
       const charts = [
         { element: "dot-map", spec: "heritage-building-kl-dot.json" },
-        { element: "malaysia-map", spec: "malaysia-proportional-symbol-map.vega" },
+        { element: "malaysia-map", spec: "malaysia-proportional-symbol-map.vega?legend=actual-counts" },
         { element: "treemap", spec: "heritage-building-kl-treemap.json" },
         { element: "area-count", spec: "heritage-buildings-by-area.json" },
         { element: "area-timeline", spec: "heritage-buildings-area-timeline.json" },

@@ -70,7 +70,8 @@
             "symbolOpacity": 0.7,
             "labelFontSize": 12,
             "titleFontSize": 18,
-            "format": ","
+            "values": [1000, 2000, 3000, 4000, 5000],
+            "labelExpr": "format(datum.value, ',.0f')"
           }
         },
         "order": {"field": "heritage_buildings_count", "type": "quantitative", "sort": "descending"},
