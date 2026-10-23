@@ -7,14 +7,6 @@
       "page": "B1-61"
     }
   },
-  "title": {
-    "text": "Construction Decades of Kuala Lumpur Heritage Buildings",
-    "subtitle": "Distribution of heritage structures across 10-year construction-year brackets by historical era",
-    "fontSize": 16,
-    "subtitleFontSize": 12,
-    "anchor": "start",
-    "offset": 15
-  },
   "width": "container",
   "height": 450,
   "background": "#fafafa",
@@ -41,8 +33,8 @@
         "y": {
           "field": "year_bin_floor",
           "type": "ordinal",
-          "sort": "ascending",
-          "scale": {"domain": [1860, 1870, 1880, 1890, 1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990]},
+          "sort": "descending",
+          "scale": {"domain": [1990, 1980, 1970, 1960, 1950, 1940, 1930, 1920, 1910, 1900, 1890, 1880, 1870, 1860]},
           "title": "Construction Year",
           "axis": {
             "labelExpr": "datum.value + '–' + (datum.value + 9)",
@@ -72,7 +64,14 @@
             "domain": ["Colonial Era (Pre-1957)", "Post-Independence (1957+)"],
             "range": ["#8B4513", "#2E8B57"]
           },
-          "legend": {"title": "Historical Era", "orient": "bottom"}
+          "legend": {
+            "title": "Historical Era",
+            "orient": "bottom",
+            "direction": "vertical",
+            "labelFontSize": 14,
+            "titleFontSize": 16,
+            "labelLimit": 300
+          }
         },
         "tooltip": [
           {"field": "year_group", "type": "nominal", "title": "Construction Years"},
@@ -90,7 +89,7 @@
         "fontWeight": "bold"
       },
       "encoding": {
-        "y": {"field": "year_bin_floor", "type": "ordinal", "sort": "ascending"},
+        "y": {"field": "year_bin_floor", "type": "ordinal", "sort": "descending"},
         "x": {"field": "signed_count", "type": "quantitative"},
         "text": {"field": "building_count", "type": "quantitative"},
         "color": {"value": "#333333"}

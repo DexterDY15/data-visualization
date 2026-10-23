@@ -447,8 +447,7 @@
           </div>
 
           <p>
-            These are informal map areas, not administrative districts. Each building is assigned once to
-            the nearest of the six focus points already used by the dot-map selector.
+            The distribution of heritage buildings across central Kuala Lumpur reveals a high concentration in the city's historic core, led by Merdeka Square (14 buildings) and Chinatown / Petaling Street (13 buildings). Together, these two areas account for more than half of the listed sites, reflecting their roles as the primary administrative and commercial hubs during the city's early development. Surrounding districts such as Chow Kit (8 buildings), Masjid Jamek (7 buildings), KL Sentral / Brickfields (5 buildings), and Central Market (3 buildings) host smaller, distinct clusters, illustrating how historical functions—from trade and transit to civic life—shaped the spatial distribution of KL’s remaining architectural heritage.
           </p>
         </section>
 
@@ -482,7 +481,8 @@
         </section>
 
         <section class="chart-card" aria-labelledby="age-pyramid-title">
-          <h2 id="age-pyramid-title">Landmarks per Era — Construction Decades</h2>
+          <h2 id="age-pyramid-title" class="chart-title">Construction Era of Kuala Lumpur Heritage Buildings</h2>
+          <h3 class="chart-subtitle">Distribution of heritage structures by historical era</h3>
           <div class="chart-frame" id="age-pyramid" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
@@ -496,15 +496,7 @@
         <p>
           While legal mechanisms exist to protect these physical records, the scope and implementation of the National Heritage Act 2005 (Act 645) present distinct operational challenges. Protection is strictly designation-based; unlisted or less-prominent vernacular and community landmarks often fall outside statutory safeguards, making them vulnerable to rapid urban redevelopment. Additionally, designated sites situated on private or alienated land require extensive owner notices, consent from State Authorities, and voluntary agreements for restoration support, often resulting in coordination delays and uneven conservation outcomes across different heritage tiers and property types.
         </p>
-        <p class="chart-source">
-          <strong>Legal source:</strong>
-          <a
-            href="https://lom.agc.gov.my/ilims/upload/portal/akta/LOM/EN/Act%20645.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >National Heritage Act 2005 (Act 645), official Laws of Malaysia reprint (sections 23–30, 38, 43 and 67)</a>.
-          The source is a 2006 reprint; check for later amendments when making a current legal assessment.
-        </p>
+        
       </section>
 
       <div class="chart-grid" aria-label="Heritage protection charts">
@@ -639,7 +631,7 @@
         { element: "treemap", spec: "heritage-building-kl-treemap.json?style-labels=wrapped-v5" },
         { element: "area-count", spec: "heritage-buildings-by-area.json?chart-title=removed" },
         { element: "area-timeline", spec: "heritage-buildings-area-timeline.json?chart-title=removed" },
-        { element: "age-pyramid", spec: "heritage-building-kl-age-pyramid.json" },
+        { element: "age-pyramid", spec: "heritage-building-kl-age-pyramid.json?title=moved-to-section" },
         { element: "donut", spec: "heritage-building-kl-donut.json" },
         { element: "community-radar", spec: "heritage-community-radar.vega" },
         { element: "original-function", spec: "heritage-building-kl-lollipop.json" },

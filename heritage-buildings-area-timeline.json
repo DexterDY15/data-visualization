@@ -29,7 +29,6 @@
   "mark": {
     "type": "line",
     "interpolate": "step-after",
-    "point": {"filled": true, "size": 55},
     "strokeWidth": 2
   },
   "encoding": {
