@@ -254,8 +254,12 @@
         line-height: 1.6;
       }
 
-      #heritage-years-title ~ .feature-description {
+      .sankey-description {
         margin-top: 1rem;
+      }
+
+      #heritage-years-title ~ .feature-description {
+        margin-top: 1.5rem;
       }
 
       .donut-comparison {
@@ -555,15 +559,17 @@
         <section class="chart-card" aria-labelledby="treemap-title">
           <h2 id="treemap-title">How Do They Look?</h2>
           <h3 class="chart-subtitle">Architectural Styles of KL's Heritage Buildings</h3>
-          <div class="chart-frame" id="treemap" aria-live="polite">
-            <p class="chart-status">Loading chart…</p>
-          </div>
           <div class="chart-narrative">
             <p>
               An architectural style is a visual and structural shorthand that tells the story of the time,
               place, culture, and technology that created it. Rather than just decorative choices, a building's
               style functions as a physical record of human history.
             </p>
+          </div>
+          <div class="chart-frame" id="treemap" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
+          <div class="chart-narrative">
             <p>
               Kuala Lumpur’s architectural landscape serves as a physical record of its political, social, and environmental evolution. The city’s history is reflected in four distinct movements: early Colonial architecture, which projected British imperial authority; Colonial Islamic styles, which blended British governance with local aesthetics; climate-adapted Vernacular traditions like Straits Eclectic shophouses and traditional Malay houses; and post-independence Modernism, whose bold geometries symbolized democratic optimism and progress. Because large-scale civic and administrative complexes survived urban redevelopment far better than vernacular shophouses—which were frequently demolished for commercial expansion—colonial and institutional structures make up the majority of today's gazetted heritage inventories.
             </p>
@@ -695,6 +701,11 @@
           <div class="chart-frame" id="style-status-sankey" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
+          <div class="feature-description sankey-description">
+            <p>
+              The Sankey diagram shows how legal status flows across architectural styles, revealing a clear concentration of top-tier <strong>National Heritage</strong> status among <strong>Colonial</strong> and <strong>Colonial Islamic</strong> structures. Grand imperial and administrative sites capture the majority of National Heritage designations, whereas <strong>Modern</strong> and <strong>Vernacular</strong> styles flow predominantly into the secondary <strong>Heritage</strong> status or comprise a far smaller share overall. This distribution illustrates how institutional recognition has historically prioritized colonial civic landmarks over post-independence and community-built architecture.
+            </p>
+          </div>
           <p class="chart-source">
             <strong>Data source:</strong> Heritage buildings list: Kuala Lumpur City Plan 2040, Volume 1, Part 1 — Development Control, page B1-61.
             <a href="https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf" target="_blank" rel="noopener noreferrer">View source document (PDF)</a>
@@ -730,7 +741,7 @@
         { element: "heritage-years", spec: "heritage-building-kl-slope-chart.json" },
         { element: "style-status-sankey", spec: "heritage-style-status-sankey.vega" },
         { element: "original-function", spec: "heritage-building-kl-lollipop.json?embedded-title=removed" },
-        { element: "current-function", spec: "heritage-building-kl-lollipop2.json?embedded-title=removed" }
+        { element: "current-function", spec: "heritage-building-kl-lollipop2.json?axis-interval=2" }
       ];
 
       async function renderCharts() {
