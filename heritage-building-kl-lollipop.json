@@ -1,13 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Original Functional Purposes of KL Heritage Buildings",
-    "subtitle": "Number of buildings by the function they were originally built for",
-    "fontSize": 20,
-    "subtitleFontSize": 12,
-    "anchor": "start",
-    "offset": 15
-  },
   "width": 600,
   "height": 320,
   "background": "#fafafa",

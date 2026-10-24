@@ -16,6 +16,12 @@
         margin: 0;
       }
 
+      h1,
+      h2,
+      h3 {
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
       header {
         padding: 2rem max(1.25rem, calc((100% - 1200px) / 2));
         background: #fff;
@@ -143,14 +149,38 @@
         border-radius: 0.5rem;
       }
 
+      .introduction[aria-labelledby="introduction-title"],
+      .introduction[aria-labelledby="limitations-title"] {
+        background: #245477;
+        color: #fff;
+      }
+
+      .introduction[aria-labelledby="introduction-title"] h2 {
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+
+      .introduction[aria-labelledby="limitations-title"] h2 {
+        margin-bottom: 0.25rem;
+        color: #fff;
+      }
+
+      .introduction[aria-labelledby="introduction-title"] p,
+      .introduction[aria-labelledby="limitations-title"] p {
+        color: #f8f6e8;
+      }
+
       .introduction h2 {
-        margin: 0 0 0.5rem;
-        font-size: 1.25rem;
+        margin: 0 0 0.25rem;
+        font-size: 1.4rem;
       }
 
       .introduction .section-subtitle {
-        margin-bottom: 0.5rem;
-        font-weight: 600;
+        margin: 0 0 1rem;
+        color: #242424;
+        font-size: 1rem;
+        font-weight: 400;
+        font-style: italic;
       }
 
       .introduction p {
@@ -164,6 +194,10 @@
         grid-template-columns: minmax(0, 1fr);
         gap: 1.25rem;
         justify-items: end;
+      }
+
+      .chart-grid[aria-label="Building function charts"] {
+        margin-top: 1rem;
       }
 
       .chart-card {
@@ -183,13 +217,13 @@
       }
 
       .chart-card h2 {
-        margin: 0 0 0.75rem;
-        font-size: 1.25rem;
+        margin: 0 0 0.25rem;
+        font-size: 1.4rem;
       }
 
       .chart-card h2.chart-title {
         margin-bottom: 0.25rem;
-        font-size: 1.25rem;
+        font-size: 1.4rem;
       }
 
       .chart-card .disclaimer {
@@ -203,6 +237,8 @@
       .chart-card h3.chart-subtitle {
         margin: 0 0 0.75rem;
         font-size: 1rem;
+        font-weight: 400;
+        font-style: italic;
       }
 
       .feature-layout {
@@ -216,6 +252,10 @@
         margin: 0;
         color: #555;
         line-height: 1.6;
+      }
+
+      #heritage-years-title ~ .feature-description {
+        margin-top: 1rem;
       }
 
       .donut-comparison {
@@ -326,24 +366,17 @@
     </header>
 
     <main>
-      <section class="introduction" aria-labelledby="introduction-title">
-        <h2 id="introduction-title">Introduction to Kuala Lumpur’s Heritage Buildings</h2>
-        <p>
-          Kuala Lumpur’s architectural landscape reflects a rich history of political, social, and cultural transformation, evolving from a 19th-century tin-mining town into a modern metropolis. The city’s heritage buildings tell a story of adaptation and identity through distinct eras: from early British colonial administrative structures that projected imperial power, to Neo-Moorish and Colonial Islamic styles designed to align visually with the local populace, to tropical vernacular shophouses and traditional Malay homes built for climate efficiency, and finally, bold post-independence Modernist architecture symbolizing democratic progress. Concentrated around the historic city center, these surviving structures serve as a physical timeline of Malaysia’s nation-building journey.
-        </p>
-      </section>
-
       <div class="chart-grid" aria-label="Introduction charts">
         <section class="chart-card" aria-labelledby="malaysia-map-title">
-          <h2 id="malaysia-map-title" class="chart-title">Heritage Buildings across Malaysia</h2>
-          <h3 class="chart-subtitle">Number of Heritage Buildings in each Malaysian State</h3>
+          <h2 id="malaysia-map-title" class="chart-title">Before We Dive In: </h2>
+          <h3 class="chart-subtitle">An Overview of Heritage Buildings in Malaysia</h3>
           <div class="chart-frame" id="malaysia-map" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
           
           <div class="chart-narrative">
             <p>
-              The proportional symbol map illustrates a striking geographic disparity, with the vast majority of heritage buildings concentrated along Peninsular Malaysia's western coast—most prominently within the historic Straits Settlements of Penang and Melaka. As premier maritime trading ports established under British colonial rule, these coastal territories experienced rapid urban development, dense commercial expansion, and architectural investment long before the inland regions were urbanized. The early influx of wealth, diverse migrant communities, and British administrative infrastructure spurred the construction of thousands of enduring masonry shophouses, civic complexes, and religious structures. In contrast, inland areas and East Malaysia developed later, resulting in smaller, more dispersed clusters of recognized historic sites today.
+              The vast majority of heritage buildings are concentrated along Peninsular Malaysia's western coast - most prominently within the historic Straits Settlements of Penang and Melaka. As premier maritime trading ports established under British colonial rule, these coastal territories experienced rapid urban development, dense commercial expansion, and architectural investment long before the inland regions were urbanized. The early influx of wealth, diverse migrant communities, and British administrative infrastructure spurred the construction of thousands of enduring masonry shophouses, civic complexes, and religious structures. In contrast, inland areas and East Malaysia developed later, resulting in smaller, more dispersed clusters of recognized historic sites today.
             </p>
       
           </div>
@@ -441,6 +474,13 @@
 
         </section>
 
+        <section class="introduction" aria-labelledby="introduction-title">
+          <h2 id="introduction-title">Act I. Introduction to Kuala Lumpur’s Heritage Buildings</h2>
+          <p>
+            Kuala Lumpur’s architectural landscape reflects a rich history of political, social, and cultural transformation, evolving from a 19th-century tin-mining town into a modern metropolis. The city’s heritage buildings tell a story of adaptation and identity through distinct eras: from early British colonial administrative structures that projected imperial power, to Neo-Moorish and Colonial Islamic styles designed to align visually with the local populace, to tropical vernacular shophouses and traditional Malay homes built for climate efficiency, and finally, bold post-independence Modernist architecture symbolizing democratic progress. Concentrated around the historic city center, these surviving structures serve as a physical timeline of Malaysia’s nation-building journey.
+          </p>
+        </section>
+
         <section class="chart-card" aria-labelledby="dot-map-title">
           <p class="disclaimer">Disclaimer: Visualizations below only involve Heritage Buildings gazetted under the National Heritage Act 2005</p>
           <h2 id="dot-map-title" class="chart-title">Marks of the beginning</h2>
@@ -475,14 +515,21 @@
         </section>
 
         <section class="chart-card" aria-labelledby="area-count-title">
-          <h2 id="area-count-title">Heritage Buildings by Central KL Area</h2>
+          <h2 id="area-count-title">Which Districts are these Buildings In?</h2>
+          <h3 class="chart-subtitle">Heritage Buildings by Central KL Area</h3>
           
           <div class="chart-frame" id="area-count" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
 
-          <p>
-            The distribution of heritage buildings across central Kuala Lumpur reveals a high concentration in the city's historic core, led by Merdeka Square (14 buildings) and Chinatown / Petaling Street (13 buildings). Together, these two areas account for more than half of the listed sites, reflecting their roles as the primary administrative and commercial hubs during the city's early development. Surrounding districts such as Chow Kit (8 buildings), Masjid Jamek (7 buildings), KL Sentral / Brickfields (5 buildings), and Central Market (3 buildings) host smaller, distinct clusters, illustrating how historical functions—from trade and transit to civic life—shaped the spatial distribution of KL’s remaining architectural heritage.
+          <div class="feature-description">
+            <p>
+              The distribution of heritage buildings across central Kuala Lumpur reveals a high concentration in the city's historic core, led by Merdeka Square (14 buildings) and Chinatown / Petaling Street (13 buildings). Together, these two areas account for more than half of the listed sites, reflecting their roles as the primary administrative and commercial hubs during the city's early development. Surrounding districts such as Chow Kit (8 buildings), Masjid Jamek (7 buildings), KL Sentral / Brickfields (5 buildings), and Central Market (3 buildings) host smaller, distinct clusters, illustrating how historical functions—from trade and transit to civic life—shaped the spatial distribution of KL’s remaining architectural heritage.
+            </p>
+          </div>
+          <p class="chart-source">
+            <strong>Data source:</strong> Heritage buildings list: Kuala Lumpur City Plan 2040, Volume 1, Part 1 — Development Control, page B1-61.
+            <a href="https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf" target="_blank" rel="noopener noreferrer">View source document (PDF)</a>
           </p>
         </section>
 
@@ -499,10 +546,15 @@
             <li style="--area-color: #7A5195">Brickfields</li>
             <li style="--area-color: #4A4A4A">Chow Kit</li>
           </ul>
+          <p class="chart-source">
+            <strong>Data source:</strong> Heritage buildings list: Kuala Lumpur City Plan 2040, Volume 1, Part 1 — Development Control, page B1-61.
+            <a href="https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf" target="_blank" rel="noopener noreferrer">View source document (PDF)</a>
+          </p>
         </section>
 
         <section class="chart-card" aria-labelledby="treemap-title">
-          <h2 id="treemap-title">Architectural Styles</h2>
+          <h2 id="treemap-title">How Do They Look?</h2>
+          <h3 class="chart-subtitle">Architectural Styles of KL's Heritage Buildings</h3>
           <div class="chart-frame" id="treemap" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
@@ -517,20 +569,53 @@
             </p>
       
           </div>
+          <p class="chart-source">
+            <strong>Data source:</strong> Heritage buildings list: Kuala Lumpur City Plan 2040, Volume 1, Part 1 — Development Control, page B1-61.
+            <a href="https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf" target="_blank" rel="noopener noreferrer">View source document (PDF)</a>
+          </p>
         </section>
 
         <section class="chart-card" aria-labelledby="age-pyramid-title">
-          <h2 id="age-pyramid-title" class="chart-title">Construction Era of Kuala Lumpur Heritage Buildings</h2>
+          <h2 id="age-pyramid-title" class="chart-title">Construction Era of KL's Heritage Buildings</h2>
           <h3 class="chart-subtitle">Distribution of heritage structures by historical era</h3>
           <div class="chart-frame" id="age-pyramid" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
+          <p class="chart-source">
+            <strong>Data source:</strong> Heritage buildings list: Kuala Lumpur City Plan 2040, Volume 1, Part 1 — Development Control, page B1-61.
+            <a href="https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf" target="_blank" rel="noopener noreferrer">View source document (PDF)</a>
+          </p>
         </section>
 
       </div>
 
+      <div class="chart-grid" aria-label="Building function charts">
+        <section class="chart-card" aria-labelledby="original-function-title">
+          <h2 id="original-function-title">What were they built for?</h2>
+          <h3 class="chart-subtitle">Original Functional Purposes of KL Heritage Buildings</h3>
+          <div class="chart-frame" id="original-function" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
+          <p class="chart-source">
+            <strong>Data source:</strong> Heritage buildings list: Kuala Lumpur City Plan 2040, Volume 1, Part 1 — Development Control, page B1-61.
+            <a href="https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf" target="_blank" rel="noopener noreferrer">View source document (PDF)</a>
+          </p>
+        </section>
+
+        <section class="chart-card" aria-labelledby="current-function-title">
+          <h2 id="current-function-title">What are they being used for now?</h2>
+          <div class="chart-frame" id="current-function" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
+          </div>
+          <p class="chart-source">
+            <strong>Data source:</strong> Heritage buildings list: Kuala Lumpur City Plan 2040, Volume 1, Part 1 — Development Control, page B1-61.
+            <a href="https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf" target="_blank" rel="noopener noreferrer">View source document (PDF)</a>
+          </p>
+        </section>
+      </div>
+
       <section class="introduction" aria-labelledby="limitations-title">
-        <h2 id="limitations-title">The Future of KL's Heritage Buildings?</h2>
+        <h2 id="limitations-title">Act II. The Future of KL's Heritage Buildings?</h2>
         <p class="section-subtitle">Limitations of Heritage Building Protection</p>
         <p>
           While legal mechanisms exist to protect these historical landmarks, the scope and implementation of the National Heritage Act 2005 (Act 645) present distinct operational challenges. Protection is strictly designation-based through gazettement—the official legal process of formally registering a building to grant it statutory protection against unauthorized demolition. Because of this framework, unlisted or less-prominent vernacular and community landmarks often fall outside statutory safeguards, making them vulnerable to rapid urban redevelopment. Additionally, designated sites situated on private or alienated land require extensive owner notices, consent from State Authorities, and voluntary agreements for restoration support, often resulting in coordination delays and uneven conservation outcomes across different heritage tiers and property types.
@@ -571,52 +656,51 @@
           </details>
         </section>
 
-        <section class="chart-card" aria-labelledby="community-radar-title">
-          <h2 id="community-radar-title">Gazetted Buildings by Community Association</h2>
-          <p>
-            The imbalance in gazetting colonial structures over local, post-independence, or vernacular
-            heritage in Kuala Lumpur stems from distinct legal, economic, and institutional biases.
-            Landmark colonial buildings enjoy substantial institutional support, clear public ownership,
-            and direct links to tourism revenue, whereas local heritage assets frequently struggle against
-            high urban land values, private ownership disputes, and a legal framework that places the
-            financial burden of conservation entirely on property owners.
+        <section class="chart-card" aria-labelledby="heritage-status-waffle-title">
+          <h2 id="heritage-status-waffle-title">Gazetted Heritage Buildings by Status</h2>
+          <div class="feature-layout">
+            <div class="feature-description">
+              <p>
+                This skewed split reveals an institutional bias toward grand colonial and state monuments, which easily meet the strict criteria for top-tier <strong>National Heritage</strong> designation. In contrast, everyday community landmarks make up a smaller share of <strong>Heritage</strong> sites, exposing how lower-tier architecture receives less visibility, funding, and state backing despite being legally gazetted.
+              </p>
+            </div>
+            <div class="chart-frame" id="heritage-status-waffle" aria-live="polite">
+              <p class="chart-status">Loading chart…</p>
+            </div>
+          </div>
+          <p class="chart-source">
+            <strong>Data source:</strong> Heritage buildings list: Kuala Lumpur City Plan 2040, Volume 1, Part 1 — Development Control, page B1-61.
+            <a href="https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf" target="_blank" rel="noopener noreferrer">View source document (PDF)</a>
           </p>
-          <div class="chart-frame" id="community-radar" aria-live="polite">
+        </section>
+
+        <section class="chart-card" aria-labelledby="heritage-years-title">
+          <h2 id="heritage-years-title">Construction and Gazettement Years</h2>
+          <div class="chart-frame" id="heritage-years" aria-live="polite">
             <p class="chart-status">Loading chart…</p>
           </div>
+          <div class="feature-description">
+            <p>
+              The comparison between construction and gazettement years highlights a noticeable lag in formal protection, with grand Colonial and Colonial Islamic structures generally designated earlier than Vernacular and Modern heritage buildings. Colonial administrative and institutional buildings benefited from state ownership, prominent central locations, and clear documentation, making them straightforward candidates for early statutory designation. In contrast, Vernacular structures—such as shophouses and traditional residences—were predominantly privately owned, fragmented across multiple land plots, and subject to commercial redevelopment pressures. Recognizing their heritage value required a shift toward broader cultural and community-based preservation frameworks, leading to their formal gazettement occurring significantly later.
+            </p>
+          </div>
+          <p class="chart-source">
+            <strong>Data source:</strong> Heritage buildings list: Kuala Lumpur City Plan 2040, Volume 1, Part 1 — Development Control, page B1-61.
+            <a href="https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf" target="_blank" rel="noopener noreferrer">View source document (PDF)</a>
+          </p>
         </section>
 
-        <section class="chart-card" aria-labelledby="original-function-title">
-          <h2 id="original-function-title">Original Function</h2>
-          <div class="feature-layout">
-            <div class="feature-description">
-              <p>
-                The lollipop chart compares the functions buildings were originally constructed to serve.
-                Hover over a mark for the exact count.
-              </p>
-            </div>
-            <div class="chart-frame" id="original-function" aria-live="polite">
-              <p class="chart-status">Loading chart…</p>
-            </div>
+        <section class="chart-card" aria-labelledby="style-status-sankey-title">
+          <h2 id="style-status-sankey-title">Architectural Styles and Heritage Protection Status</h2>
+          <div class="chart-frame" id="style-status-sankey" aria-live="polite">
+            <p class="chart-status">Loading chart…</p>
           </div>
+          <p class="chart-source">
+            <strong>Data source:</strong> Heritage buildings list: Kuala Lumpur City Plan 2040, Volume 1, Part 1 — Development Control, page B1-61.
+            <a href="https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf" target="_blank" rel="noopener noreferrer">View source document (PDF)</a>
+          </p>
         </section>
 
-        <section class="chart-card" aria-labelledby="current-function-title">
-          <h2 id="current-function-title">Current Function</h2>
-          <div class="feature-layout">
-            <div class="feature-description">
-              <p>
-                The chart shows the recorded current uses of the listed buildings. Function is not a measure
-                of physical condition: buildings outside statutory designation may not receive the Act’s
-                site-specific measures, but this dataset does not record maintenance or other protections
-                and cannot show that they receive no care.
-              </p>
-            </div>
-            <div class="chart-frame" id="current-function" aria-live="polite">
-              <p class="chart-status">Loading chart…</p>
-            </div>
-          </div>
-        </section>
       </div>
 
       <section class="introduction" aria-labelledby="conclusion-title">
@@ -642,9 +726,11 @@
         { element: "area-timeline", spec: "heritage-buildings-area-timeline.json?legend=filled-squares" },
         { element: "age-pyramid", spec: "heritage-building-kl-age-pyramid.json?title=moved-to-section" },
         { element: "heritage-status", spec: "heritage-building-kl-status-bar.json" },
-        { element: "community-radar", spec: "heritage-community-radar.vega" },
-        { element: "original-function", spec: "heritage-building-kl-lollipop.json" },
-        { element: "current-function", spec: "heritage-building-kl-lollipop2.json" }
+        { element: "heritage-status-waffle", spec: "heritage-building-kl-status-waffle.vega" },
+        { element: "heritage-years", spec: "heritage-building-kl-slope-chart.json" },
+        { element: "style-status-sankey", spec: "heritage-style-status-sankey.vega" },
+        { element: "original-function", spec: "heritage-building-kl-lollipop.json?embedded-title=removed" },
+        { element: "current-function", spec: "heritage-building-kl-lollipop2.json?embedded-title=removed" }
       ];
 
       async function renderCharts() {

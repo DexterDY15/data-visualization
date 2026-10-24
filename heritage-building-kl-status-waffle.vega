@@ -1,0 +1,133 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 620,
+  "height": 270,
+  "padding": 10,
+  "autosize": {"type": "pad", "contains": "padding"},
+  "data": [
+    {
+      "name": "records",
+      "url": "data-basic.json",
+      "format": {"type": "json"},
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.heritage_status === 'National Heritage (Warisan Kebangsaan)' || datum.heritage_status === 'Heritage (Warisan)'"
+        },
+        {
+          "type": "formula",
+          "as": "statusOrder",
+          "expr": "datum.heritage_status === 'National Heritage (Warisan Kebangsaan)' ? 0 : 1"
+        },
+        {
+          "type": "window",
+          "ops": ["row_number"],
+          "fields": [null],
+          "as": ["tileIndex"],
+          "sort": [
+            {"field": "statusOrder", "order": "ascending"},
+            {"field": "name", "order": "ascending"}
+          ]
+        },
+        {
+          "type": "formula",
+          "as": "tileX",
+          "expr": "128 + ((datum.tileIndex - 1) % 10) * 38"
+        },
+        {
+          "type": "formula",
+          "as": "tileY",
+          "expr": "18 + floor((datum.tileIndex - 1) / 10) * 38"
+        }
+      ]
+    },
+    {
+      "name": "statusTotals",
+      "source": "records",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["heritage_status", "statusOrder"],
+          "ops": ["count"],
+          "as": ["building_count"]
+        },
+        {
+          "type": "formula",
+          "as": "legendX",
+          "expr": "130 + datum.statusOrder * 240"
+        },
+        {
+          "type": "formula",
+          "as": "legendLabel",
+          "expr": "(datum.statusOrder === 0 ? 'National Heritage' : 'Heritage') + ' (' + datum.building_count + ')'"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "statusColor",
+      "type": "ordinal",
+      "domain": [
+        "National Heritage (Warisan Kebangsaan)",
+        "Heritage (Warisan)"
+      ],
+      "range": ["#2E8B57", "#8ECFEA"]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "records"},
+      "encode": {
+        "update": {
+          "x": {"field": "tileX"},
+          "y": {"field": "tileY"},
+          "width": {"value": 30},
+          "height": {"value": 30},
+          "cornerRadius": {"value": 3},
+          "fill": {"scale": "statusColor", "field": "heritage_status"},
+          "stroke": {"value": "#ffffff"},
+          "strokeWidth": {"value": 1},
+          "tooltip": {
+            "signal": "{'Building': datum.name, 'Heritage status': datum.heritage_status}"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {"data": "statusTotals"},
+      "encode": {
+        "update": {
+          "x": {"field": "legendX"},
+          "y": {"value": 225},
+          "width": {"value": 16},
+          "height": {"value": 16},
+          "cornerRadius": {"value": 2},
+          "fill": {"scale": "statusColor", "field": "heritage_status"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "statusTotals"},
+      "encode": {
+        "update": {
+          "x": {"signal": "datum.legendX + 24"},
+          "y": {"value": 233},
+          "text": {"field": "legendLabel"},
+          "align": {"value": "left"},
+          "baseline": {"value": "middle"},
+          "fontSize": {"value": 15},
+          "fontWeight": {"value": "bold"},
+          "fill": {"value": "#242424"}
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "background": "#fafafa"
+  }
+}

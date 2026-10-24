@@ -1,0 +1,142 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 720,
+  "height": 520,
+  "padding": {"top": 10, "left": 20, "right": 20, "bottom": 10},
+  "autosize": {"type": "pad", "contains": "padding"},
+  "signals": [
+    {"name": "centerX", "update": "width / 2"},
+    {"name": "centerY", "update": "height / 2"}
+  ],
+  "data": [
+    {
+      "name": "buildings",
+      "url": "data-basic.json?community-attribution=v1",
+      "format": {"type": "json"},
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["community"],
+          "ops": ["count"],
+          "as": ["building_count"]
+        },
+        {
+          "type": "formula",
+          "as": "order",
+          "expr": "indexof(['Chinese', 'Malay', 'Indian', 'British'], datum.community)"
+        },
+        {
+          "type": "formula",
+          "as": "startAngle",
+          "expr": "datum.order * PI / 2 - PI / 4"
+        },
+        {
+          "type": "formula",
+          "as": "endAngle",
+          "expr": "datum.startAngle + PI / 2"
+        },
+        {
+          "type": "formula",
+          "as": "labelAngle",
+          "expr": "datum.order * PI / 2 - PI / 4"
+        },
+        {
+          "type": "formula",
+          "as": "labelX",
+          "expr": "centerX + 205 * cos(datum.labelAngle)"
+        },
+        {
+          "type": "formula",
+          "as": "labelY",
+          "expr": "centerY + 205 * sin(datum.labelAngle)"
+        },
+        {"type": "collect", "sort": {"field": "order", "order": "ascending"}}
+      ]
+    },
+    {
+      "name": "rings",
+      "values": [
+        {"value": 5}, {"value": 10}, {"value": 15}, {"value": 20},
+        {"value": 25}, {"value": 30}, {"value": 35}
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "radius",
+      "type": "linear",
+      "domain": [0, 35],
+      "range": [0, 160],
+      "zero": true,
+      "nice": false
+    },
+    {
+      "name": "communityColor",
+      "type": "ordinal",
+      "domain": ["Chinese", "Malay", "Indian", "British"],
+      "range": ["#C9822B", "#2E8B57", "#7A5195", "#3A6EA5"]
+    }
+  ],
+  "marks": [
+    {
+      "type": "arc",
+      "from": {"data": "buildings"},
+      "encode": {
+        "update": {
+          "x": {"signal": "centerX"},
+          "y": {"signal": "centerY"},
+          "startAngle": {"field": "startAngle"},
+          "endAngle": {"field": "endAngle"},
+          "innerRadius": {"value": 0},
+          "outerRadius": {"scale": "radius", "field": "building_count"},
+          "fill": {"scale": "communityColor", "field": "community"},
+          "stroke": {"value": "#cfc8bf"},
+          "strokeWidth": {"value": 2},
+          "tooltip": {
+            "signal": "{'Community association': datum.community, 'Buildings': datum.building_count}"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {"data": "rings"},
+      "encode": {
+        "update": {
+          "x": {"signal": "centerX"},
+          "y": {"signal": "centerY"},
+          "shape": {"value": "circle"},
+          "size": {"signal": "pow(2 * scale('radius', datum.value), 2)"},
+          "fill": {"value": "#ffffff"},
+          "fillOpacity": {"value": 0},
+          "stroke": {"value": "#ffffff"},
+          "strokeWidth": {"value": 1}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "buildings"},
+      "encode": {
+        "update": {
+          "x": {"field": "labelX"},
+          "y": {"field": "labelY"},
+          "text": {"signal": "datum.community + ' (' + datum.building_count + ')'"},
+          "fontSize": {"value": 14},
+          "fontWeight": {"value": "bold"},
+          "fill": {"value": "#333333"},
+          "align": {
+            "signal": "datum.labelX < centerX - 10 ? 'right' : datum.labelX > centerX + 10 ? 'left' : 'center'"
+          },
+          "baseline": {
+            "signal": "datum.labelY < centerY - 10 ? 'bottom' : datum.labelY > centerY + 10 ? 'top' : 'middle'"
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "background": "#fafafa"
+  }
+}

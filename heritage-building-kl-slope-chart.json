@@ -1,0 +1,129 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 380,
+  "background": "#fafafa",
+  "data": {
+    "url": "data-basic.json",
+    "format": {"type": "json"}
+  },
+  "transform": [
+    {
+      "filter": "isValid(datum.start_year) && isValid(datum.gazettement_year)"
+    },
+    {
+      "fold": ["start_year", "gazettement_year"],
+      "as": ["milestone", "year"]
+    },
+    {
+      "calculate": "datum.milestone === 'start_year' ? 'Construction Year' : 'Gazettement Year'",
+      "as": "year_type"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 1.5,
+        "opacity": 0.55
+      },
+      "encoding": {
+        "x": {
+          "field": "year_type",
+          "type": "nominal",
+          "sort": ["Construction Year", "Gazettement Year"],
+          "axis": {
+            "title": null,
+            "labelFontSize": 13,
+            "labelFontWeight": "bold",
+            "labelPadding": 12,
+            "labelAngle": 0,
+            "ticks": false,
+            "domain": false
+          }
+        },
+        "y": {
+          "field": "year",
+          "type": "quantitative",
+          "scale": {"domain": [1860, 2030]},
+          "axis": {
+            "title": "Year",
+            "format": "d",
+            "values": [1860, 1880, 1900, 1920, 1940, 1960, 1980, 2000, 2020],
+            "grid": true,
+            "gridDash": [2, 3],
+            "labelFontSize": 12,
+            "titleFontSize": 14,
+            "titleFontWeight": "bold",
+            "titlePadding": 12
+          }
+        },
+        "detail": {"field": "name", "type": "nominal"},
+        "order": {
+          "field": "year_type",
+          "type": "nominal",
+          "sort": ["Construction Year", "Gazettement Year"]
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "title": "Architectural Style",
+          "sort": ["colonial", "colonial islamic", "modern", "vernacular"],
+          "scale": {
+            "domain": ["colonial", "colonial islamic", "modern", "vernacular"],
+            "range": ["#8B4513", "#C9822B", "#3A6EA5", "#2E8B57"]
+          },
+          "legend": {
+            "labelFontSize": 15,
+            "titleFontSize": 16,
+            "symbolType": "square",
+            "labelExpr": "datum.label === 'colonial islamic' ? 'Colonial Islamic' : datum.label === 'colonial' ? 'Colonial' : datum.label === 'modern' ? 'Modern' : 'Vernacular'"
+          }
+        },
+        "tooltip": [
+          {"field": "name", "type": "nominal", "title": "Building"},
+          {"field": "category", "type": "nominal", "title": "Architectural Style"},
+          {"field": "year_type", "type": "nominal", "title": "Milestone"},
+          {"field": "year", "type": "quantitative", "title": "Year", "format": "d"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 38,
+        "opacity": 0.75
+      },
+      "encoding": {
+        "x": {
+          "field": "year_type",
+          "type": "nominal",
+          "sort": ["Construction Year", "Gazettement Year"]
+        },
+        "y": {
+          "field": "year",
+          "type": "quantitative",
+          "scale": {"domain": [1860, 2030]}
+        },
+        "detail": {"field": "name", "type": "nominal"},
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "sort": ["colonial", "colonial islamic", "modern", "vernacular"],
+          "scale": {
+            "domain": ["colonial", "colonial islamic", "modern", "vernacular"],
+            "range": ["#8B4513", "#C9822B", "#3A6EA5", "#2E8B57"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "name", "type": "nominal", "title": "Building"},
+          {"field": "category", "type": "nominal", "title": "Architectural Style"},
+          {"field": "year_type", "type": "nominal", "title": "Milestone"},
+          {"field": "year", "type": "quantitative", "title": "Year", "format": "d"}
+        ]
+      }
+    }
+  ]
+}

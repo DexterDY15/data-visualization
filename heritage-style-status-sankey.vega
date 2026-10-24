@@ -1,0 +1,286 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 1100,
+  "height": 520,
+  "padding": {"top": 20, "left": 15, "right": 15, "bottom": 20},
+  "autosize": {"type": "pad", "contains": "padding"},
+  "signals": [
+    {"name": "unitHeight", "value": 7},
+    {"name": "sourceTop", "value": 48},
+    {"name": "targetTop", "value": 72},
+    {"name": "nodeGap", "value": 16},
+    {"name": "sourceX", "value": 250},
+    {"name": "targetX", "value": 740},
+    {"name": "nodeWidth", "value": 18}
+  ],
+  "data": [
+    {
+      "name": "records",
+      "url": "data-basic.json",
+      "format": {"type": "json"}
+    },
+    {
+      "name": "styleNodes",
+      "source": "records",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["category"],
+          "ops": ["count"],
+          "as": ["building_count"]
+        },
+        {
+          "type": "formula",
+          "as": "styleOrder",
+          "expr": "indexof(['colonial', 'colonial islamic', 'modern', 'vernacular'], datum.category)"
+        },
+        {
+          "type": "window",
+          "ops": ["sum"],
+          "fields": ["building_count"],
+          "as": ["cumulative"],
+          "sort": {"field": "styleOrder", "order": "ascending"}
+        },
+        {
+          "type": "formula",
+          "as": "y0",
+          "expr": "sourceTop + (datum.cumulative - datum.building_count) * unitHeight + datum.styleOrder * nodeGap"
+        },
+        {
+          "type": "formula",
+          "as": "y1",
+          "expr": "datum.y0 + datum.building_count * unitHeight"
+        },
+        {
+          "type": "formula",
+          "as": "label",
+          "expr": "(datum.category === 'colonial islamic' ? 'Colonial Islamic' : datum.category === 'colonial' ? 'Colonial' : datum.category === 'modern' ? 'Modern' : 'Vernacular') + ' (' + datum.building_count + ')'"
+        }
+      ]
+    },
+    {
+      "name": "statusNodes",
+      "source": "records",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.heritage_status === 'National Heritage (Warisan Kebangsaan)' || datum.heritage_status === 'Heritage (Warisan)'"
+        },
+        {
+          "type": "aggregate",
+          "groupby": ["heritage_status"],
+          "ops": ["count"],
+          "as": ["building_count"]
+        },
+        {
+          "type": "formula",
+          "as": "statusOrder",
+          "expr": "datum.heritage_status === 'National Heritage (Warisan Kebangsaan)' ? 0 : 1"
+        },
+        {
+          "type": "window",
+          "ops": ["sum"],
+          "fields": ["building_count"],
+          "as": ["cumulative"],
+          "sort": {"field": "statusOrder", "order": "ascending"}
+        },
+        {
+          "type": "formula",
+          "as": "y0",
+          "expr": "targetTop + (datum.cumulative - datum.building_count) * unitHeight + datum.statusOrder * nodeGap"
+        },
+        {
+          "type": "formula",
+          "as": "y1",
+          "expr": "datum.y0 + datum.building_count * unitHeight"
+        },
+        {
+          "type": "formula",
+          "as": "label",
+          "expr": "(datum.statusOrder === 0 ? 'National Heritage' : 'Heritage') + ' (' + datum.building_count + ')'"
+        }
+      ]
+    },
+    {
+      "name": "links",
+      "source": "records",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.heritage_status === 'National Heritage (Warisan Kebangsaan)' || datum.heritage_status === 'Heritage (Warisan)'"
+        },
+        {
+          "type": "aggregate",
+          "groupby": ["category", "heritage_status"],
+          "ops": ["count"],
+          "as": ["building_count"]
+        },
+        {
+          "type": "formula",
+          "as": "styleOrder",
+          "expr": "indexof(['colonial', 'colonial islamic', 'modern', 'vernacular'], datum.category)"
+        },
+        {
+          "type": "formula",
+          "as": "statusOrder",
+          "expr": "datum.heritage_status === 'National Heritage (Warisan Kebangsaan)' ? 0 : 1"
+        },
+        {
+          "type": "stack",
+          "groupby": ["category"],
+          "field": "building_count",
+          "sort": {"field": "statusOrder", "order": "ascending"},
+          "as": ["sourceOffset0", "sourceOffset1"]
+        },
+        {
+          "type": "stack",
+          "groupby": ["heritage_status"],
+          "field": "building_count",
+          "sort": {"field": "styleOrder", "order": "ascending"},
+          "as": ["targetOffset0", "targetOffset1"]
+        },
+        {
+          "type": "lookup",
+          "from": "styleNodes",
+          "key": "category",
+          "fields": ["category"],
+          "values": ["y0"],
+          "as": ["sourceNodeY0"]
+        },
+        {
+          "type": "lookup",
+          "from": "statusNodes",
+          "key": "heritage_status",
+          "fields": ["heritage_status"],
+          "values": ["y0"],
+          "as": ["targetNodeY0"]
+        },
+        {
+          "type": "formula",
+          "as": "sourceY0",
+          "expr": "datum.sourceNodeY0 + datum.sourceOffset0 * unitHeight"
+        },
+        {
+          "type": "formula",
+          "as": "sourceY1",
+          "expr": "datum.sourceNodeY0 + datum.sourceOffset1 * unitHeight"
+        },
+        {
+          "type": "formula",
+          "as": "targetY0",
+          "expr": "datum.targetNodeY0 + datum.targetOffset0 * unitHeight"
+        },
+        {
+          "type": "formula",
+          "as": "targetY1",
+          "expr": "datum.targetNodeY0 + datum.targetOffset1 * unitHeight"
+        },
+        {
+          "type": "formula",
+          "as": "path",
+          "expr": "'M' + (sourceX + nodeWidth) + ',' + datum.sourceY0 + 'C' + (sourceX + nodeWidth + 220) + ',' + datum.sourceY0 + ' ' + (targetX - 220) + ',' + datum.targetY0 + ' ' + targetX + ',' + datum.targetY0 + 'L' + targetX + ',' + datum.targetY1 + 'C' + (targetX - 220) + ',' + datum.targetY1 + ' ' + (sourceX + nodeWidth + 220) + ',' + datum.sourceY1 + ' ' + (sourceX + nodeWidth) + ',' + datum.sourceY1 + 'Z'"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "styleColor",
+      "type": "ordinal",
+      "domain": ["colonial", "colonial islamic", "modern", "vernacular"],
+      "range": ["#8B4513", "#C9822B", "#3A6EA5", "#2E8B57"]
+    }
+  ],
+  "marks": [
+    {
+      "type": "path",
+      "from": {"data": "links"},
+      "encode": {
+        "update": {
+          "path": {"field": "path"},
+          "fill": {"scale": "styleColor", "field": "category"},
+          "fillOpacity": {"value": 0.48},
+          "stroke": {"value": "#ffffff"},
+          "strokeWidth": {"value": 0.5},
+          "tooltip": {
+            "signal": "{'Architectural style': datum.category, 'Heritage status': datum.heritage_status, 'Buildings': datum.building_count}"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {"data": "styleNodes"},
+      "encode": {
+        "update": {
+          "x": {"signal": "sourceX"},
+          "x2": {"signal": "sourceX + nodeWidth"},
+          "y": {"field": "y0"},
+          "y2": {"field": "y1"},
+          "fill": {"scale": "styleColor", "field": "category"},
+          "stroke": {"value": "#ffffff"},
+          "strokeWidth": {"value": 1},
+          "tooltip": {
+            "signal": "{'Architectural style': datum.label, 'Buildings': datum.building_count}"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {"data": "statusNodes"},
+      "encode": {
+        "update": {
+          "x": {"signal": "targetX"},
+          "x2": {"signal": "targetX + nodeWidth"},
+          "y": {"field": "y0"},
+          "y2": {"field": "y1"},
+          "fill": {
+            "signal": "datum.statusOrder === 0 ? '#6b557e' : '#8ecfea'"
+          },
+          "stroke": {"value": "#ffffff"},
+          "strokeWidth": {"value": 1},
+          "tooltip": {
+            "signal": "{'Heritage status': datum.heritage_status, 'Buildings': datum.building_count}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "styleNodes"},
+      "encode": {
+        "update": {
+          "x": {"signal": "sourceX - 12"},
+          "y": {"signal": "(datum.y0 + datum.y1) / 2"},
+          "text": {"field": "label"},
+          "align": {"value": "right"},
+          "baseline": {"value": "middle"},
+          "fontSize": {"value": 15},
+          "fontWeight": {"value": "bold"},
+          "fill": {"value": "#242424"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "statusNodes"},
+      "encode": {
+        "update": {
+          "x": {"signal": "targetX + nodeWidth + 12"},
+          "y": {"signal": "(datum.y0 + datum.y1) / 2"},
+          "text": {"field": "label"},
+          "align": {"value": "left"},
+          "baseline": {"value": "middle"},
+          "fontSize": {"value": 15},
+          "fontWeight": {"value": "bold"},
+          "fill": {"value": "#242424"}
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "background": "#fafafa"
+  }
+}

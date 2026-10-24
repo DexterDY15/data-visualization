@@ -1,13 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Current Functions of KL Heritage Buildings",
-    "subtitle": "Number of buildings by the function they serve today",
-    "fontSize": 20,
-    "subtitleFontSize": 12,
-    "anchor": "start",
-    "offset": 15
-  },
   "width": 600,
   "height": 360,
   "background": "#fafafa",
