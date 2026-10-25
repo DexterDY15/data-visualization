@@ -10,13 +10,17 @@
   "transform": [
     {"filter": "isValid(datum.current_function)"},
     {
+      "calculate": "datum.current_function === 'Government, Courts & Public Offices' ? 'Government & Civic' : datum.current_function === 'Education & Research' ? 'Education & Social' : datum.current_function === 'Places of Worship & Community' ? 'Worship & Community' : datum.current_function === 'Transport & Public Infrastructure' ? 'Transport & Infrastructure' : datum.current_function === 'Commerce, Hospitality & Tourism' ? 'Commerce & Retail' : datum.current_function",
+      "as": "category_label"
+    },
+    {
       "aggregate": [{"op": "count", "as": "building_count"}],
-      "groupby": ["current_function"]
+      "groupby": ["category_label"]
     }
   ],
   "encoding": {
     "y": {
-      "field": "current_function",
+      "field": "category_label",
       "type": "nominal",
       "sort": {"field": "building_count", "order": "descending"},
       "title": null,
@@ -34,24 +38,24 @@
       }
     },
     "color": {
-      "field": "current_function",
+      "field": "category_label",
       "type": "nominal",
       "legend": null,
       "scale": {
         "domain": [
-          "Museums, Culture & Libraries",
-          "Government, Courts & Public Offices",
-          "Places of Worship & Community",
+          "Government & Civic",
+          "Education & Social",
+          "Worship & Community",
           "Recreation, Sports & Memorials",
-          "Education & Research",
-          "Commerce, Hospitality & Tourism",
-          "Transport & Public Infrastructure"
+          "Commerce & Retail",
+          "Transport & Infrastructure",
+          "Museums, Culture & Libraries"
         ],
-        "range": ["#7A5195", "#8B4513", "#2E8B57", "#C9822B", "#3A6EA5", "#B5651D", "#4A4A4A"]
+        "range": ["#8B4513", "#3A6EA5", "#2E8B57", "#D1495B", "#C9822B", "#7A5195", "#6A5ACD"]
       }
     },
     "tooltip": [
-      {"field": "current_function", "type": "nominal", "title": "Current Function"},
+      {"field": "category_label", "type": "nominal", "title": "Category"},
       {"field": "building_count", "type": "quantitative", "title": "Buildings"}
     ]
   },

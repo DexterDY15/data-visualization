@@ -41,14 +41,25 @@
       "name": "styles",
       "source": "raw",
       "transform": [
-        {"type": "aggregate", "groupby": ["category", "specific_style"], "ops": ["count"], "as": ["size"]},
-        {"type": "formula", "as": "id", "expr": "datum.category + '|' + datum.specific_style"},
+        {
+          "type": "formula",
+          "as": "treemap_style",
+          "expr": "datum.specific_style === 'Independence Era-Modern Structural Engineering' || datum.specific_style === 'Post Independence-Modern Structural Suspended Roof' ? 'Modern Structural Engineering' : datum.specific_style"
+        },
+        {
+          "type": "aggregate",
+          "groupby": ["category", "treemap_style"],
+          "ops": ["count", "values"],
+          "fields": ["name", "name"],
+          "as": ["size", "building_names"]
+        },
+        {"type": "formula", "as": "id", "expr": "datum.category + '|' + datum.treemap_style"},
         {"type": "formula", "as": "parent", "expr": "datum.category"},
         {"type": "formula", "as": "category_label", "expr": "upper(slice(datum.category,0,1)) + slice(datum.category,1)"},
         {
           "type": "formula",
           "as": "style_label",
-          "expr": "indexof(datum.specific_style, 'Colonial-') == 0 ? slice(datum.specific_style, 9) : indexof(datum.specific_style, 'Colonial ') == 0 ? slice(datum.specific_style, 9) : indexof(datum.specific_style, 'Post Independence-') == 0 ? slice(datum.specific_style, 18) : indexof(datum.specific_style, 'Post-Independence ') == 0 ? slice(datum.specific_style, 18) : indexof(datum.specific_style, 'Independence Era-') == 0 ? slice(datum.specific_style, 17) : datum.specific_style"
+          "expr": "indexof(datum.treemap_style, 'Colonial-') == 0 ? slice(datum.treemap_style, 9) : indexof(datum.treemap_style, 'Colonial ') == 0 ? slice(datum.treemap_style, 9) : indexof(datum.treemap_style, 'Post Independence-') == 0 ? slice(datum.treemap_style, 18) : indexof(datum.treemap_style, 'Post-Independence ') == 0 ? slice(datum.treemap_style, 18) : indexof(datum.treemap_style, 'Independence Era-') == 0 ? slice(datum.treemap_style, 17) : datum.treemap_style"
         }
       ]
     },
@@ -131,7 +142,7 @@
           "stroke": {"value": "#ffffff"},
           "strokeWidth": {"value": 1},
           "tooltip": {
-            "signal": "{'Category': datum.category_label, 'Style': datum.style_label, 'Buildings': datum.size}"
+            "signal": "{'Category': datum.category_label, 'Style': datum.style_label, 'Buildings': datum.size, 'Heritage buildings': join(pluck(datum.building_names, 'name'), ', ')}"
           }
         },
         "hover": {"fillOpacity": {"value": 1}},

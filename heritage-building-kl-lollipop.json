@@ -10,13 +10,17 @@
   "transform": [
     {"filter": "isValid(datum.purpose)"},
     {
+      "calculate": "datum.purpose === 'Civic, Government & Administrative' ? 'Government & Civic' : datum.purpose === 'Education & Social Clubs' ? 'Education & Social' : datum.purpose === 'Places of Worship & Religious Institutions' ? 'Worship & Community' : datum.purpose === 'Transportation & Public Infrastructure' ? 'Transport & Infrastructure' : datum.purpose === 'Commerce, Finance & Retail' ? 'Commerce & Retail' : datum.purpose",
+      "as": "category_label"
+    },
+    {
       "aggregate": [{"op": "count", "as": "building_count"}],
-      "groupby": ["purpose"]
+      "groupby": ["category_label"]
     }
   ],
   "encoding": {
     "y": {
-      "field": "purpose",
+      "field": "category_label",
       "type": "nominal",
       "sort": {"field": "building_count", "order": "descending"},
       "title": null,
@@ -30,23 +34,23 @@
       "axis": {"tickMinStep": 1, "grid": true, "gridDash": [2, 3]}
     },
     "color": {
-      "field": "purpose",
+      "field": "category_label",
       "type": "nominal",
       "legend": null,
       "scale": {
         "domain": [
-          "Civic, Government & Administrative",
-          "Education & Social Clubs",
+          "Government & Civic",
+          "Education & Social",
           "Residential & Royal",
-          "Places of Worship & Religious Institutions",
-          "Transportation & Public Infrastructure",
-          "Commerce, Finance & Retail"
+          "Worship & Community",
+          "Transport & Infrastructure",
+          "Commerce & Retail"
         ],
         "range": ["#8B4513", "#3A6EA5", "#B5651D", "#2E8B57", "#7A5195", "#C9822B"]
       }
     },
     "tooltip": [
-      {"field": "purpose", "type": "nominal", "title": "Purpose"},
+      {"field": "category_label", "type": "nominal", "title": "Category"},
       {"field": "building_count", "type": "quantitative", "title": "Buildings"}
     ]
   },

@@ -16,6 +16,10 @@
         margin: 0;
       }
 
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
       h1,
       h2,
       h3 {
@@ -526,11 +530,6 @@
             <p class="chart-status">Loading chart…</p>
           </div>
 
-          <div class="feature-description">
-            <p>
-              The distribution of heritage buildings across central Kuala Lumpur reveals a high concentration in the city's historic core, led by Merdeka Square (14 buildings) and Chinatown / Petaling Street (13 buildings). Together, these two areas account for more than half of the listed sites, reflecting their roles as the primary administrative and commercial hubs during the city's early development. Surrounding districts such as Chow Kit (8 buildings), Masjid Jamek (7 buildings), KL Sentral / Brickfields (5 buildings), and Central Market (3 buildings) host smaller, distinct clusters, illustrating how historical functions—from trade and transit to civic life—shaped the spatial distribution of KL’s remaining architectural heritage.
-            </p>
-          </div>
           <p class="chart-source">
             <strong>Data source:</strong> Heritage buildings list: Kuala Lumpur City Plan 2040, Volume 1, Part 1 — Development Control, page B1-61.
             <a href="https://ppkl.dbkl.gov.my/wp-content/uploads/2025/06/1.-VOLUME-1-PART-1_DEVELOPMENT-CONTROL_.pdf" target="_blank" rel="noopener noreferrer">View source document (PDF)</a>
@@ -732,7 +731,7 @@
       const charts = [
         { element: "dot-map", spec: "heritage-building-kl-dot.json" },
         { element: "malaysia-map", spec: "malaysia-proportional-symbol-map.vega?legend=right-side" },
-        { element: "treemap", spec: "heritage-building-kl-treemap.json?style-labels=wrapped-v5" },
+        { element: "treemap", spec: "heritage-building-kl-treemap.json?style-labels=wrapped-v6" },
         { element: "area-count", spec: "heritage-buildings-by-area.json?chart-title=removed" },
         { element: "area-timeline", spec: "heritage-buildings-area-timeline.json?legend=filled-squares" },
         { element: "age-pyramid", spec: "heritage-building-kl-age-pyramid.json?title=moved-to-section" },
@@ -740,8 +739,8 @@
         { element: "heritage-status-waffle", spec: "heritage-building-kl-status-waffle.vega" },
         { element: "heritage-years", spec: "heritage-building-kl-slope-chart.json" },
         { element: "style-status-sankey", spec: "heritage-style-status-sankey.vega" },
-        { element: "original-function", spec: "heritage-building-kl-lollipop.json?embedded-title=removed" },
-        { element: "current-function", spec: "heritage-building-kl-lollipop2.json?axis-interval=2" }
+        { element: "original-function", spec: "heritage-building-kl-lollipop.json?category-labels=v2" },
+        { element: "current-function", spec: "heritage-building-kl-lollipop2.json?axis-interval=2&category-labels=v2" }
       ];
 
       async function renderCharts() {
